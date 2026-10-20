@@ -1,8 +1,3 @@
-#!/usr/bin/env bash
-# Baseline performance measurement of the g6t3 web app on EC2.
-# Usage: ./bench.sh [base_url]   (default: http://localhost:8080)
-# Every measurement uses bash's `time`; each configuration is repeated REPS times.
-
 BASE=${1:-http://localhost:8080}
 REPS=3
 TIMEFORMAT='%R'   # `time` prints only wall-clock seconds
@@ -22,7 +17,6 @@ SENSORS=(30001 30002 30003 30004 30011 30012 30013 30014 30021 30022
 
 get() { curl -s -o /dev/null -H "Authorization: Bearer $1" "$BASE$2"; }
 
-# Run "$@" REPS times under `time`, print the individual timings
 measure() {
   local t out=""
   for _ in $(seq $REPS); do
@@ -35,17 +29,17 @@ measure() {
 echo "warm-up (JIT, connection pool)..."
 for _ in $(seq 20); do get "$DEPHEAD" "/api/dashboard/department/1?days=30"; get "$ADMIN" "/api/measurements?sensorId=30001"; done
 
-# Experiment 1: aggregation depth, 20 sequential dashboard requests per run
+#aggregation depth, 20 sequential dashboard requests per run
 dashboard() { for _ in $(seq 20); do get "$DEPHEAD" "/api/dashboard/department/1?days=$1"; done; }
 echo; echo "Exp 1 - dashboard, 20 requests, depth = days of history"
 for d in 1 3 7 14 30; do echo "days=$d:$(measure dashboard $d)"; done
 
-# Experiment 2: data volume, fetch all measurements of k sensors (~720 rows each)
+#data volume, fetch all measurements of k sensors (~720 rows each)
 sensors() { for s in "${SENSORS[@]:0:$1}"; do get "$ADMIN" "/api/measurements?sensorId=$s"; done; }
 echo; echo "Exp 2 - measurements of k sensors (~720 rows each)"
 for k in 1 5 10 20 40; do echo "k=$k:$(measure sensors $k)"; done
 
-# Experiment 3: concurrency, 200 requests with P in flight at once
+#concurrency, 200 requests with P in flight at once
 export BASE ADMIN
 parallel() { seq 200 | xargs -P "$1" -I{} curl -s -o /dev/null -H "Authorization: Bearer $ADMIN" "$BASE/api/measurements?sensorId=30001"; }
 echo; echo "Exp 3 - 200 requests, P parallel clients"

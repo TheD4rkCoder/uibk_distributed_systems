@@ -141,7 +141,7 @@ docker save g6t3-app:amd64 | gzip | ssh ec2-user@184.73.43.150 'gunzip | docker 
 
 ssh ec2-user@184.73.43.150
 
-started my database
+created the docker network the containers use to find each other, and started my database
 
 ```
 docker run -d --name postgres --network appnet \
@@ -231,13 +231,6 @@ logs
          _/ _/
        _/m/'
 Last login: Sat Oct 10 18:27:41 2026 from 209.198.159.79
-[ec2-user@ip-172-31-41-118 ~]$ ssh ec2-user@34.227.84.90
-The authenticity of host '34.227.84.90 (34.227.84.90)' can't be established.
-ED25519 key fingerprint is SHA256:KA3IWdw8smgPy6JY6KQwrBjZNIAxFdHjshv3LzKwZUk.
-This key is not known by any other names.
-Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-Warning: Permanently added '34.227.84.90' (ED25519) to the list of known hosts.
-ec2-user@34.227.84.90: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
 [ec2-user@ip-172-31-41-118 ~]$ docker logs -f app
 
   .   ____          _            __ _ _
@@ -603,6 +596,14 @@ docker buildx build --platform linux/amd64 -t g6t3-app:amd64 .
 terraform apply
 docker save g6t3-app:amd64 | gzip | ssh ec2-user@54.89.167.59 'gunzip | docker load'
 
+# on the new instance: same network, Postgres and seeding as in 2.1/2.2
+docker network create appnet
+docker run -d --name postgres --network appnet \
+  -e POSTGRES_DB=skeleton_db -e POSTGRES_USER=skeleton_user -e POSTGRES_PASSWORD=changeme \
+  postgres:16
+docker cp ~/data_prod.sql postgres:/tmp/data_prod.sql
+docker exec postgres psql -U skeleton_user -d skeleton_db -v ON_ERROR_STOP=1 --single-transaction -f /tmp/data_prod.sql
+
 docker run -d --name app --network appnet -p 8080:8080 \
   -e DB_HOST=postgres -e DB_NAME=skeleton_db -e DB_USERNAME=skeleton_user -e DB_PASSWORD=changeme \
   -e APP_JWT_SECRET=$(openssl rand -base64 64 | tr -d "\n") \
@@ -670,13 +671,15 @@ graph made with python plot_task3.py (matplotlib), data from the tables above
 
 ![VM baseline vs. hybrid VM + Lambda](task3_comparison.png)
 
-(a) per request latency of the hybrid version stays ~25 ms above the baseline, the HTTPS round trip to the lambda is a fixed cost per request
+note: exp A k=100 and exp B P=1 are both 100 sequential requests but disagree (local 2.000 vs. 1.531 s, lambda 4.469 vs. 3.675 s). They were separate benchmark runs and I did not control for the difference; the most likely cause is CPU credit / background-load variation on the t2.micro between runs (see 1.3), which I did not verify. The local-vs-lambda gap is similar in both, so the conclusions below do not depend on it.
+
+(a) the per request latency of the hybrid version is above the baseline by 10 ms at k=1 and 17 ms at k=10, growing to ~25 ms at k=50 and k=100 and then staying there; the HTTPS round trip to the lambda is a per-request cost
 
 (b) with one client the hybrid version only reaches 27 vs. 65 req/s, with 8 parallel clients both converge (~73-76 req/s) because the single vCPU is the bottleneck either way
 
 cold start: first request after deployment 1.96 s vs. ~0.46 s warm
 
-CloudWatch says Init Duration: 101 ms, the rest is connection setup (DNS, TLS) from the app to the function URL
+CloudWatch says Init Duration: 101 ms, the rest is most likely connection setup (DNS, TLS) from the app to the function URL plus the app's own first-call costs (RestClient initialization, JIT); I did not measure this split, and the 1.96 s was measured from my laptop, not from localhost
 
 for this workload the hybrid version is slower, sequentially ~2.2x (45 vs. 20 ms per request)
 
@@ -684,7 +687,7 @@ the computation itself is tiny (lambda reports 2-11 ms for 4 sensors, locally su
 
 under concurrency the gap closes (P=8: 1.36 s vs. 1.32 s, within 3%), the VM is CPU-bound at ~76 req/s, with the lambda the app thread just waits on I/O while the lambda computes, so more clients hide the latency
 
-with a heavier computation the lambda might overtake the local version once the CPU saturates
+hypothesis (not tested): with a heavier computation the lambda might overtake the local version once the CPU saturates
 
 cold starts add a one-time penalty (~1.5 s here) that the always-running VM doesn't have
 
@@ -697,7 +700,7 @@ trade-off: VM = constant cost and full control but fixed capacity, lambda = pay 
 
 A: the image has everything the app needs (Java runtime, jar, config), so the VM only needs docker installed, no Java or Postgres setup by hand
 
-same image runs on my laptop and on EC2, built once with docker buildx for amd64 and loaded with docker save / docker load, no "works on my machine" problems
+same image runs on my laptop and on EC2, built once with docker buildx for amd64 and loaded with docker save / docker load, I built the image for amd64 on my ARM Mac and the same image ran unchanged on EC2
 
 configuration is passed as env variables (DB_HOST, APP_JWT_SECRET, APP_THRESHOLD_LAMBDA_URL), so the same image ran both the local and the lambda variant in 3.3
 
@@ -709,17 +712,13 @@ when the instance gets replaced (like in 2.3 or 3.2) the new VM is set up again 
 
 2. Why is running multiple containers in parallel on a single VM more eﬀicient or manageable than running multiple raw Python processes manually?
 
-A: every container has its own filesystem and dependencies, so the app and postgres (or two apps with different library versions) don't conflict, raw processes all share the same installed packages on the host
+A: every container has its own filesystem and dependencies, so the app and postgres don't conflict, raw processes all share the same installed packages on the host
 
 containers on the same docker network (appnet) find each other by name (DB_HOST=postgres), no fixed ports or IPs on the host
 
 docker manages the lifecycle: --restart unless-stopped brings the app back after a crash or reboot
 
 docker ps, docker logs and docker rm give one way to see, read and stop every service, with manual processes you have to find the PIDs and log files yourself
-
-CPU and memory limits can be set per container (--cpus, --memory), so one service can't use up the whole t2.micro
-
-containers are much lighter than separate VMs, they share the host kernel, so several of them fit on one small instance
 
 the setup is reproducible, the same docker run commands give the same result on a new instance, a manual process setup has to be redone by hand
 
@@ -731,9 +730,9 @@ lambda: no server to manage, scales automatically and is only charged per call, 
 
 the code also has to be split out: the app still loads the data from its own database and sends it to the lambda, so every call adds network traffic
 
-startup: the VM container takes ~22 s to start but then stays warm, the lambda has a cold start on the first request (1.96 s vs. ~0.46 s warm, of which Init Duration 101 ms, the rest DNS and TLS setup)
+startup: the VM container takes about 22 s to start but then stays warm, the lambda has a cold start on the first request
 
-execution overhead: the computation itself is tiny, but the HTTPS round trip adds ~25 ms per request, so sequentially the hybrid version is ~2.2x slower (45 vs. 20 ms per request)
+execution overhead: the computation itself is tiny, but the HTTPS round trip adds 10-25 ms per request, so sequentially the hybrid version is slower
 
 under load the difference disappears (P=8: 1.36 s vs. 1.32 s), because the VM's single vCPU is the bottleneck and the lambda runs separately
 
