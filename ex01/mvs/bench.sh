@@ -1,6 +1,6 @@
 BASE=${1:-http://localhost:8080}
 REPS=3
-TIMEFORMAT='%R'   # `time` prints only wall-clock seconds
+TIMEFORMAT='%R'
 
 login() {
   curl -s -X POST "$BASE/api/auth/login" -H "Content-Type: application/json" \

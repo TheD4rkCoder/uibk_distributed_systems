@@ -115,7 +115,6 @@ exp 2: time scales roughly linearly with the rows returned (~16 ms per sensor / 
 
 exp 3: 1 to 2 clients gives ~13% more throughput (overlapping I/O waits), then it plateaus at ~80 req/s because the single vCPU is saturated, more concurrency only adds queueing
 
-t2.micro is burstable (CPU credits), so long or repeated benchmarks could get slower once the credits run out
 
 
 # 2

@@ -1,4 +1,4 @@
-#AWS Academy does not allow creating IAM roles, so use the pre-made LabRole
+#AWS Academy does not allow creating IAM roles, used the pre-made LabRole
 data "aws_iam_role" "lab" {
   name = "LabRole"
 }
@@ -20,7 +20,6 @@ resource "aws_lambda_function" "threshold" {
   timeout          = 10
 }
 
-#public HTTPS endpoint so the app can call the function with a plain HTTP POST
 resource "aws_lambda_function_url" "threshold" {
   function_name      = aws_lambda_function.threshold.function_name
   authorization_type = "NONE"

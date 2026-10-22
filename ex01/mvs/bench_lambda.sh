@@ -1,8 +1,3 @@
-#!/usr/bin/env bash
-# Task 3.3: time the threshold recommendation endpoint (local vs. Lambda-offloaded).
-# Usage: ./bench_lambda.sh <label> [base_url]
-# The mode is chosen by how the app container was started (with/without APP_THRESHOLD_LAMBDA_URL).
-
 LABEL=${1:?label required, e.g. local or lambda}
 BASE=${2:-http://localhost:8080}
 REPS=3
@@ -26,12 +21,12 @@ measure() {
 echo "[$LABEL] warm-up..."
 for i in $(seq 30); do recommend "${ROOMS[$((i % 10))]}"; done
 
-# Exp A: k sequential requests, cycling through the 10 rooms (4 sensors / ~670 values each)
+#k sequential requests, cycling through the 10 rooms
 sequential() { for i in $(seq "$1"); do recommend "${ROOMS[$((i % 10))]}"; done; }
 echo "[$LABEL] Exp A - k sequential requests"
 for k in 1 10 50 100; do echo "k=$k:$(measure sequential $k)"; done
 
-# Exp B: 100 requests with P in flight at once
+#100 requests with P in flight at once
 export BASE TOKEN
 parallel() {
   for i in $(seq 100); do echo "${ROOMS[$((i % 10))]}"; done |
