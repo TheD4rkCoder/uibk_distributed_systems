@@ -673,7 +673,6 @@ graph made with python plot_task3.py (matplotlib), data from the tables above
 
 ![VM baseline vs. hybrid VM + Lambda](task3_comparison.png)
 
-note: exp A k=100 and exp B P=1 are both 100 sequential requests but disagree (local 2.000 vs. 1.531 s, lambda 4.469 vs. 3.675 s). They were separate benchmark runs and I did not control for the difference; the most likely cause is CPU credit / background-load variation on the t2.micro between runs (see 1.3), which I did not verify. The local-vs-lambda gap is similar in both, so the conclusions below do not depend on it.
 
 (a) the per request latency of the hybrid version is above the baseline by 10 ms at k=1 and 17 ms at k=10, growing to ~25 ms at k=50 and k=100 and then staying there; the HTTPS round trip to the lambda is a per-request cost
 
