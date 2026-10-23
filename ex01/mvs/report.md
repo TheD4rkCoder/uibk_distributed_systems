@@ -1,3 +1,6 @@
+**Student Name:** Maurits van Staalduinen  
+**Student ID:** `c9881018`  
+
 # 1
 
 ## 1.1
