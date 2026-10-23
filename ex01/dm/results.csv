@@ -1,0 +1,6 @@
+case,wall_s,max_rss_kb,output
+s1_light,0.00,3448,1
+s2_medium,0.04,3428,1
+s3_heavy,0.19,3476,1
+s4_extreme,1.25,3456,0
+s5_insane,12.58,3476,0

@@ -1,0 +1,6 @@
+FROM amazonlinux:2023
+RUN dnf install -y gcc-c++ && dnf clean all
+WORKDIR /app
+COPY bouncing_dvd.cpp .
+RUN g++ -O2 -std=c++17 -o solver bouncing_dvd.cpp
+ENTRYPOINT ["./solver"]
