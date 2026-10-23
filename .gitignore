@@ -3,3 +3,4 @@
 **/*.fstate
 **/*.backup
 **/*.zip
+**/.venv/
