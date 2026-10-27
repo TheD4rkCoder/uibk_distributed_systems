@@ -4,3 +4,6 @@
 **/*.backup
 **/*.zip
 **/.venv/
+**/.env
+**/.env_aws
+**/*.pem
