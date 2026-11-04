@@ -1,0 +1,70 @@
+== a.log
+[A 17:56:46] online, zid 71ac3c373d7c30b8ced60d4c51b43c91
+[A 17:56:48] join B
+[A 17:56:48] peers ['B'], 1 zenoh peer connections
+[A 17:56:49] join C
+[A 17:56:50] peers ['B', 'C'], 2 zenoh peer connections
+[A 17:56:52] peers ['B', 'C'], 2 zenoh peer connections
+[A 17:56:54] peers ['B', 'C'], 2 zenoh peer connections
+[A 17:56:56] peers ['B', 'C'], 2 zenoh peer connections
+[A 17:56:58] peers ['B', 'C'], 2 zenoh peer connections
+[A 17:57:00] peers ['B', 'C'], 2 zenoh peer connections
+[A 17:57:01] leave B
+[A 17:57:02] peers ['C'], 1 zenoh peer connections
+[A 17:57:04] peers ['C'], 1 zenoh peer connections
+[A 17:57:06] peers ['C'], 1 zenoh peer connections
+[A 17:57:08] peers ['C'], 1 zenoh peer connections
+[A 17:57:10] peers ['C'], 1 zenoh peer connections
+[A 17:57:11] join B
+[A 17:57:12] peers ['B', 'C'], 2 zenoh peer connections
+[A 17:57:14] peers ['B', 'C'], 2 zenoh peer connections
+[A 17:57:16] peers ['B', 'C'], 2 zenoh peer connections
+[A 17:57:18] peers ['B', 'C'], 2 zenoh peer connections
+[A 17:57:20] peers ['B', 'C'], 2 zenoh peer connections
+== c.log
+[C 17:56:49] join A
+[C 17:56:49] online, zid 17d79eab9cc4f9e30638fe3f42722b2f
+[C 17:56:49] join B
+[C 17:56:51] peers ['A', 'B'], 2 zenoh peer connections
+[C 17:56:54] peers ['A', 'B'], 2 zenoh peer connections
+[C 17:56:56] peers ['A', 'B'], 2 zenoh peer connections
+[C 17:56:58] peers ['A', 'B'], 2 zenoh peer connections
+[C 17:57:00] peers ['A', 'B'], 2 zenoh peer connections
+[C 17:57:01] leave B
+[C 17:57:02] peers ['A'], 1 zenoh peer connections
+[C 17:57:04] peers ['A'], 1 zenoh peer connections
+[C 17:57:06] peers ['A'], 1 zenoh peer connections
+[C 17:57:08] peers ['A'], 1 zenoh peer connections
+[C 17:57:10] peers ['A'], 1 zenoh peer connections
+[C 17:57:11] join B
+[C 17:57:12] peers ['A', 'B'], 2 zenoh peer connections
+[C 17:57:14] peers ['A', 'B'], 2 zenoh peer connections
+[C 17:57:16] peers ['A', 'B'], 2 zenoh peer connections
+[C 17:57:18] peers ['A', 'B'], 2 zenoh peer connections
+[C 17:57:20] peers ['A', 'B'], 2 zenoh peer connections
+[C 17:57:20] leave A
+[C 17:57:22] peers ['B'], 1 zenoh peer connections
+[C 17:57:23] leave B
+[C 17:57:24] peers [], 0 zenoh peer connections
+[C 17:57:26] peers [], 0 zenoh peer connections
+== b1.log
+[B 17:56:48] online, zid f58c70f457bb771cfa7f948c281b555f
+[B 17:56:48] join A
+[B 17:56:50] join C
+[B 17:56:50] peers ['A', 'C'], 2 zenoh peer connections
+[B 17:56:52] peers ['A', 'C'], 2 zenoh peer connections
+[B 17:56:54] peers ['A', 'C'], 2 zenoh peer connections
+[B 17:56:56] peers ['A', 'C'], 2 zenoh peer connections
+[B 17:56:58] peers ['A', 'C'], 2 zenoh peer connections
+[B 17:57:00] peers ['A', 'C'], 2 zenoh peer connections
+== b2.log
+[B 17:57:11] online, zid 981b66f5c66eedab5fcdd6040284dbeb
+[B 17:57:11] join C
+[B 17:57:11] join A
+[B 17:57:13] peers ['A', 'C'], 2 zenoh peer connections
+[B 17:57:15] peers ['A', 'C'], 2 zenoh peer connections
+[B 17:57:17] peers ['A', 'C'], 2 zenoh peer connections
+[B 17:57:19] peers ['A', 'C'], 2 zenoh peer connections
+[B 17:57:20] leave A
+[B 17:57:21] peers ['C'], 1 zenoh peer connections
+[B 17:57:23] peers ['C'], 1 zenoh peer connections

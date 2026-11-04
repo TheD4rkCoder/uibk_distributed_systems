@@ -1,0 +1,85 @@
+== A
+[A 18:05:40] online, zid b7bdf13369145bc4f7f5e7275a98e204
+[A 18:05:42] join B
+[A 18:05:42] sent hello #1, peers ['B']
+[A 18:05:44] join C
+[A 18:05:44] recv from B: Hello from Node B #1
+[A 18:05:45] sent hello #2, peers ['B', 'C']
+[A 18:05:46] recv from C: Hello from Node C #1
+[A 18:05:46] recv from B: Hello from Node B #2
+[A 18:05:47] sent hello #3, peers ['B', 'C']
+[A 18:05:48] recv from C: Hello from Node C #2
+[A 18:05:48] recv from B: Hello from Node B #3
+[A 18:05:49] sent hello #4, peers ['B', 'C']
+[A 18:05:50] recv from C: Hello from Node C #3
+[A 18:05:50] recv from B: Hello from Node B #4
+[A 18:05:51] sent hello #5, peers ['B', 'C']
+[A 18:05:52] recv from C: Hello from Node C #4
+[A 18:05:52] recv from B: Hello from Node B #5
+[A 18:05:53] sent hello #6, peers ['B', 'C']
+[A 18:05:54] recv from C: Hello from Node C #5
+[A 18:05:54] recv from B: Hello from Node B #6
+[A 18:05:55] sent hello #7, peers ['B', 'C']
+[A 18:05:56] recv from C: Hello from Node C #6
+[A 18:05:56] recv from B: Hello from Node B #7
+[A 18:05:57] sent hello #8, peers ['B', 'C']
+stopped
+== B
+[B 18:05:42] online, zid 96c3532f1e42b172f00b8f86ccc9ee4b
+[B 18:05:42] join A
+[B 18:05:43] recv from A: Hello from Node A #1
+[B 18:05:44] join C
+[B 18:05:44] sent hello #1, peers ['A', 'C']
+[B 18:05:45] recv from A: Hello from Node A #2
+[B 18:05:46] recv from C: Hello from Node C #1
+[B 18:05:46] sent hello #2, peers ['A', 'C']
+[B 18:05:47] recv from A: Hello from Node A #3
+[B 18:05:48] recv from C: Hello from Node C #2
+[B 18:05:48] sent hello #3, peers ['A', 'C']
+[B 18:05:49] recv from A: Hello from Node A #4
+[B 18:05:50] recv from C: Hello from Node C #3
+[B 18:05:50] sent hello #4, peers ['A', 'C']
+[B 18:05:51] recv from A: Hello from Node A #5
+[B 18:05:52] recv from C: Hello from Node C #4
+[B 18:05:52] sent hello #5, peers ['A', 'C']
+[B 18:05:53] recv from A: Hello from Node A #6
+[B 18:05:54] recv from C: Hello from Node C #5
+[B 18:05:54] sent hello #6, peers ['A', 'C']
+[B 18:05:55] recv from A: Hello from Node A #7
+[B 18:05:56] recv from C: Hello from Node C #6
+[B 18:05:56] sent hello #7, peers ['A', 'C']
+[B 18:05:57] recv from A: Hello from Node A #8
+[B 18:05:57] leave A
+[B 18:05:58] recv from C: Hello from Node C #7
+[B 18:05:58] sent hello #8, peers ['C']
+stopped
+== C
+[C 18:05:44] online, zid 239822b5b26726e70a032d503fe3ff6e
+[C 18:05:44] join B
+[C 18:05:44] join A
+[C 18:05:44] recv from B: Hello from Node B #1
+[C 18:05:45] recv from A: Hello from Node A #2
+[C 18:05:46] sent hello #1, peers ['A', 'B']
+[C 18:05:46] recv from B: Hello from Node B #2
+[C 18:05:46] recv from A: Hello from Node A #3
+[C 18:05:48] sent hello #2, peers ['A', 'B']
+[C 18:05:48] recv from B: Hello from Node B #3
+[C 18:05:49] recv from A: Hello from Node A #4
+[C 18:05:50] sent hello #3, peers ['A', 'B']
+[C 18:05:50] recv from B: Hello from Node B #4
+[C 18:05:51] recv from A: Hello from Node A #5
+[C 18:05:52] sent hello #4, peers ['A', 'B']
+[C 18:05:52] recv from B: Hello from Node B #5
+[C 18:05:53] recv from A: Hello from Node A #6
+[C 18:05:54] sent hello #5, peers ['A', 'B']
+[C 18:05:54] recv from B: Hello from Node B #6
+[C 18:05:55] recv from A: Hello from Node A #7
+[C 18:05:56] sent hello #6, peers ['A', 'B']
+[C 18:05:56] recv from B: Hello from Node B #7
+[C 18:05:57] recv from A: Hello from Node A #8
+[C 18:05:57] leave A
+[C 18:05:58] sent hello #7, peers ['B']
+[C 18:05:58] recv from B: Hello from Node B #8
+[C 18:05:59] leave B
+[C 18:06:00] sent hello #8, peers []
+stopped

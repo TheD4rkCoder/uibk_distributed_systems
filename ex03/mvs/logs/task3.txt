@@ -1,0 +1,106 @@
+######## 3 generals, traitor none
+$ python3 byzantine_node.py C --role commander --order attack --nodes 3 --connect tcp/172.31.19.254:7447
+[C 18:16:34] commander, 3 generals
+[C 18:16:34] waiting for lieutenants, have []
+[C 18:16:36] order attack -> L1
+[C 18:16:36] order attack -> L2
+[L1 18:16:28] lieutenant, 3 generals
+[L1 18:16:36] recv attack from commander
+[L1 18:16:36] relay attack to the other lieutenants
+[L1 18:16:36] recv attack from L2
+[L1 18:16:36] votes ['attack', 'attack'] -> decision attack
+[L2 18:16:29] lieutenant, 3 generals
+[L2 18:16:36] recv attack from commander
+[L2 18:16:36] relay attack to the other lieutenants
+[L2 18:16:36] recv attack from L1
+[L2 18:16:36] votes ['attack', 'attack'] -> decision attack
+######## 3 generals, traitor C
+$ python3 byzantine_node.py C --role commander --order attack --nodes 3 --traitor --connect tcp/172.31.19.254:7447
+[C 18:16:51] traitor commander, 3 generals
+[C 18:16:52] order attack -> L1
+[C 18:16:52] order retreat -> L2
+[L1 18:16:45] lieutenant, 3 generals
+[L1 18:16:52] recv attack from commander
+[L1 18:16:52] relay attack to the other lieutenants
+[L1 18:16:52] recv retreat from L2
+[L1 18:16:52] votes ['attack', 'retreat'] -> decision attack
+[L2 18:16:47] lieutenant, 3 generals
+[L2 18:16:52] recv retreat from commander
+[L2 18:16:52] relay retreat to the other lieutenants
+[L2 18:16:52] recv attack from L1
+[L2 18:16:52] votes ['retreat', 'attack'] -> decision retreat
+######## 4 generals, traitor none
+$ python3 byzantine_node.py C --role commander --order attack --nodes 4 --connect tcp/172.31.19.254:7447
+[C 18:17:09] commander, 4 generals
+[C 18:17:09] waiting for lieutenants, have []
+[C 18:17:11] order attack -> L1
+[C 18:17:11] order attack -> L2
+[C 18:17:11] order attack -> L3
+[L1 18:17:01] lieutenant, 4 generals
+[L1 18:17:11] recv attack from commander
+[L1 18:17:11] relay attack to the other lieutenants
+[L1 18:17:11] recv attack from L2
+[L1 18:17:11] recv attack from L3
+[L1 18:17:11] votes ['attack', 'attack', 'attack'] -> decision attack
+[L2 18:17:03] lieutenant, 4 generals
+[L2 18:17:11] recv attack from commander
+[L2 18:17:11] relay attack to the other lieutenants
+[L2 18:17:11] recv attack from L1
+[L2 18:17:11] recv attack from L3
+[L2 18:17:11] votes ['attack', 'attack', 'attack'] -> decision attack
+[L3 18:17:05] lieutenant, 4 generals
+[L3 18:17:11] recv attack from L1
+[L3 18:17:11] recv attack from commander
+[L3 18:17:11] relay attack to the other lieutenants
+[L3 18:17:11] recv attack from L2
+[L3 18:17:11] votes ['attack', 'attack', 'attack'] -> decision attack
+######## 4 generals, traitor C
+$ python3 byzantine_node.py C --role commander --order attack --nodes 4 --traitor --connect tcp/172.31.19.254:7447
+[C 18:17:30] traitor commander, 4 generals
+[C 18:17:30] waiting for lieutenants, have []
+[C 18:17:32] order attack -> L1
+[C 18:17:32] order retreat -> L2
+[C 18:17:32] order attack -> L3
+[L1 18:17:22] lieutenant, 4 generals
+[L1 18:17:32] recv attack from commander
+[L1 18:17:32] relay attack to the other lieutenants
+[L1 18:17:32] recv retreat from L2
+[L1 18:17:32] recv attack from L3
+[L1 18:17:32] votes ['attack', 'retreat', 'attack'] -> decision attack
+[L2 18:17:24] lieutenant, 4 generals
+[L2 18:17:32] recv retreat from commander
+[L2 18:17:32] relay retreat to the other lieutenants
+[L2 18:17:32] recv attack from L1
+[L2 18:17:32] recv attack from L3
+[L2 18:17:32] votes ['retreat', 'attack', 'attack'] -> decision attack
+[L3 18:17:25] lieutenant, 4 generals
+[L3 18:17:32] recv attack from commander
+[L3 18:17:32] relay attack to the other lieutenants
+[L3 18:17:32] recv retreat from L2
+[L3 18:17:32] recv attack from L1
+[L3 18:17:32] votes ['attack', 'retreat', 'attack'] -> decision attack
+######## 4 generals, traitor L2
+$ python3 byzantine_node.py C --role commander --order attack --nodes 4 --connect tcp/172.31.19.254:7447
+[C 18:17:51] commander, 4 generals
+[C 18:17:51] waiting for lieutenants, have []
+[C 18:17:53] order attack -> L1
+[C 18:17:53] order attack -> L2
+[C 18:17:53] order attack -> L3
+[L1 18:17:43] lieutenant, 4 generals
+[L1 18:17:53] recv attack from commander
+[L1 18:17:53] relay attack to the other lieutenants
+[L1 18:17:53] recv retreat from L2
+[L1 18:17:53] recv attack from L3
+[L1 18:17:53] votes ['attack', 'retreat', 'attack'] -> decision attack
+[L2 18:17:44] traitor lieutenant, 4 generals
+[L2 18:17:53] recv attack from commander
+[L2 18:17:53] relay retreat to the other lieutenants
+[L2 18:17:53] recv attack from L1
+[L2 18:17:53] recv attack from L3
+[L2 18:17:53] votes ['attack', 'attack', 'attack'] -> decision attack (traitor)
+[L3 18:17:46] lieutenant, 4 generals
+[L3 18:17:53] recv attack from commander
+[L3 18:17:53] relay attack to the other lieutenants
+[L3 18:17:53] recv attack from L1
+[L3 18:17:53] recv retreat from L2
+[L3 18:17:53] votes ['attack', 'attack', 'retreat'] -> decision attack
