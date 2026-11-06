@@ -160,7 +160,6 @@ messages sent while a node is down or not started yet are lost, a restarted node
 
 discovery also doesn't detect wrong behavior, a node can be reachable and still send wrong data, fault tolerance needs replication, retries / stored history and agreement on top
 
-the instances were destroyed after the run
 
 ---
 
