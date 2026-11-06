@@ -7,3 +7,4 @@
 **/.env
 **/.env_aws
 **/*.pem
+.vscode/
