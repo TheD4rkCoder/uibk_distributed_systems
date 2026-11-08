@@ -1,0 +1,5 @@
+Node ID (A/B/C or any char): [C 0.000] start: follower, term 0
+[C 0.204] term 0 -> 1 (vote request from A)
+[C 0.204] vote for A in term 1
+[C 0.711] term 1 -> 2 (vote request from B)
+[C 0.711] vote for B in term 2

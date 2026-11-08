@@ -1,0 +1,7 @@
+Node ID (A/B/C or any char): [A 0.000] start: follower, term 0
+[A 0.206] election timeout -> candidate, term 1
+[A 0.207] vote from C (2/3)
+[A 0.207] elected leader, term 1
+Node ID (A/B/C or any char): [A 0.000] restored term 1, voted for A
+[A 0.000] start: follower, term 1
+[A 0.006] term 1 -> 2 (heartbeat from B)

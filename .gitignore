@@ -8,3 +8,4 @@
 **/.env_aws
 **/*.pem
 .vscode/
+**/build/

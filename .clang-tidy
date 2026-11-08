@@ -1,0 +1,24 @@
+---
+Checks: >
+  -*,
+  bugprone-*,
+  clang-analyzer-*,
+  performance-*,
+  portability-*,
+  -bugprone-easily-swappable-parameters,
+  -bugprone-implicit-widening-of-multiplication-result,
+  -bugprone-misplaced-widening-cast,
+  -bugprone-narrowing-conversions,
+  -bugprone-reserved-identifier,
+  -bugprone-throwing-static-initialization,
+  -performance-avoid-endl,
+  -performance-enum-size,
+  -performance-type-promotion-in-math-fn,
+  -performance-unnecessary-value-param,
+  -portability-avoid-pragma-once,
+  -portability-simd-intrinsics
+WarningsAsErrors: "clang-analyzer-*"
+HeaderFilterRegex: "(include|src)/.*"
+ExcludeHeaderFilterRegex: ""
+FormatStyle: file
+SystemHeaders: false
