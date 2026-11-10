@@ -1,0 +1,32 @@
+[C 21:10:54.593] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-300 ms
+[C 21:10:54.773] term 0 -> 1 (vote_req from A)
+[C 21:10:54.778] vote for A in term 1
+[C 21:10:54.778] following A, term 1
+[C 21:10:55.594] follower, term 1, heartbeats in the last 1s: A 17
+[C 21:10:56.594] follower, term 1, heartbeats in the last 1s: A 20
+[C 21:10:57.594] follower, term 1, heartbeats in the last 1s: A 20
+[C 21:10:58.594] follower, term 1, heartbeats in the last 1s: A 20
+[C 21:10:59.593] follower, term 1, heartbeats in the last 1s: A 20
+[C 21:11:00.103] election timeout, no heartbeat from A for 174 ms -> candidate, term 2
+[C 21:11:00.105] vote from B (2/3, need 2)
+[C 21:11:00.105] elected leader, term 2, votes ['B', 'C'] (5.6 ms after becoming candidate)
+[C 21:11:00.593] leader, term 2, heartbeat acks in the last 1s: A 0, B 10
+[C 21:11:01.594] leader, term 2, heartbeat acks in the last 1s: A 0, B 20
+[C 21:11:02.593] leader, term 2, heartbeat acks in the last 1s: A 0, B 20
+[C 21:11:02.875] reject heartbeat from A (term 1 < 2)
+[C 21:11:03.593] leader, term 2, heartbeat acks in the last 1s: A 14, B 20
+[C 21:11:04.593] leader, term 2, heartbeat acks in the last 1s: A 20, B 20
+[C 21:11:05.594] leader, term 2, heartbeat acks in the last 1s: A 20, B 20
+[C 21:11:06.593] leader, term 2, heartbeat acks in the last 1s: A 20, B 20
+[C 21:11:07.594] leader, term 2, heartbeat acks in the last 1s: A 20, B 20
+[C 21:11:08.593] leader, term 2, heartbeat acks in the last 1s: A 12, B 20
+[C 21:11:09.593] leader, term 2, heartbeat acks in the last 1s: A 0, B 20
+[C 21:11:10.593] leader, term 2, heartbeat acks in the last 1s: A 0, B 20
+[C 21:11:11.107] term 2 -> 15 (heartbeat_resp from A), leader -> follower
+[C 21:11:11.158] term 15 -> 16 (vote_req from A)
+[C 21:11:11.163] vote for A in term 16
+[C 21:11:11.163] following A, term 16
+[C 21:11:11.593] follower, term 16, heartbeats in the last 1s: A 9
+[C 21:11:12.593] follower, term 16, heartbeats in the last 1s: A 20
+[C 21:11:13.593] follower, term 16, heartbeats in the last 1s: A 20
+[C 21:11:14.095] stop as follower, term 16

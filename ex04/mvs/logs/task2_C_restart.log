@@ -1,0 +1,9 @@
+[C 21:08:26.760] restored term 1, voted for C from state_C.json
+[C 21:08:26.760] start as follower, term 1, cluster ['A', 'B', 'C'], majority 2, timeout 150-300 ms
+[C 21:08:26.765] term 1 -> 2 (heartbeat from B)
+[C 21:08:26.767] following B, term 2
+[C 21:08:27.761] follower, term 2, heartbeats in the last 1s: B 20
+[C 21:08:28.760] follower, term 2, heartbeats in the last 1s: B 20
+[C 21:08:29.761] follower, term 2, heartbeats in the last 1s: B 20
+[C 21:08:30.760] follower, term 2, heartbeats in the last 1s: B 20
+[C 21:08:30.852] stop as follower, term 2

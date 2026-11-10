@@ -1,0 +1,26 @@
+[B 21:08:11.327] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-300 ms
+[B 21:08:11.350] term 0 -> 1 (heartbeat from C)
+[B 21:08:11.351] following C, term 1
+[B 21:08:12.328] follower, term 1, heartbeats in the last 1s: C 20
+[B 21:08:13.328] follower, term 1, heartbeats in the last 1s: C 20
+[B 21:08:14.327] follower, term 1, heartbeats in the last 1s: C 20
+[B 21:08:15.328] follower, term 1, heartbeats in the last 1s: C 20
+[B 21:08:16.327] follower, term 1, heartbeats in the last 1s: C 20
+[B 21:08:17.328] follower, term 1, heartbeats in the last 1s: C 20
+[B 21:08:18.327] follower, term 1, heartbeats in the last 1s: C 20
+[B 21:08:19.328] follower, term 1, heartbeats in the last 1s: C 20
+[B 21:08:20.327] follower, term 1, heartbeats in the last 1s: C 20
+[B 21:08:21.329] follower, term 1, heartbeats in the last 1s: C 20
+[B 21:08:22.311] election timeout, no heartbeat from C for 159 ms -> candidate, term 2
+[B 21:08:22.314] vote from A (2/3, need 2)
+[B 21:08:22.314] elected leader, term 2, votes ['A', 'B'] (4.7 ms after becoming candidate)
+[B 21:08:22.327] leader, term 2, heartbeat acks in the last 1s: A 1, C 0
+[B 21:08:23.328] leader, term 2, heartbeat acks in the last 1s: A 20, C 0
+[B 21:08:24.328] leader, term 2, heartbeat acks in the last 1s: A 20, C 0
+[B 21:08:25.328] leader, term 2, heartbeat acks in the last 1s: A 20, C 0
+[B 21:08:26.327] leader, term 2, heartbeat acks in the last 1s: A 20, C 0
+[B 21:08:27.328] leader, term 2, heartbeat acks in the last 1s: A 20, C 12
+[B 21:08:28.327] leader, term 2, heartbeat acks in the last 1s: A 20, C 20
+[B 21:08:29.328] leader, term 2, heartbeat acks in the last 1s: A 20, C 20
+[B 21:08:30.327] leader, term 2, heartbeat acks in the last 1s: A 20, C 20
+[B 21:08:30.860] stop as leader, term 2

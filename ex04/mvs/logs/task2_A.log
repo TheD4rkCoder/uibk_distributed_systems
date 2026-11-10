@@ -1,0 +1,28 @@
+[A 21:08:10.776] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-300 ms
+[A 21:08:10.895] term 0 -> 1 (vote_req from C)
+[A 21:08:10.899] vote for C in term 1
+[A 21:08:10.900] following C, term 1
+[A 21:08:11.777] follower, term 1, heartbeats in the last 1s: C 18
+[A 21:08:12.777] follower, term 1, heartbeats in the last 1s: C 20
+[A 21:08:13.777] follower, term 1, heartbeats in the last 1s: C 20
+[A 21:08:14.777] follower, term 1, heartbeats in the last 1s: C 20
+[A 21:08:15.777] follower, term 1, heartbeats in the last 1s: C 20
+[A 21:08:16.778] follower, term 1, heartbeats in the last 1s: C 20
+[A 21:08:17.777] follower, term 1, heartbeats in the last 1s: C 20
+[A 21:08:18.777] follower, term 1, heartbeats in the last 1s: C 20
+[A 21:08:19.778] follower, term 1, heartbeats in the last 1s: C 20
+[A 21:08:20.777] follower, term 1, heartbeats in the last 1s: C 20
+[A 21:08:21.777] follower, term 1, heartbeats in the last 1s: C 20
+[A 21:08:22.311] term 1 -> 2 (vote_req from B)
+[A 21:08:22.314] vote for B in term 2
+[A 21:08:22.314] following B, term 2
+[A 21:08:22.777] follower, term 2, heartbeats in the last 1s: C 8, B 10
+[A 21:08:23.777] follower, term 2, heartbeats in the last 1s: B 20
+[A 21:08:24.777] follower, term 2, heartbeats in the last 1s: B 20
+[A 21:08:25.777] follower, term 2, heartbeats in the last 1s: B 20
+[A 21:08:26.777] follower, term 2, heartbeats in the last 1s: B 20
+[A 21:08:27.777] follower, term 2, heartbeats in the last 1s: B 20
+[A 21:08:28.777] follower, term 2, heartbeats in the last 1s: B 20
+[A 21:08:29.777] follower, term 2, heartbeats in the last 1s: B 20
+[A 21:08:30.777] follower, term 2, heartbeats in the last 1s: B 20
+[A 21:08:30.853] stop as follower, term 2

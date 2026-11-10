@@ -1,0 +1,1645 @@
+### run 1 start_at 1794345096.063613
+[A 21:11:36.066] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[A 21:11:36.219] election timeout, no leader -> candidate, term 1
+[A 21:11:36.219] reject vote for B in term 1 (term 1, voted for A)
+[A 21:11:36.219] reject vote for C in term 1 (term 1, voted for A)
+[A 21:11:36.219] B rejected the vote, term 1
+[A 21:11:36.219] C rejected the vote, term 1
+[A 21:11:36.372] election timeout, no majority in term 1 -> candidate, term 2
+[A 21:11:36.372] reject vote for B in term 2 (term 2, voted for A)
+[A 21:11:36.373] reject vote for C in term 2 (term 2, voted for A)
+[A 21:11:36.373] C rejected the vote, term 2
+[A 21:11:36.373] B rejected the vote, term 2
+[A 21:11:36.521] term 2 -> 3 (vote_req from B), candidate -> follower
+[A 21:11:36.526] vote for B in term 3
+[A 21:11:36.527] following B, term 3
+[A 21:11:37.066] follower, term 3, heartbeats in the last 1s: B 11
+[A 21:11:38.066] follower, term 3, heartbeats in the last 1s: B 20
+[A 21:11:39.067] stop as follower, term 3
+[B 21:11:36.066] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[B 21:11:36.218] election timeout, no leader -> candidate, term 1
+[B 21:11:36.219] reject vote for A in term 1 (term 1, voted for B)
+[B 21:11:36.219] A rejected the vote, term 1
+[B 21:11:36.219] reject vote for C in term 1 (term 1, voted for B)
+[B 21:11:36.219] C rejected the vote, term 1
+[B 21:11:36.370] election timeout, no majority in term 1 -> candidate, term 2
+[B 21:11:36.373] reject vote for C in term 2 (term 2, voted for B)
+[B 21:11:36.373] C rejected the vote, term 2
+[B 21:11:36.373] reject vote for A in term 2 (term 2, voted for B)
+[B 21:11:36.373] A rejected the vote, term 2
+[B 21:11:36.521] election timeout, no majority in term 2 -> candidate, term 3
+[B 21:11:36.527] vote from A (2/3, need 2)
+[B 21:11:36.527] elected leader, term 3, votes ['A', 'B'] (6.7 ms after becoming candidate)
+[B 21:11:37.066] leader, term 3, heartbeat acks in the last 1s: A 11, C 11
+[B 21:11:38.067] leader, term 3, heartbeat acks in the last 1s: A 20, C 20
+[B 21:11:39.066] stop as leader, term 3
+[C 21:11:36.066] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[C 21:11:36.219] election timeout, no leader -> candidate, term 1
+[C 21:11:36.219] reject vote for B in term 1 (term 1, voted for C)
+[C 21:11:36.219] reject vote for A in term 1 (term 1, voted for C)
+[C 21:11:36.219] A rejected the vote, term 1
+[C 21:11:36.219] B rejected the vote, term 1
+[C 21:11:36.372] election timeout, no majority in term 1 -> candidate, term 2
+[C 21:11:36.372] reject vote for B in term 2 (term 2, voted for C)
+[C 21:11:36.372] reject vote for A in term 2 (term 2, voted for C)
+[C 21:11:36.373] A rejected the vote, term 2
+[C 21:11:36.373] B rejected the vote, term 2
+[C 21:11:36.522] term 2 -> 3 (vote_req from B), candidate -> follower
+[C 21:11:36.526] vote for B in term 3
+[C 21:11:36.527] following B, term 3
+[C 21:11:37.066] follower, term 3, heartbeats in the last 1s: B 11
+[C 21:11:38.066] follower, term 3, heartbeats in the last 1s: B 20
+[C 21:11:39.067] stop as follower, term 3
+### run 2 start_at 1794345103.6532218
+[A 21:11:43.655] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[A 21:11:43.808] election timeout, no leader -> candidate, term 1
+[A 21:11:43.809] reject vote for C in term 1 (term 1, voted for A)
+[A 21:11:43.809] reject vote for B in term 1 (term 1, voted for A)
+[A 21:11:43.809] B rejected the vote, term 1
+[A 21:11:43.809] C rejected the vote, term 1
+[A 21:11:43.962] election timeout, no majority in term 1 -> candidate, term 2
+[A 21:11:43.962] reject vote for B in term 2 (term 2, voted for A)
+[A 21:11:43.962] reject vote for C in term 2 (term 2, voted for A)
+[A 21:11:43.962] B rejected the vote, term 2
+[A 21:11:43.962] C rejected the vote, term 2
+[A 21:11:44.112] term 2 -> 3 (vote_req from B), candidate -> follower
+[A 21:11:44.116] vote for B in term 3
+[A 21:11:44.117] reject vote for C in term 3 (term 3, voted for B)
+[A 21:11:44.117] following B, term 3
+[A 21:11:44.656] follower, term 3, heartbeats in the last 1s: B 11
+[A 21:11:45.656] follower, term 3, heartbeats in the last 1s: B 20
+[A 21:11:46.656] stop as follower, term 3
+[B 21:11:43.655] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[B 21:11:43.807] election timeout, no leader -> candidate, term 1
+[B 21:11:43.807] reject vote for C in term 1 (term 1, voted for B)
+[B 21:11:43.808] C rejected the vote, term 1
+[B 21:11:43.808] reject vote for A in term 1 (term 1, voted for B)
+[B 21:11:43.809] A rejected the vote, term 1
+[B 21:11:43.959] election timeout, no majority in term 1 -> candidate, term 2
+[B 21:11:43.960] reject vote for C in term 2 (term 2, voted for B)
+[B 21:11:43.960] C rejected the vote, term 2
+[B 21:11:43.962] reject vote for A in term 2 (term 2, voted for B)
+[B 21:11:43.962] A rejected the vote, term 2
+[B 21:11:44.111] election timeout, no majority in term 2 -> candidate, term 3
+[B 21:11:44.113] reject vote for C in term 3 (term 3, voted for B)
+[B 21:11:44.114] C rejected the vote, term 3
+[B 21:11:44.117] vote from A (2/3, need 2)
+[B 21:11:44.117] elected leader, term 3, votes ['A', 'B'] (6.6 ms after becoming candidate)
+[B 21:11:44.656] leader, term 3, heartbeat acks in the last 1s: A 11, C 11
+[B 21:11:45.656] leader, term 3, heartbeat acks in the last 1s: A 20, C 20
+[B 21:11:46.656] stop as leader, term 3
+[C 21:11:43.653] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[C 21:11:43.806] election timeout, no leader -> candidate, term 1
+[C 21:11:43.808] reject vote for B in term 1 (term 1, voted for C)
+[C 21:11:43.808] B rejected the vote, term 1
+[C 21:11:43.809] reject vote for A in term 1 (term 1, voted for C)
+[C 21:11:43.809] A rejected the vote, term 1
+[C 21:11:43.960] election timeout, no majority in term 1 -> candidate, term 2
+[C 21:11:43.960] reject vote for B in term 2 (term 2, voted for C)
+[C 21:11:43.960] B rejected the vote, term 2
+[C 21:11:43.962] reject vote for A in term 2 (term 2, voted for C)
+[C 21:11:43.962] A rejected the vote, term 2
+[C 21:11:44.113] election timeout, no majority in term 2 -> candidate, term 3
+[C 21:11:44.113] reject vote for B in term 3 (term 3, voted for C)
+[C 21:11:44.114] B rejected the vote, term 3
+[C 21:11:44.117] A rejected the vote, term 3
+[C 21:11:44.117] heartbeat from B in term 3, candidate -> follower
+[C 21:11:44.117] following B, term 3
+[C 21:11:44.654] follower, term 3, heartbeats in the last 1s: B 11
+[C 21:11:45.653] follower, term 3, heartbeats in the last 1s: B 20
+[C 21:11:46.654] stop as follower, term 3
+### run 3 start_at 1794345111.199959
+[A 21:11:51.202] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[A 21:11:51.356] election timeout, no leader -> candidate, term 1
+[A 21:11:51.356] reject vote for C in term 1 (term 1, voted for A)
+[A 21:11:51.356] reject vote for B in term 1 (term 1, voted for A)
+[A 21:11:51.356] B rejected the vote, term 1
+[A 21:11:51.356] C rejected the vote, term 1
+[A 21:11:51.509] election timeout, no majority in term 1 -> candidate, term 2
+[A 21:11:51.509] reject vote for B in term 2 (term 2, voted for A)
+[A 21:11:51.509] reject vote for C in term 2 (term 2, voted for A)
+[A 21:11:51.509] B rejected the vote, term 2
+[A 21:11:51.509] C rejected the vote, term 2
+[A 21:11:51.662] election timeout, no majority in term 2 -> candidate, term 3
+[A 21:11:51.662] reject vote for B in term 3 (term 3, voted for A)
+[A 21:11:51.662] reject vote for C in term 3 (term 3, voted for A)
+[A 21:11:51.663] B rejected the vote, term 3
+[A 21:11:51.663] C rejected the vote, term 3
+[A 21:11:51.816] election timeout, no majority in term 3 -> candidate, term 4
+[A 21:11:51.816] reject vote for B in term 4 (term 4, voted for A)
+[A 21:11:51.816] reject vote for C in term 4 (term 4, voted for A)
+[A 21:11:51.816] C rejected the vote, term 4
+[A 21:11:51.816] B rejected the vote, term 4
+[A 21:11:51.969] election timeout, no majority in term 4 -> candidate, term 5
+[A 21:11:51.969] reject vote for B in term 5 (term 5, voted for A)
+[A 21:11:51.969] reject vote for C in term 5 (term 5, voted for A)
+[A 21:11:51.970] B rejected the vote, term 5
+[A 21:11:51.970] C rejected the vote, term 5
+[A 21:11:52.122] election timeout, no majority in term 5 -> candidate, term 6
+[A 21:11:52.123] reject vote for B in term 6 (term 6, voted for A)
+[A 21:11:52.123] reject vote for C in term 6 (term 6, voted for A)
+[A 21:11:52.123] B rejected the vote, term 6
+[A 21:11:52.123] C rejected the vote, term 6
+[A 21:11:52.276] election timeout, no majority in term 6 -> candidate, term 7
+[A 21:11:52.276] reject vote for B in term 7 (term 7, voted for A)
+[A 21:11:52.276] B rejected the vote, term 7
+[A 21:11:52.276] reject vote for C in term 7 (term 7, voted for A)
+[A 21:11:52.276] C rejected the vote, term 7
+[A 21:11:52.429] election timeout, no majority in term 7 -> candidate, term 8
+[A 21:11:52.430] reject vote for C in term 8 (term 8, voted for A)
+[A 21:11:52.430] reject vote for B in term 8 (term 8, voted for A)
+[A 21:11:52.430] B rejected the vote, term 8
+[A 21:11:52.430] C rejected the vote, term 8
+[A 21:11:52.583] election timeout, no majority in term 8 -> candidate, term 9
+[A 21:11:52.583] reject vote for C in term 9 (term 9, voted for A)
+[A 21:11:52.583] reject vote for B in term 9 (term 9, voted for A)
+[A 21:11:52.583] B rejected the vote, term 9
+[A 21:11:52.584] C rejected the vote, term 9
+[A 21:11:52.736] election timeout, no majority in term 9 -> candidate, term 10
+[A 21:11:52.736] reject vote for C in term 10 (term 10, voted for A)
+[A 21:11:52.737] C rejected the vote, term 10
+[A 21:11:52.737] reject vote for B in term 10 (term 10, voted for A)
+[A 21:11:52.737] B rejected the vote, term 10
+[A 21:11:52.890] election timeout, no majority in term 10 -> candidate, term 11
+[A 21:11:52.890] reject vote for C in term 11 (term 11, voted for A)
+[A 21:11:52.890] reject vote for B in term 11 (term 11, voted for A)
+[A 21:11:52.890] C rejected the vote, term 11
+[A 21:11:52.890] B rejected the vote, term 11
+[A 21:11:53.043] election timeout, no majority in term 11 -> candidate, term 12
+[A 21:11:53.043] reject vote for C in term 12 (term 12, voted for A)
+[A 21:11:53.043] reject vote for B in term 12 (term 12, voted for A)
+[A 21:11:53.043] B rejected the vote, term 12
+[A 21:11:53.044] C rejected the vote, term 12
+[A 21:11:53.196] election timeout, no majority in term 12 -> candidate, term 13
+[A 21:11:53.197] reject vote for B in term 13 (term 13, voted for A)
+[A 21:11:53.197] reject vote for C in term 13 (term 13, voted for A)
+[A 21:11:53.197] B rejected the vote, term 13
+[A 21:11:53.197] C rejected the vote, term 13
+[A 21:11:53.351] election timeout, no majority in term 13 -> candidate, term 14
+[A 21:11:53.351] reject vote for B in term 14 (term 14, voted for A)
+[A 21:11:53.351] reject vote for C in term 14 (term 14, voted for A)
+[A 21:11:53.351] B rejected the vote, term 14
+[A 21:11:53.352] C rejected the vote, term 14
+[A 21:11:53.504] election timeout, no majority in term 14 -> candidate, term 15
+[A 21:11:53.505] reject vote for C in term 15 (term 15, voted for A)
+[A 21:11:53.505] reject vote for B in term 15 (term 15, voted for A)
+[A 21:11:53.505] B rejected the vote, term 15
+[A 21:11:53.505] C rejected the vote, term 15
+[A 21:11:53.658] election timeout, no majority in term 15 -> candidate, term 16
+[A 21:11:53.658] reject vote for C in term 16 (term 16, voted for A)
+[A 21:11:53.658] reject vote for B in term 16 (term 16, voted for A)
+[A 21:11:53.658] B rejected the vote, term 16
+[A 21:11:53.658] C rejected the vote, term 16
+[A 21:11:53.811] election timeout, no majority in term 16 -> candidate, term 17
+[A 21:11:53.811] reject vote for C in term 17 (term 17, voted for A)
+[A 21:11:53.811] reject vote for B in term 17 (term 17, voted for A)
+[A 21:11:53.811] B rejected the vote, term 17
+[A 21:11:53.811] C rejected the vote, term 17
+[A 21:11:53.964] election timeout, no majority in term 17 -> candidate, term 18
+[A 21:11:53.964] reject vote for C in term 18 (term 18, voted for A)
+[A 21:11:53.964] reject vote for B in term 18 (term 18, voted for A)
+[A 21:11:53.964] B rejected the vote, term 18
+[A 21:11:53.964] C rejected the vote, term 18
+[A 21:11:54.117] election timeout, no majority in term 18 -> candidate, term 19
+[A 21:11:54.117] reject vote for C in term 19 (term 19, voted for A)
+[A 21:11:54.117] reject vote for B in term 19 (term 19, voted for A)
+[A 21:11:54.117] B rejected the vote, term 19
+[A 21:11:54.118] C rejected the vote, term 19
+[A 21:11:54.203] stop as candidate, term 19
+[B 21:11:51.202] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[B 21:11:51.355] election timeout, no leader -> candidate, term 1
+[B 21:11:51.355] reject vote for C in term 1 (term 1, voted for B)
+[B 21:11:51.356] reject vote for A in term 1 (term 1, voted for B)
+[B 21:11:51.356] C rejected the vote, term 1
+[B 21:11:51.356] A rejected the vote, term 1
+[B 21:11:51.509] election timeout, no majority in term 1 -> candidate, term 2
+[B 21:11:51.509] reject vote for A in term 2 (term 2, voted for B)
+[B 21:11:51.509] reject vote for C in term 2 (term 2, voted for B)
+[B 21:11:51.509] A rejected the vote, term 2
+[B 21:11:51.509] C rejected the vote, term 2
+[B 21:11:51.662] election timeout, no majority in term 2 -> candidate, term 3
+[B 21:11:51.662] reject vote for A in term 3 (term 3, voted for B)
+[B 21:11:51.663] reject vote for C in term 3 (term 3, voted for B)
+[B 21:11:51.663] A rejected the vote, term 3
+[B 21:11:51.663] C rejected the vote, term 3
+[B 21:11:51.815] election timeout, no majority in term 3 -> candidate, term 4
+[B 21:11:51.816] reject vote for C in term 4 (term 4, voted for B)
+[B 21:11:51.816] C rejected the vote, term 4
+[B 21:11:51.816] reject vote for A in term 4 (term 4, voted for B)
+[B 21:11:51.816] A rejected the vote, term 4
+[B 21:11:51.969] election timeout, no majority in term 4 -> candidate, term 5
+[B 21:11:51.969] reject vote for C in term 5 (term 5, voted for B)
+[B 21:11:51.969] C rejected the vote, term 5
+[B 21:11:51.969] reject vote for A in term 5 (term 5, voted for B)
+[B 21:11:51.969] A rejected the vote, term 5
+[B 21:11:52.122] election timeout, no majority in term 5 -> candidate, term 6
+[B 21:11:52.123] reject vote for A in term 6 (term 6, voted for B)
+[B 21:11:52.123] A rejected the vote, term 6
+[B 21:11:52.123] reject vote for C in term 6 (term 6, voted for B)
+[B 21:11:52.123] C rejected the vote, term 6
+[B 21:11:52.275] election timeout, no majority in term 6 -> candidate, term 7
+[B 21:11:52.276] reject vote for A in term 7 (term 7, voted for B)
+[B 21:11:52.276] A rejected the vote, term 7
+[B 21:11:52.276] reject vote for C in term 7 (term 7, voted for B)
+[B 21:11:52.276] C rejected the vote, term 7
+[B 21:11:52.429] election timeout, no majority in term 7 -> candidate, term 8
+[B 21:11:52.430] reject vote for C in term 8 (term 8, voted for B)
+[B 21:11:52.430] reject vote for A in term 8 (term 8, voted for B)
+[B 21:11:52.430] A rejected the vote, term 8
+[B 21:11:52.430] C rejected the vote, term 8
+[B 21:11:52.583] election timeout, no majority in term 8 -> candidate, term 9
+[B 21:11:52.583] reject vote for A in term 9 (term 9, voted for B)
+[B 21:11:52.583] reject vote for C in term 9 (term 9, voted for B)
+[B 21:11:52.583] A rejected the vote, term 9
+[B 21:11:52.584] C rejected the vote, term 9
+[B 21:11:52.737] election timeout, no majority in term 9 -> candidate, term 10
+[B 21:11:52.737] reject vote for A in term 10 (term 10, voted for B)
+[B 21:11:52.737] reject vote for C in term 10 (term 10, voted for B)
+[B 21:11:52.737] A rejected the vote, term 10
+[B 21:11:52.737] C rejected the vote, term 10
+[B 21:11:52.890] election timeout, no majority in term 10 -> candidate, term 11
+[B 21:11:52.890] reject vote for C in term 11 (term 11, voted for B)
+[B 21:11:52.890] reject vote for A in term 11 (term 11, voted for B)
+[B 21:11:52.890] A rejected the vote, term 11
+[B 21:11:52.890] C rejected the vote, term 11
+[B 21:11:53.043] election timeout, no majority in term 11 -> candidate, term 12
+[B 21:11:53.043] reject vote for C in term 12 (term 12, voted for B)
+[B 21:11:53.043] reject vote for A in term 12 (term 12, voted for B)
+[B 21:11:53.043] C rejected the vote, term 12
+[B 21:11:53.043] A rejected the vote, term 12
+[B 21:11:53.196] election timeout, no majority in term 12 -> candidate, term 13
+[B 21:11:53.197] reject vote for C in term 13 (term 13, voted for B)
+[B 21:11:53.197] reject vote for A in term 13 (term 13, voted for B)
+[B 21:11:53.197] C rejected the vote, term 13
+[B 21:11:53.197] A rejected the vote, term 13
+[B 21:11:53.350] election timeout, no majority in term 13 -> candidate, term 14
+[B 21:11:53.351] reject vote for C in term 14 (term 14, voted for B)
+[B 21:11:53.351] C rejected the vote, term 14
+[B 21:11:53.351] reject vote for A in term 14 (term 14, voted for B)
+[B 21:11:53.351] A rejected the vote, term 14
+[B 21:11:53.504] election timeout, no majority in term 14 -> candidate, term 15
+[B 21:11:53.504] reject vote for C in term 15 (term 15, voted for B)
+[B 21:11:53.504] C rejected the vote, term 15
+[B 21:11:53.505] reject vote for A in term 15 (term 15, voted for B)
+[B 21:11:53.505] A rejected the vote, term 15
+[B 21:11:53.657] election timeout, no majority in term 15 -> candidate, term 16
+[B 21:11:53.658] reject vote for C in term 16 (term 16, voted for B)
+[B 21:11:53.658] reject vote for A in term 16 (term 16, voted for B)
+[B 21:11:53.658] C rejected the vote, term 16
+[B 21:11:53.658] A rejected the vote, term 16
+[B 21:11:53.811] election timeout, no majority in term 16 -> candidate, term 17
+[B 21:11:53.811] reject vote for C in term 17 (term 17, voted for B)
+[B 21:11:53.811] reject vote for A in term 17 (term 17, voted for B)
+[B 21:11:53.811] A rejected the vote, term 17
+[B 21:11:53.811] C rejected the vote, term 17
+[B 21:11:53.964] election timeout, no majority in term 17 -> candidate, term 18
+[B 21:11:53.964] reject vote for C in term 18 (term 18, voted for B)
+[B 21:11:53.964] reject vote for A in term 18 (term 18, voted for B)
+[B 21:11:53.964] C rejected the vote, term 18
+[B 21:11:53.964] A rejected the vote, term 18
+[B 21:11:54.117] election timeout, no majority in term 18 -> candidate, term 19
+[B 21:11:54.117] reject vote for C in term 19 (term 19, voted for B)
+[B 21:11:54.117] reject vote for A in term 19 (term 19, voted for B)
+[B 21:11:54.118] A rejected the vote, term 19
+[B 21:11:54.118] C rejected the vote, term 19
+[B 21:11:54.203] stop as candidate, term 19
+[C 21:11:51.202] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[C 21:11:51.355] election timeout, no leader -> candidate, term 1
+[C 21:11:51.356] reject vote for B in term 1 (term 1, voted for C)
+[C 21:11:51.356] B rejected the vote, term 1
+[C 21:11:51.356] reject vote for A in term 1 (term 1, voted for C)
+[C 21:11:51.356] A rejected the vote, term 1
+[C 21:11:51.509] election timeout, no majority in term 1 -> candidate, term 2
+[C 21:11:51.509] reject vote for B in term 2 (term 2, voted for C)
+[C 21:11:51.509] reject vote for A in term 2 (term 2, voted for C)
+[C 21:11:51.509] B rejected the vote, term 2
+[C 21:11:51.509] A rejected the vote, term 2
+[C 21:11:51.662] election timeout, no majority in term 2 -> candidate, term 3
+[C 21:11:51.662] reject vote for B in term 3 (term 3, voted for C)
+[C 21:11:51.662] reject vote for A in term 3 (term 3, voted for C)
+[C 21:11:51.663] A rejected the vote, term 3
+[C 21:11:51.663] B rejected the vote, term 3
+[C 21:11:51.815] election timeout, no majority in term 3 -> candidate, term 4
+[C 21:11:51.816] reject vote for B in term 4 (term 4, voted for C)
+[C 21:11:51.816] reject vote for A in term 4 (term 4, voted for C)
+[C 21:11:51.816] B rejected the vote, term 4
+[C 21:11:51.816] A rejected the vote, term 4
+[C 21:11:51.969] election timeout, no majority in term 4 -> candidate, term 5
+[C 21:11:51.969] reject vote for B in term 5 (term 5, voted for C)
+[C 21:11:51.969] B rejected the vote, term 5
+[C 21:11:51.969] reject vote for A in term 5 (term 5, voted for C)
+[C 21:11:51.970] A rejected the vote, term 5
+[C 21:11:52.122] election timeout, no majority in term 5 -> candidate, term 6
+[C 21:11:52.123] reject vote for B in term 6 (term 6, voted for C)
+[C 21:11:52.123] reject vote for A in term 6 (term 6, voted for C)
+[C 21:11:52.123] A rejected the vote, term 6
+[C 21:11:52.123] B rejected the vote, term 6
+[C 21:11:52.276] election timeout, no majority in term 6 -> candidate, term 7
+[C 21:11:52.276] reject vote for B in term 7 (term 7, voted for C)
+[C 21:11:52.276] reject vote for A in term 7 (term 7, voted for C)
+[C 21:11:52.276] A rejected the vote, term 7
+[C 21:11:52.276] B rejected the vote, term 7
+[C 21:11:52.429] election timeout, no majority in term 7 -> candidate, term 8
+[C 21:11:52.430] reject vote for B in term 8 (term 8, voted for C)
+[C 21:11:52.430] reject vote for A in term 8 (term 8, voted for C)
+[C 21:11:52.430] B rejected the vote, term 8
+[C 21:11:52.430] A rejected the vote, term 8
+[C 21:11:52.583] election timeout, no majority in term 8 -> candidate, term 9
+[C 21:11:52.583] reject vote for A in term 9 (term 9, voted for C)
+[C 21:11:52.583] A rejected the vote, term 9
+[C 21:11:52.584] reject vote for B in term 9 (term 9, voted for C)
+[C 21:11:52.584] B rejected the vote, term 9
+[C 21:11:52.736] election timeout, no majority in term 9 -> candidate, term 10
+[C 21:11:52.737] reject vote for A in term 10 (term 10, voted for C)
+[C 21:11:52.737] A rejected the vote, term 10
+[C 21:11:52.737] reject vote for B in term 10 (term 10, voted for C)
+[C 21:11:52.737] B rejected the vote, term 10
+[C 21:11:52.889] election timeout, no majority in term 10 -> candidate, term 11
+[C 21:11:52.890] reject vote for A in term 11 (term 11, voted for C)
+[C 21:11:52.890] A rejected the vote, term 11
+[C 21:11:52.890] reject vote for B in term 11 (term 11, voted for C)
+[C 21:11:52.890] B rejected the vote, term 11
+[C 21:11:53.042] election timeout, no majority in term 11 -> candidate, term 12
+[C 21:11:53.043] reject vote for B in term 12 (term 12, voted for C)
+[C 21:11:53.043] B rejected the vote, term 12
+[C 21:11:53.043] reject vote for A in term 12 (term 12, voted for C)
+[C 21:11:53.043] A rejected the vote, term 12
+[C 21:11:53.196] election timeout, no majority in term 12 -> candidate, term 13
+[C 21:11:53.196] reject vote for B in term 13 (term 13, voted for C)
+[C 21:11:53.197] reject vote for A in term 13 (term 13, voted for C)
+[C 21:11:53.197] A rejected the vote, term 13
+[C 21:11:53.197] B rejected the vote, term 13
+[C 21:11:53.350] election timeout, no majority in term 13 -> candidate, term 14
+[C 21:11:53.351] reject vote for B in term 14 (term 14, voted for C)
+[C 21:11:53.351] B rejected the vote, term 14
+[C 21:11:53.351] reject vote for A in term 14 (term 14, voted for C)
+[C 21:11:53.351] A rejected the vote, term 14
+[C 21:11:53.503] election timeout, no majority in term 14 -> candidate, term 15
+[C 21:11:53.504] reject vote for B in term 15 (term 15, voted for C)
+[C 21:11:53.504] B rejected the vote, term 15
+[C 21:11:53.505] reject vote for A in term 15 (term 15, voted for C)
+[C 21:11:53.505] A rejected the vote, term 15
+[C 21:11:53.656] election timeout, no majority in term 15 -> candidate, term 16
+[C 21:11:53.658] reject vote for B in term 16 (term 16, voted for C)
+[C 21:11:53.658] B rejected the vote, term 16
+[C 21:11:53.658] reject vote for A in term 16 (term 16, voted for C)
+[C 21:11:53.658] A rejected the vote, term 16
+[C 21:11:53.809] election timeout, no majority in term 16 -> candidate, term 17
+[C 21:11:53.811] reject vote for B in term 17 (term 17, voted for C)
+[C 21:11:53.811] B rejected the vote, term 17
+[C 21:11:53.811] reject vote for A in term 17 (term 17, voted for C)
+[C 21:11:53.811] A rejected the vote, term 17
+[C 21:11:53.963] election timeout, no majority in term 17 -> candidate, term 18
+[C 21:11:53.964] reject vote for B in term 18 (term 18, voted for C)
+[C 21:11:53.964] B rejected the vote, term 18
+[C 21:11:53.964] reject vote for A in term 18 (term 18, voted for C)
+[C 21:11:53.964] A rejected the vote, term 18
+[C 21:11:54.116] election timeout, no majority in term 18 -> candidate, term 19
+[C 21:11:54.117] reject vote for B in term 19 (term 19, voted for C)
+[C 21:11:54.117] B rejected the vote, term 19
+[C 21:11:54.117] reject vote for A in term 19 (term 19, voted for C)
+[C 21:11:54.117] A rejected the vote, term 19
+[C 21:11:54.203] stop as candidate, term 19
+### run 4 start_at 1794345118.843903
+[A 21:11:58.846] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[A 21:11:58.999] election timeout, no leader -> candidate, term 1
+[A 21:11:58.999] reject vote for C in term 1 (term 1, voted for A)
+[A 21:11:58.999] C rejected the vote, term 1
+[A 21:11:59.000] reject vote for B in term 1 (term 1, voted for A)
+[A 21:11:59.000] B rejected the vote, term 1
+[A 21:11:59.152] election timeout, no majority in term 1 -> candidate, term 2
+[A 21:11:59.153] reject vote for C in term 2 (term 2, voted for A)
+[A 21:11:59.153] reject vote for B in term 2 (term 2, voted for A)
+[A 21:11:59.153] C rejected the vote, term 2
+[A 21:11:59.153] B rejected the vote, term 2
+[A 21:11:59.304] election timeout, no majority in term 2 -> candidate, term 3
+[A 21:11:59.306] reject vote for B in term 3 (term 3, voted for A)
+[A 21:11:59.306] reject vote for C in term 3 (term 3, voted for A)
+[A 21:11:59.306] B rejected the vote, term 3
+[A 21:11:59.306] C rejected the vote, term 3
+[A 21:11:59.458] election timeout, no majority in term 3 -> candidate, term 4
+[A 21:11:59.459] reject vote for C in term 4 (term 4, voted for A)
+[A 21:11:59.459] reject vote for B in term 4 (term 4, voted for A)
+[A 21:11:59.459] C rejected the vote, term 4
+[A 21:11:59.459] B rejected the vote, term 4
+[A 21:11:59.611] election timeout, no majority in term 4 -> candidate, term 5
+[A 21:11:59.612] reject vote for C in term 5 (term 5, voted for A)
+[A 21:11:59.612] reject vote for B in term 5 (term 5, voted for A)
+[A 21:11:59.612] C rejected the vote, term 5
+[A 21:11:59.612] B rejected the vote, term 5
+[A 21:11:59.764] election timeout, no majority in term 5 -> candidate, term 6
+[A 21:11:59.765] reject vote for C in term 6 (term 6, voted for A)
+[A 21:11:59.765] C rejected the vote, term 6
+[A 21:11:59.765] reject vote for B in term 6 (term 6, voted for A)
+[A 21:11:59.765] B rejected the vote, term 6
+[A 21:11:59.917] election timeout, no majority in term 6 -> candidate, term 7
+[A 21:11:59.918] reject vote for C in term 7 (term 7, voted for A)
+[A 21:11:59.918] C rejected the vote, term 7
+[A 21:11:59.918] reject vote for B in term 7 (term 7, voted for A)
+[A 21:11:59.919] B rejected the vote, term 7
+[A 21:12:00.070] election timeout, no majority in term 7 -> candidate, term 8
+[A 21:12:00.071] reject vote for C in term 8 (term 8, voted for A)
+[A 21:12:00.071] C rejected the vote, term 8
+[A 21:12:00.071] reject vote for B in term 8 (term 8, voted for A)
+[A 21:12:00.072] B rejected the vote, term 8
+[A 21:12:00.223] election timeout, no majority in term 8 -> candidate, term 9
+[A 21:12:00.224] reject vote for C in term 9 (term 9, voted for A)
+[A 21:12:00.224] C rejected the vote, term 9
+[A 21:12:00.225] reject vote for B in term 9 (term 9, voted for A)
+[A 21:12:00.225] B rejected the vote, term 9
+[A 21:12:00.376] election timeout, no majority in term 9 -> candidate, term 10
+[A 21:12:00.377] reject vote for C in term 10 (term 10, voted for A)
+[A 21:12:00.377] C rejected the vote, term 10
+[A 21:12:00.378] reject vote for B in term 10 (term 10, voted for A)
+[A 21:12:00.378] B rejected the vote, term 10
+[A 21:12:00.530] election timeout, no majority in term 10 -> candidate, term 11
+[A 21:12:00.530] reject vote for C in term 11 (term 11, voted for A)
+[A 21:12:00.530] C rejected the vote, term 11
+[A 21:12:00.531] reject vote for B in term 11 (term 11, voted for A)
+[A 21:12:00.531] B rejected the vote, term 11
+[A 21:12:00.683] election timeout, no majority in term 11 -> candidate, term 12
+[A 21:12:00.683] reject vote for C in term 12 (term 12, voted for A)
+[A 21:12:00.683] C rejected the vote, term 12
+[A 21:12:00.684] reject vote for B in term 12 (term 12, voted for A)
+[A 21:12:00.684] B rejected the vote, term 12
+[A 21:12:00.836] election timeout, no majority in term 12 -> candidate, term 13
+[A 21:12:00.836] reject vote for C in term 13 (term 13, voted for A)
+[A 21:12:00.836] C rejected the vote, term 13
+[A 21:12:00.837] reject vote for B in term 13 (term 13, voted for A)
+[A 21:12:00.837] B rejected the vote, term 13
+[A 21:12:00.990] election timeout, no majority in term 13 -> candidate, term 14
+[A 21:12:00.991] reject vote for C in term 14 (term 14, voted for A)
+[A 21:12:00.991] C rejected the vote, term 14
+[A 21:12:00.991] reject vote for B in term 14 (term 14, voted for A)
+[A 21:12:00.991] B rejected the vote, term 14
+[A 21:12:01.143] election timeout, no majority in term 14 -> candidate, term 15
+[A 21:12:01.143] reject vote for C in term 15 (term 15, voted for A)
+[A 21:12:01.143] C rejected the vote, term 15
+[A 21:12:01.144] reject vote for B in term 15 (term 15, voted for A)
+[A 21:12:01.144] B rejected the vote, term 15
+[A 21:12:01.296] election timeout, no majority in term 15 -> candidate, term 16
+[A 21:12:01.297] reject vote for C in term 16 (term 16, voted for A)
+[A 21:12:01.297] C rejected the vote, term 16
+[A 21:12:01.297] reject vote for B in term 16 (term 16, voted for A)
+[A 21:12:01.297] B rejected the vote, term 16
+[A 21:12:01.449] election timeout, no majority in term 16 -> candidate, term 17
+[A 21:12:01.449] reject vote for C in term 17 (term 17, voted for A)
+[A 21:12:01.449] C rejected the vote, term 17
+[A 21:12:01.450] reject vote for B in term 17 (term 17, voted for A)
+[A 21:12:01.450] B rejected the vote, term 17
+[A 21:12:01.602] election timeout, no majority in term 17 -> candidate, term 18
+[A 21:12:01.602] reject vote for C in term 18 (term 18, voted for A)
+[A 21:12:01.602] C rejected the vote, term 18
+[A 21:12:01.603] reject vote for B in term 18 (term 18, voted for A)
+[A 21:12:01.603] B rejected the vote, term 18
+[A 21:12:01.755] election timeout, no majority in term 18 -> candidate, term 19
+[A 21:12:01.755] reject vote for C in term 19 (term 19, voted for A)
+[A 21:12:01.755] C rejected the vote, term 19
+[A 21:12:01.756] reject vote for B in term 19 (term 19, voted for A)
+[A 21:12:01.756] B rejected the vote, term 19
+[A 21:12:01.847] stop as candidate, term 19
+[B 21:11:58.846] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[B 21:11:58.999] election timeout, no leader -> candidate, term 1
+[B 21:11:59.000] reject vote for A in term 1 (term 1, voted for B)
+[B 21:11:59.000] reject vote for C in term 1 (term 1, voted for B)
+[B 21:11:59.000] A rejected the vote, term 1
+[B 21:11:59.000] C rejected the vote, term 1
+[B 21:11:59.152] election timeout, no majority in term 1 -> candidate, term 2
+[B 21:11:59.153] reject vote for A in term 2 (term 2, voted for B)
+[B 21:11:59.153] reject vote for C in term 2 (term 2, voted for B)
+[B 21:11:59.153] C rejected the vote, term 2
+[B 21:11:59.153] A rejected the vote, term 2
+[B 21:11:59.305] election timeout, no majority in term 2 -> candidate, term 3
+[B 21:11:59.306] reject vote for A in term 3 (term 3, voted for B)
+[B 21:11:59.306] reject vote for C in term 3 (term 3, voted for B)
+[B 21:11:59.306] A rejected the vote, term 3
+[B 21:11:59.306] C rejected the vote, term 3
+[B 21:11:59.459] election timeout, no majority in term 3 -> candidate, term 4
+[B 21:11:59.459] reject vote for A in term 4 (term 4, voted for B)
+[B 21:11:59.459] reject vote for C in term 4 (term 4, voted for B)
+[B 21:11:59.459] A rejected the vote, term 4
+[B 21:11:59.459] C rejected the vote, term 4
+[B 21:11:59.612] election timeout, no majority in term 4 -> candidate, term 5
+[B 21:11:59.612] reject vote for A in term 5 (term 5, voted for B)
+[B 21:11:59.612] reject vote for C in term 5 (term 5, voted for B)
+[B 21:11:59.612] A rejected the vote, term 5
+[B 21:11:59.612] C rejected the vote, term 5
+[B 21:11:59.765] election timeout, no majority in term 5 -> candidate, term 6
+[B 21:11:59.765] reject vote for A in term 6 (term 6, voted for B)
+[B 21:11:59.765] reject vote for C in term 6 (term 6, voted for B)
+[B 21:11:59.766] A rejected the vote, term 6
+[B 21:11:59.766] C rejected the vote, term 6
+[B 21:11:59.918] election timeout, no majority in term 6 -> candidate, term 7
+[B 21:11:59.918] reject vote for A in term 7 (term 7, voted for B)
+[B 21:11:59.919] reject vote for C in term 7 (term 7, voted for B)
+[B 21:11:59.919] A rejected the vote, term 7
+[B 21:11:59.919] C rejected the vote, term 7
+[B 21:12:00.071] election timeout, no majority in term 7 -> candidate, term 8
+[B 21:12:00.071] reject vote for A in term 8 (term 8, voted for B)
+[B 21:12:00.072] reject vote for C in term 8 (term 8, voted for B)
+[B 21:12:00.072] A rejected the vote, term 8
+[B 21:12:00.072] C rejected the vote, term 8
+[B 21:12:00.224] election timeout, no majority in term 8 -> candidate, term 9
+[B 21:12:00.225] reject vote for A in term 9 (term 9, voted for B)
+[B 21:12:00.225] reject vote for C in term 9 (term 9, voted for B)
+[B 21:12:00.225] A rejected the vote, term 9
+[B 21:12:00.225] C rejected the vote, term 9
+[B 21:12:00.377] election timeout, no majority in term 9 -> candidate, term 10
+[B 21:12:00.378] reject vote for A in term 10 (term 10, voted for B)
+[B 21:12:00.378] reject vote for C in term 10 (term 10, voted for B)
+[B 21:12:00.378] A rejected the vote, term 10
+[B 21:12:00.378] C rejected the vote, term 10
+[B 21:12:00.531] election timeout, no majority in term 10 -> candidate, term 11
+[B 21:12:00.531] reject vote for A in term 11 (term 11, voted for B)
+[B 21:12:00.531] reject vote for C in term 11 (term 11, voted for B)
+[B 21:12:00.531] A rejected the vote, term 11
+[B 21:12:00.532] C rejected the vote, term 11
+[B 21:12:00.684] election timeout, no majority in term 11 -> candidate, term 12
+[B 21:12:00.684] reject vote for A in term 12 (term 12, voted for B)
+[B 21:12:00.684] reject vote for C in term 12 (term 12, voted for B)
+[B 21:12:00.684] A rejected the vote, term 12
+[B 21:12:00.685] C rejected the vote, term 12
+[B 21:12:00.837] election timeout, no majority in term 12 -> candidate, term 13
+[B 21:12:00.837] reject vote for A in term 13 (term 13, voted for B)
+[B 21:12:00.837] reject vote for C in term 13 (term 13, voted for B)
+[B 21:12:00.837] A rejected the vote, term 13
+[B 21:12:00.837] C rejected the vote, term 13
+[B 21:12:00.991] election timeout, no majority in term 13 -> candidate, term 14
+[B 21:12:00.991] reject vote for A in term 14 (term 14, voted for B)
+[B 21:12:00.991] reject vote for C in term 14 (term 14, voted for B)
+[B 21:12:00.991] C rejected the vote, term 14
+[B 21:12:00.991] A rejected the vote, term 14
+[B 21:12:01.144] election timeout, no majority in term 14 -> candidate, term 15
+[B 21:12:01.144] reject vote for A in term 15 (term 15, voted for B)
+[B 21:12:01.144] reject vote for C in term 15 (term 15, voted for B)
+[B 21:12:01.144] A rejected the vote, term 15
+[B 21:12:01.144] C rejected the vote, term 15
+[B 21:12:01.297] election timeout, no majority in term 15 -> candidate, term 16
+[B 21:12:01.297] reject vote for C in term 16 (term 16, voted for B)
+[B 21:12:01.297] reject vote for A in term 16 (term 16, voted for B)
+[B 21:12:01.297] A rejected the vote, term 16
+[B 21:12:01.297] C rejected the vote, term 16
+[B 21:12:01.450] election timeout, no majority in term 16 -> candidate, term 17
+[B 21:12:01.450] reject vote for A in term 17 (term 17, voted for B)
+[B 21:12:01.450] reject vote for C in term 17 (term 17, voted for B)
+[B 21:12:01.450] A rejected the vote, term 17
+[B 21:12:01.450] C rejected the vote, term 17
+[B 21:12:01.603] election timeout, no majority in term 17 -> candidate, term 18
+[B 21:12:01.603] reject vote for C in term 18 (term 18, voted for B)
+[B 21:12:01.603] reject vote for A in term 18 (term 18, voted for B)
+[B 21:12:01.603] A rejected the vote, term 18
+[B 21:12:01.603] C rejected the vote, term 18
+[B 21:12:01.756] election timeout, no majority in term 18 -> candidate, term 19
+[B 21:12:01.756] reject vote for A in term 19 (term 19, voted for B)
+[B 21:12:01.756] reject vote for C in term 19 (term 19, voted for B)
+[B 21:12:01.756] A rejected the vote, term 19
+[B 21:12:01.756] C rejected the vote, term 19
+[B 21:12:01.846] stop as candidate, term 19
+[C 21:11:58.846] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[C 21:11:58.999] election timeout, no leader -> candidate, term 1
+[C 21:11:58.999] reject vote for A in term 1 (term 1, voted for C)
+[C 21:11:58.999] A rejected the vote, term 1
+[C 21:11:59.000] reject vote for B in term 1 (term 1, voted for C)
+[C 21:11:59.000] B rejected the vote, term 1
+[C 21:11:59.152] election timeout, no majority in term 1 -> candidate, term 2
+[C 21:11:59.152] reject vote for A in term 2 (term 2, voted for C)
+[C 21:11:59.153] reject vote for B in term 2 (term 2, voted for C)
+[C 21:11:59.153] B rejected the vote, term 2
+[C 21:11:59.153] A rejected the vote, term 2
+[C 21:11:59.305] election timeout, no majority in term 2 -> candidate, term 3
+[C 21:11:59.306] reject vote for A in term 3 (term 3, voted for C)
+[C 21:11:59.306] reject vote for B in term 3 (term 3, voted for C)
+[C 21:11:59.306] B rejected the vote, term 3
+[C 21:11:59.306] A rejected the vote, term 3
+[C 21:11:59.459] election timeout, no majority in term 3 -> candidate, term 4
+[C 21:11:59.459] reject vote for A in term 4 (term 4, voted for C)
+[C 21:11:59.459] reject vote for B in term 4 (term 4, voted for C)
+[C 21:11:59.459] A rejected the vote, term 4
+[C 21:11:59.459] B rejected the vote, term 4
+[C 21:11:59.612] election timeout, no majority in term 4 -> candidate, term 5
+[C 21:11:59.612] reject vote for A in term 5 (term 5, voted for C)
+[C 21:11:59.612] reject vote for B in term 5 (term 5, voted for C)
+[C 21:11:59.612] A rejected the vote, term 5
+[C 21:11:59.612] B rejected the vote, term 5
+[C 21:11:59.765] election timeout, no majority in term 5 -> candidate, term 6
+[C 21:11:59.765] reject vote for A in term 6 (term 6, voted for C)
+[C 21:11:59.765] A rejected the vote, term 6
+[C 21:11:59.765] reject vote for B in term 6 (term 6, voted for C)
+[C 21:11:59.766] B rejected the vote, term 6
+[C 21:11:59.917] election timeout, no majority in term 6 -> candidate, term 7
+[C 21:11:59.918] reject vote for A in term 7 (term 7, voted for C)
+[C 21:11:59.918] A rejected the vote, term 7
+[C 21:11:59.918] reject vote for B in term 7 (term 7, voted for C)
+[C 21:11:59.919] B rejected the vote, term 7
+[C 21:12:00.070] election timeout, no majority in term 7 -> candidate, term 8
+[C 21:12:00.071] reject vote for A in term 8 (term 8, voted for C)
+[C 21:12:00.071] A rejected the vote, term 8
+[C 21:12:00.071] reject vote for B in term 8 (term 8, voted for C)
+[C 21:12:00.072] B rejected the vote, term 8
+[C 21:12:00.223] election timeout, no majority in term 8 -> candidate, term 9
+[C 21:12:00.223] reject vote for A in term 9 (term 9, voted for C)
+[C 21:12:00.224] A rejected the vote, term 9
+[C 21:12:00.225] reject vote for B in term 9 (term 9, voted for C)
+[C 21:12:00.225] B rejected the vote, term 9
+[C 21:12:00.376] election timeout, no majority in term 9 -> candidate, term 10
+[C 21:12:00.377] reject vote for A in term 10 (term 10, voted for C)
+[C 21:12:00.377] A rejected the vote, term 10
+[C 21:12:00.378] reject vote for B in term 10 (term 10, voted for C)
+[C 21:12:00.378] B rejected the vote, term 10
+[C 21:12:00.530] election timeout, no majority in term 10 -> candidate, term 11
+[C 21:12:00.530] reject vote for A in term 11 (term 11, voted for C)
+[C 21:12:00.530] A rejected the vote, term 11
+[C 21:12:00.531] reject vote for B in term 11 (term 11, voted for C)
+[C 21:12:00.531] B rejected the vote, term 11
+[C 21:12:00.683] election timeout, no majority in term 11 -> candidate, term 12
+[C 21:12:00.683] reject vote for A in term 12 (term 12, voted for C)
+[C 21:12:00.683] A rejected the vote, term 12
+[C 21:12:00.684] reject vote for B in term 12 (term 12, voted for C)
+[C 21:12:00.684] B rejected the vote, term 12
+[C 21:12:00.836] election timeout, no majority in term 12 -> candidate, term 13
+[C 21:12:00.836] reject vote for A in term 13 (term 13, voted for C)
+[C 21:12:00.836] A rejected the vote, term 13
+[C 21:12:00.837] reject vote for B in term 13 (term 13, voted for C)
+[C 21:12:00.837] B rejected the vote, term 13
+[C 21:12:00.990] election timeout, no majority in term 13 -> candidate, term 14
+[C 21:12:00.990] reject vote for A in term 14 (term 14, voted for C)
+[C 21:12:00.991] reject vote for B in term 14 (term 14, voted for C)
+[C 21:12:00.991] A rejected the vote, term 14
+[C 21:12:00.991] B rejected the vote, term 14
+[C 21:12:01.143] election timeout, no majority in term 14 -> candidate, term 15
+[C 21:12:01.143] reject vote for A in term 15 (term 15, voted for C)
+[C 21:12:01.143] A rejected the vote, term 15
+[C 21:12:01.144] reject vote for B in term 15 (term 15, voted for C)
+[C 21:12:01.144] B rejected the vote, term 15
+[C 21:12:01.296] election timeout, no majority in term 15 -> candidate, term 16
+[C 21:12:01.297] reject vote for A in term 16 (term 16, voted for C)
+[C 21:12:01.297] A rejected the vote, term 16
+[C 21:12:01.297] reject vote for B in term 16 (term 16, voted for C)
+[C 21:12:01.297] B rejected the vote, term 16
+[C 21:12:01.449] election timeout, no majority in term 16 -> candidate, term 17
+[C 21:12:01.449] reject vote for A in term 17 (term 17, voted for C)
+[C 21:12:01.449] A rejected the vote, term 17
+[C 21:12:01.450] reject vote for B in term 17 (term 17, voted for C)
+[C 21:12:01.450] B rejected the vote, term 17
+[C 21:12:01.602] election timeout, no majority in term 17 -> candidate, term 18
+[C 21:12:01.602] reject vote for A in term 18 (term 18, voted for C)
+[C 21:12:01.602] A rejected the vote, term 18
+[C 21:12:01.603] reject vote for B in term 18 (term 18, voted for C)
+[C 21:12:01.603] B rejected the vote, term 18
+[C 21:12:01.755] election timeout, no majority in term 18 -> candidate, term 19
+[C 21:12:01.755] reject vote for A in term 19 (term 19, voted for C)
+[C 21:12:01.755] A rejected the vote, term 19
+[C 21:12:01.756] reject vote for B in term 19 (term 19, voted for C)
+[C 21:12:01.756] B rejected the vote, term 19
+[C 21:12:01.846] stop as candidate, term 19
+### run 5 start_at 1794345126.621975
+[A 21:12:06.623] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[A 21:12:06.775] election timeout, no leader -> candidate, term 1
+[A 21:12:06.776] reject vote for C in term 1 (term 1, voted for A)
+[A 21:12:06.776] C rejected the vote, term 1
+[A 21:12:06.777] reject vote for B in term 1 (term 1, voted for A)
+[A 21:12:06.777] B rejected the vote, term 1
+[A 21:12:06.928] election timeout, no majority in term 1 -> candidate, term 2
+[A 21:12:06.930] reject vote for C in term 2 (term 2, voted for A)
+[A 21:12:06.930] C rejected the vote, term 2
+[A 21:12:06.930] reject vote for B in term 2 (term 2, voted for A)
+[A 21:12:06.931] B rejected the vote, term 2
+[A 21:12:07.081] election timeout, no majority in term 2 -> candidate, term 3
+[A 21:12:07.083] reject vote for C in term 3 (term 3, voted for A)
+[A 21:12:07.083] C rejected the vote, term 3
+[A 21:12:07.083] reject vote for B in term 3 (term 3, voted for A)
+[A 21:12:07.084] B rejected the vote, term 3
+[A 21:12:07.234] election timeout, no majority in term 3 -> candidate, term 4
+[A 21:12:07.236] reject vote for C in term 4 (term 4, voted for A)
+[A 21:12:07.236] C rejected the vote, term 4
+[A 21:12:07.237] reject vote for B in term 4 (term 4, voted for A)
+[A 21:12:07.237] B rejected the vote, term 4
+[A 21:12:07.387] election timeout, no majority in term 4 -> candidate, term 5
+[A 21:12:07.389] reject vote for C in term 5 (term 5, voted for A)
+[A 21:12:07.389] C rejected the vote, term 5
+[A 21:12:07.390] reject vote for B in term 5 (term 5, voted for A)
+[A 21:12:07.390] B rejected the vote, term 5
+[A 21:12:07.541] election timeout, no majority in term 5 -> candidate, term 6
+[A 21:12:07.542] reject vote for C in term 6 (term 6, voted for A)
+[A 21:12:07.542] C rejected the vote, term 6
+[A 21:12:07.543] reject vote for B in term 6 (term 6, voted for A)
+[A 21:12:07.543] B rejected the vote, term 6
+[A 21:12:07.694] election timeout, no majority in term 6 -> candidate, term 7
+[A 21:12:07.696] reject vote for C in term 7 (term 7, voted for A)
+[A 21:12:07.696] C rejected the vote, term 7
+[A 21:12:07.696] reject vote for B in term 7 (term 7, voted for A)
+[A 21:12:07.697] B rejected the vote, term 7
+[A 21:12:07.847] election timeout, no majority in term 7 -> candidate, term 8
+[A 21:12:07.849] reject vote for C in term 8 (term 8, voted for A)
+[A 21:12:07.849] C rejected the vote, term 8
+[A 21:12:07.850] reject vote for B in term 8 (term 8, voted for A)
+[A 21:12:07.850] B rejected the vote, term 8
+[A 21:12:08.000] election timeout, no majority in term 8 -> candidate, term 9
+[A 21:12:08.002] reject vote for C in term 9 (term 9, voted for A)
+[A 21:12:08.002] C rejected the vote, term 9
+[A 21:12:08.003] reject vote for B in term 9 (term 9, voted for A)
+[A 21:12:08.003] B rejected the vote, term 9
+[A 21:12:08.154] election timeout, no majority in term 9 -> candidate, term 10
+[A 21:12:08.155] reject vote for C in term 10 (term 10, voted for A)
+[A 21:12:08.155] C rejected the vote, term 10
+[A 21:12:08.156] reject vote for B in term 10 (term 10, voted for A)
+[A 21:12:08.156] B rejected the vote, term 10
+[A 21:12:08.306] election timeout, no majority in term 10 -> candidate, term 11
+[A 21:12:08.308] reject vote for C in term 11 (term 11, voted for A)
+[A 21:12:08.308] C rejected the vote, term 11
+[A 21:12:08.309] reject vote for B in term 11 (term 11, voted for A)
+[A 21:12:08.309] B rejected the vote, term 11
+[A 21:12:08.459] election timeout, no majority in term 11 -> candidate, term 12
+[A 21:12:08.461] reject vote for C in term 12 (term 12, voted for A)
+[A 21:12:08.461] C rejected the vote, term 12
+[A 21:12:08.462] reject vote for B in term 12 (term 12, voted for A)
+[A 21:12:08.462] B rejected the vote, term 12
+[A 21:12:08.613] election timeout, no majority in term 12 -> candidate, term 13
+[A 21:12:08.614] reject vote for C in term 13 (term 13, voted for A)
+[A 21:12:08.614] C rejected the vote, term 13
+[A 21:12:08.615] reject vote for B in term 13 (term 13, voted for A)
+[A 21:12:08.615] B rejected the vote, term 13
+[A 21:12:08.767] election timeout, no majority in term 13 -> candidate, term 14
+[A 21:12:08.768] reject vote for C in term 14 (term 14, voted for A)
+[A 21:12:08.768] C rejected the vote, term 14
+[A 21:12:08.770] reject vote for B in term 14 (term 14, voted for A)
+[A 21:12:08.770] B rejected the vote, term 14
+[A 21:12:08.920] election timeout, no majority in term 14 -> candidate, term 15
+[A 21:12:08.922] reject vote for C in term 15 (term 15, voted for A)
+[A 21:12:08.922] C rejected the vote, term 15
+[A 21:12:08.923] reject vote for B in term 15 (term 15, voted for A)
+[A 21:12:08.923] B rejected the vote, term 15
+[A 21:12:09.074] election timeout, no majority in term 15 -> candidate, term 16
+[A 21:12:09.075] reject vote for C in term 16 (term 16, voted for A)
+[A 21:12:09.075] C rejected the vote, term 16
+[A 21:12:09.076] reject vote for B in term 16 (term 16, voted for A)
+[A 21:12:09.076] B rejected the vote, term 16
+[A 21:12:09.227] election timeout, no majority in term 16 -> candidate, term 17
+[A 21:12:09.228] reject vote for C in term 17 (term 17, voted for A)
+[A 21:12:09.228] C rejected the vote, term 17
+[A 21:12:09.229] reject vote for B in term 17 (term 17, voted for A)
+[A 21:12:09.229] B rejected the vote, term 17
+[A 21:12:09.379] election timeout, no majority in term 17 -> candidate, term 18
+[A 21:12:09.381] reject vote for C in term 18 (term 18, voted for A)
+[A 21:12:09.381] C rejected the vote, term 18
+[A 21:12:09.382] reject vote for B in term 18 (term 18, voted for A)
+[A 21:12:09.382] B rejected the vote, term 18
+[A 21:12:09.533] election timeout, no majority in term 18 -> candidate, term 19
+[A 21:12:09.534] reject vote for C in term 19 (term 19, voted for A)
+[A 21:12:09.535] C rejected the vote, term 19
+[A 21:12:09.535] reject vote for B in term 19 (term 19, voted for A)
+[A 21:12:09.535] B rejected the vote, term 19
+[A 21:12:09.624] stop as candidate, term 19
+[B 21:12:06.624] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[B 21:12:06.777] election timeout, no leader -> candidate, term 1
+[B 21:12:06.777] reject vote for A in term 1 (term 1, voted for B)
+[B 21:12:06.777] reject vote for C in term 1 (term 1, voted for B)
+[B 21:12:06.778] A rejected the vote, term 1
+[B 21:12:06.778] C rejected the vote, term 1
+[B 21:12:06.930] election timeout, no majority in term 1 -> candidate, term 2
+[B 21:12:06.930] reject vote for A in term 2 (term 2, voted for B)
+[B 21:12:06.931] reject vote for C in term 2 (term 2, voted for B)
+[B 21:12:06.931] A rejected the vote, term 2
+[B 21:12:06.931] C rejected the vote, term 2
+[B 21:12:07.083] election timeout, no majority in term 2 -> candidate, term 3
+[B 21:12:07.084] reject vote for A in term 3 (term 3, voted for B)
+[B 21:12:07.084] reject vote for C in term 3 (term 3, voted for B)
+[B 21:12:07.084] A rejected the vote, term 3
+[B 21:12:07.084] C rejected the vote, term 3
+[B 21:12:07.236] election timeout, no majority in term 3 -> candidate, term 4
+[B 21:12:07.237] reject vote for A in term 4 (term 4, voted for B)
+[B 21:12:07.237] reject vote for C in term 4 (term 4, voted for B)
+[B 21:12:07.237] A rejected the vote, term 4
+[B 21:12:07.237] C rejected the vote, term 4
+[B 21:12:07.390] election timeout, no majority in term 4 -> candidate, term 5
+[B 21:12:07.390] reject vote for A in term 5 (term 5, voted for B)
+[B 21:12:07.390] reject vote for C in term 5 (term 5, voted for B)
+[B 21:12:07.390] A rejected the vote, term 5
+[B 21:12:07.390] C rejected the vote, term 5
+[B 21:12:07.543] election timeout, no majority in term 5 -> candidate, term 6
+[B 21:12:07.543] reject vote for A in term 6 (term 6, voted for B)
+[B 21:12:07.543] reject vote for C in term 6 (term 6, voted for B)
+[B 21:12:07.543] A rejected the vote, term 6
+[B 21:12:07.543] C rejected the vote, term 6
+[B 21:12:07.696] election timeout, no majority in term 6 -> candidate, term 7
+[B 21:12:07.696] reject vote for A in term 7 (term 7, voted for B)
+[B 21:12:07.696] reject vote for C in term 7 (term 7, voted for B)
+[B 21:12:07.697] C rejected the vote, term 7
+[B 21:12:07.697] A rejected the vote, term 7
+[B 21:12:07.849] election timeout, no majority in term 7 -> candidate, term 8
+[B 21:12:07.850] reject vote for A in term 8 (term 8, voted for B)
+[B 21:12:07.850] reject vote for C in term 8 (term 8, voted for B)
+[B 21:12:07.850] A rejected the vote, term 8
+[B 21:12:07.850] C rejected the vote, term 8
+[B 21:12:08.002] election timeout, no majority in term 8 -> candidate, term 9
+[B 21:12:08.003] reject vote for A in term 9 (term 9, voted for B)
+[B 21:12:08.003] reject vote for C in term 9 (term 9, voted for B)
+[B 21:12:08.003] A rejected the vote, term 9
+[B 21:12:08.003] C rejected the vote, term 9
+[B 21:12:08.155] election timeout, no majority in term 9 -> candidate, term 10
+[B 21:12:08.156] reject vote for A in term 10 (term 10, voted for B)
+[B 21:12:08.156] reject vote for C in term 10 (term 10, voted for B)
+[B 21:12:08.156] A rejected the vote, term 10
+[B 21:12:08.156] C rejected the vote, term 10
+[B 21:12:08.308] election timeout, no majority in term 10 -> candidate, term 11
+[B 21:12:08.309] reject vote for A in term 11 (term 11, voted for B)
+[B 21:12:08.309] reject vote for C in term 11 (term 11, voted for B)
+[B 21:12:08.309] A rejected the vote, term 11
+[B 21:12:08.309] C rejected the vote, term 11
+[B 21:12:08.461] election timeout, no majority in term 11 -> candidate, term 12
+[B 21:12:08.462] reject vote for A in term 12 (term 12, voted for B)
+[B 21:12:08.462] reject vote for C in term 12 (term 12, voted for B)
+[B 21:12:08.462] A rejected the vote, term 12
+[B 21:12:08.462] C rejected the vote, term 12
+[B 21:12:08.615] election timeout, no majority in term 12 -> candidate, term 13
+[B 21:12:08.615] reject vote for A in term 13 (term 13, voted for B)
+[B 21:12:08.615] reject vote for C in term 13 (term 13, voted for B)
+[B 21:12:08.615] A rejected the vote, term 13
+[B 21:12:08.616] C rejected the vote, term 13
+[B 21:12:08.769] election timeout, no majority in term 13 -> candidate, term 14
+[B 21:12:08.770] reject vote for A in term 14 (term 14, voted for B)
+[B 21:12:08.770] reject vote for C in term 14 (term 14, voted for B)
+[B 21:12:08.770] A rejected the vote, term 14
+[B 21:12:08.770] C rejected the vote, term 14
+[B 21:12:08.923] election timeout, no majority in term 14 -> candidate, term 15
+[B 21:12:08.923] reject vote for A in term 15 (term 15, voted for B)
+[B 21:12:08.923] reject vote for C in term 15 (term 15, voted for B)
+[B 21:12:08.923] A rejected the vote, term 15
+[B 21:12:08.923] C rejected the vote, term 15
+[B 21:12:09.076] election timeout, no majority in term 15 -> candidate, term 16
+[B 21:12:09.076] reject vote for A in term 16 (term 16, voted for B)
+[B 21:12:09.076] reject vote for C in term 16 (term 16, voted for B)
+[B 21:12:09.076] A rejected the vote, term 16
+[B 21:12:09.076] C rejected the vote, term 16
+[B 21:12:09.229] election timeout, no majority in term 16 -> candidate, term 17
+[B 21:12:09.229] reject vote for A in term 17 (term 17, voted for B)
+[B 21:12:09.229] reject vote for C in term 17 (term 17, voted for B)
+[B 21:12:09.229] A rejected the vote, term 17
+[B 21:12:09.229] C rejected the vote, term 17
+[B 21:12:09.382] election timeout, no majority in term 17 -> candidate, term 18
+[B 21:12:09.382] reject vote for A in term 18 (term 18, voted for B)
+[B 21:12:09.382] reject vote for C in term 18 (term 18, voted for B)
+[B 21:12:09.382] A rejected the vote, term 18
+[B 21:12:09.382] C rejected the vote, term 18
+[B 21:12:09.535] election timeout, no majority in term 18 -> candidate, term 19
+[B 21:12:09.535] reject vote for A in term 19 (term 19, voted for B)
+[B 21:12:09.535] reject vote for C in term 19 (term 19, voted for B)
+[B 21:12:09.535] C rejected the vote, term 19
+[B 21:12:09.536] A rejected the vote, term 19
+[B 21:12:09.625] stop as candidate, term 19
+[C 21:12:06.623] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[C 21:12:06.776] election timeout, no leader -> candidate, term 1
+[C 21:12:06.776] reject vote for A in term 1 (term 1, voted for C)
+[C 21:12:06.776] A rejected the vote, term 1
+[C 21:12:06.777] reject vote for B in term 1 (term 1, voted for C)
+[C 21:12:06.778] B rejected the vote, term 1
+[C 21:12:06.929] election timeout, no majority in term 1 -> candidate, term 2
+[C 21:12:06.930] reject vote for A in term 2 (term 2, voted for C)
+[C 21:12:06.930] A rejected the vote, term 2
+[C 21:12:06.930] reject vote for B in term 2 (term 2, voted for C)
+[C 21:12:06.931] B rejected the vote, term 2
+[C 21:12:07.082] election timeout, no majority in term 2 -> candidate, term 3
+[C 21:12:07.083] reject vote for A in term 3 (term 3, voted for C)
+[C 21:12:07.083] A rejected the vote, term 3
+[C 21:12:07.084] reject vote for B in term 3 (term 3, voted for C)
+[C 21:12:07.084] B rejected the vote, term 3
+[C 21:12:07.235] election timeout, no majority in term 3 -> candidate, term 4
+[C 21:12:07.236] reject vote for A in term 4 (term 4, voted for C)
+[C 21:12:07.236] A rejected the vote, term 4
+[C 21:12:07.237] reject vote for B in term 4 (term 4, voted for C)
+[C 21:12:07.237] B rejected the vote, term 4
+[C 21:12:07.388] election timeout, no majority in term 4 -> candidate, term 5
+[C 21:12:07.389] reject vote for A in term 5 (term 5, voted for C)
+[C 21:12:07.389] A rejected the vote, term 5
+[C 21:12:07.390] reject vote for B in term 5 (term 5, voted for C)
+[C 21:12:07.390] B rejected the vote, term 5
+[C 21:12:07.542] election timeout, no majority in term 5 -> candidate, term 6
+[C 21:12:07.542] reject vote for A in term 6 (term 6, voted for C)
+[C 21:12:07.542] A rejected the vote, term 6
+[C 21:12:07.543] reject vote for B in term 6 (term 6, voted for C)
+[C 21:12:07.543] B rejected the vote, term 6
+[C 21:12:07.695] election timeout, no majority in term 6 -> candidate, term 7
+[C 21:12:07.695] reject vote for A in term 7 (term 7, voted for C)
+[C 21:12:07.696] A rejected the vote, term 7
+[C 21:12:07.696] reject vote for B in term 7 (term 7, voted for C)
+[C 21:12:07.696] B rejected the vote, term 7
+[C 21:12:07.848] election timeout, no majority in term 7 -> candidate, term 8
+[C 21:12:07.848] reject vote for A in term 8 (term 8, voted for C)
+[C 21:12:07.849] A rejected the vote, term 8
+[C 21:12:07.850] reject vote for B in term 8 (term 8, voted for C)
+[C 21:12:07.850] B rejected the vote, term 8
+[C 21:12:08.001] election timeout, no majority in term 8 -> candidate, term 9
+[C 21:12:08.002] reject vote for A in term 9 (term 9, voted for C)
+[C 21:12:08.002] A rejected the vote, term 9
+[C 21:12:08.003] reject vote for B in term 9 (term 9, voted for C)
+[C 21:12:08.003] B rejected the vote, term 9
+[C 21:12:08.155] election timeout, no majority in term 9 -> candidate, term 10
+[C 21:12:08.155] reject vote for A in term 10 (term 10, voted for C)
+[C 21:12:08.155] A rejected the vote, term 10
+[C 21:12:08.156] reject vote for B in term 10 (term 10, voted for C)
+[C 21:12:08.156] B rejected the vote, term 10
+[C 21:12:08.307] election timeout, no majority in term 10 -> candidate, term 11
+[C 21:12:08.308] reject vote for A in term 11 (term 11, voted for C)
+[C 21:12:08.308] A rejected the vote, term 11
+[C 21:12:08.309] reject vote for B in term 11 (term 11, voted for C)
+[C 21:12:08.309] B rejected the vote, term 11
+[C 21:12:08.460] election timeout, no majority in term 11 -> candidate, term 12
+[C 21:12:08.460] reject vote for A in term 12 (term 12, voted for C)
+[C 21:12:08.461] A rejected the vote, term 12
+[C 21:12:08.462] reject vote for B in term 12 (term 12, voted for C)
+[C 21:12:08.462] B rejected the vote, term 12
+[C 21:12:08.614] election timeout, no majority in term 12 -> candidate, term 13
+[C 21:12:08.614] reject vote for A in term 13 (term 13, voted for C)
+[C 21:12:08.614] A rejected the vote, term 13
+[C 21:12:08.615] reject vote for B in term 13 (term 13, voted for C)
+[C 21:12:08.615] B rejected the vote, term 13
+[C 21:12:08.768] election timeout, no majority in term 13 -> candidate, term 14
+[C 21:12:08.768] reject vote for A in term 14 (term 14, voted for C)
+[C 21:12:08.768] A rejected the vote, term 14
+[C 21:12:08.770] reject vote for B in term 14 (term 14, voted for C)
+[C 21:12:08.770] B rejected the vote, term 14
+[C 21:12:08.922] election timeout, no majority in term 14 -> candidate, term 15
+[C 21:12:08.922] reject vote for A in term 15 (term 15, voted for C)
+[C 21:12:08.922] A rejected the vote, term 15
+[C 21:12:08.923] reject vote for B in term 15 (term 15, voted for C)
+[C 21:12:08.923] B rejected the vote, term 15
+[C 21:12:09.075] election timeout, no majority in term 15 -> candidate, term 16
+[C 21:12:09.075] reject vote for A in term 16 (term 16, voted for C)
+[C 21:12:09.075] A rejected the vote, term 16
+[C 21:12:09.076] reject vote for B in term 16 (term 16, voted for C)
+[C 21:12:09.076] B rejected the vote, term 16
+[C 21:12:09.228] election timeout, no majority in term 16 -> candidate, term 17
+[C 21:12:09.228] reject vote for A in term 17 (term 17, voted for C)
+[C 21:12:09.228] A rejected the vote, term 17
+[C 21:12:09.229] reject vote for B in term 17 (term 17, voted for C)
+[C 21:12:09.229] B rejected the vote, term 17
+[C 21:12:09.381] election timeout, no majority in term 17 -> candidate, term 18
+[C 21:12:09.381] reject vote for A in term 18 (term 18, voted for C)
+[C 21:12:09.381] A rejected the vote, term 18
+[C 21:12:09.382] reject vote for B in term 18 (term 18, voted for C)
+[C 21:12:09.382] B rejected the vote, term 18
+[C 21:12:09.534] election timeout, no majority in term 18 -> candidate, term 19
+[C 21:12:09.534] reject vote for A in term 19 (term 19, voted for C)
+[C 21:12:09.535] A rejected the vote, term 19
+[C 21:12:09.535] reject vote for B in term 19 (term 19, voted for C)
+[C 21:12:09.535] B rejected the vote, term 19
+[C 21:12:09.623] stop as candidate, term 19
+### run 6 start_at 1794345134.35972
+[A 21:12:14.362] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[A 21:12:14.515] election timeout, no leader -> candidate, term 1
+[A 21:12:14.515] reject vote for B in term 1 (term 1, voted for A)
+[A 21:12:14.515] reject vote for C in term 1 (term 1, voted for A)
+[A 21:12:14.515] B rejected the vote, term 1
+[A 21:12:14.515] C rejected the vote, term 1
+[A 21:12:14.668] election timeout, no majority in term 1 -> candidate, term 2
+[A 21:12:14.669] reject vote for C in term 2 (term 2, voted for A)
+[A 21:12:14.669] reject vote for B in term 2 (term 2, voted for A)
+[A 21:12:14.669] B rejected the vote, term 2
+[A 21:12:14.669] C rejected the vote, term 2
+[A 21:12:14.821] election timeout, no majority in term 2 -> candidate, term 3
+[A 21:12:14.822] reject vote for C in term 3 (term 3, voted for A)
+[A 21:12:14.822] reject vote for B in term 3 (term 3, voted for A)
+[A 21:12:14.822] B rejected the vote, term 3
+[A 21:12:14.822] C rejected the vote, term 3
+[A 21:12:14.972] term 3 -> 4 (vote_req from C), candidate -> follower
+[A 21:12:14.977] vote for C in term 4
+[A 21:12:14.977] following C, term 4
+[A 21:12:15.363] follower, term 4, heartbeats in the last 1s: C 8
+[A 21:12:16.363] follower, term 4, heartbeats in the last 1s: C 20
+[A 21:12:17.362] stop as follower, term 4
+[B 21:12:14.362] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[B 21:12:14.515] election timeout, no leader -> candidate, term 1
+[B 21:12:14.515] reject vote for C in term 1 (term 1, voted for B)
+[B 21:12:14.515] C rejected the vote, term 1
+[B 21:12:14.515] reject vote for A in term 1 (term 1, voted for B)
+[B 21:12:14.515] A rejected the vote, term 1
+[B 21:12:14.668] election timeout, no majority in term 1 -> candidate, term 2
+[B 21:12:14.668] reject vote for C in term 2 (term 2, voted for B)
+[B 21:12:14.668] C rejected the vote, term 2
+[B 21:12:14.669] reject vote for A in term 2 (term 2, voted for B)
+[B 21:12:14.669] A rejected the vote, term 2
+[B 21:12:14.821] election timeout, no majority in term 2 -> candidate, term 3
+[B 21:12:14.822] reject vote for C in term 3 (term 3, voted for B)
+[B 21:12:14.822] reject vote for A in term 3 (term 3, voted for B)
+[B 21:12:14.822] A rejected the vote, term 3
+[B 21:12:14.822] C rejected the vote, term 3
+[B 21:12:14.972] term 3 -> 4 (vote_req from C), candidate -> follower
+[B 21:12:14.977] vote for C in term 4
+[B 21:12:14.977] following C, term 4
+[B 21:12:15.363] follower, term 4, heartbeats in the last 1s: C 8
+[B 21:12:16.363] follower, term 4, heartbeats in the last 1s: C 20
+[B 21:12:17.362] stop as follower, term 4
+[C 21:12:14.362] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[C 21:12:14.515] election timeout, no leader -> candidate, term 1
+[C 21:12:14.515] reject vote for B in term 1 (term 1, voted for C)
+[C 21:12:14.515] B rejected the vote, term 1
+[C 21:12:14.515] reject vote for A in term 1 (term 1, voted for C)
+[C 21:12:14.515] A rejected the vote, term 1
+[C 21:12:14.667] election timeout, no majority in term 1 -> candidate, term 2
+[C 21:12:14.668] reject vote for B in term 2 (term 2, voted for C)
+[C 21:12:14.668] B rejected the vote, term 2
+[C 21:12:14.669] reject vote for A in term 2 (term 2, voted for C)
+[C 21:12:14.669] A rejected the vote, term 2
+[C 21:12:14.820] election timeout, no majority in term 2 -> candidate, term 3
+[C 21:12:14.822] reject vote for A in term 3 (term 3, voted for C)
+[C 21:12:14.822] reject vote for B in term 3 (term 3, voted for C)
+[C 21:12:14.822] A rejected the vote, term 3
+[C 21:12:14.822] B rejected the vote, term 3
+[C 21:12:14.972] election timeout, no majority in term 3 -> candidate, term 4
+[C 21:12:14.977] vote from B (2/3, need 2)
+[C 21:12:14.977] elected leader, term 4, votes ['B', 'C'] (6.8 ms after becoming candidate)
+[C 21:12:15.363] leader, term 4, heartbeat acks in the last 1s: A 8, B 8
+[C 21:12:16.363] leader, term 4, heartbeat acks in the last 1s: A 20, B 20
+[C 21:12:17.363] stop as leader, term 4
+### run 7 start_at 1794345142.0012429
+[A 21:12:22.003] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[A 21:12:22.157] election timeout, no leader -> candidate, term 1
+[A 21:12:22.157] reject vote for C in term 1 (term 1, voted for A)
+[A 21:12:22.157] reject vote for B in term 1 (term 1, voted for A)
+[A 21:12:22.157] B rejected the vote, term 1
+[A 21:12:22.157] C rejected the vote, term 1
+[A 21:12:22.310] election timeout, no majority in term 1 -> candidate, term 2
+[A 21:12:22.310] reject vote for C in term 2 (term 2, voted for A)
+[A 21:12:22.310] reject vote for B in term 2 (term 2, voted for A)
+[A 21:12:22.310] B rejected the vote, term 2
+[A 21:12:22.311] C rejected the vote, term 2
+[A 21:12:22.463] election timeout, no majority in term 2 -> candidate, term 3
+[A 21:12:22.463] reject vote for C in term 3 (term 3, voted for A)
+[A 21:12:22.463] C rejected the vote, term 3
+[A 21:12:22.468] B rejected the vote, term 3
+[A 21:12:22.468] heartbeat from C in term 3, candidate -> follower
+[A 21:12:22.468] following C, term 3
+[A 21:12:23.003] follower, term 3, heartbeats in the last 1s: C 11
+[A 21:12:24.004] follower, term 3, heartbeats in the last 1s: C 20
+[A 21:12:25.004] stop as follower, term 3
+[B 21:12:22.003] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[B 21:12:22.156] election timeout, no leader -> candidate, term 1
+[B 21:12:22.157] reject vote for C in term 1 (term 1, voted for B)
+[B 21:12:22.157] reject vote for A in term 1 (term 1, voted for B)
+[B 21:12:22.157] C rejected the vote, term 1
+[B 21:12:22.157] A rejected the vote, term 1
+[B 21:12:22.310] election timeout, no majority in term 1 -> candidate, term 2
+[B 21:12:22.310] reject vote for C in term 2 (term 2, voted for B)
+[B 21:12:22.310] reject vote for A in term 2 (term 2, voted for B)
+[B 21:12:22.310] A rejected the vote, term 2
+[B 21:12:22.311] C rejected the vote, term 2
+[B 21:12:22.461] term 2 -> 3 (vote_req from C), candidate -> follower
+[B 21:12:22.467] vote for C in term 3
+[B 21:12:22.467] reject vote for A in term 3 (term 3, voted for C)
+[B 21:12:22.468] following C, term 3
+[B 21:12:23.004] follower, term 3, heartbeats in the last 1s: C 11
+[B 21:12:24.004] follower, term 3, heartbeats in the last 1s: C 20
+[B 21:12:25.005] stop as follower, term 3
+[C 21:12:22.003] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[C 21:12:22.155] election timeout, no leader -> candidate, term 1
+[C 21:12:22.157] reject vote for B in term 1 (term 1, voted for C)
+[C 21:12:22.157] B rejected the vote, term 1
+[C 21:12:22.157] reject vote for A in term 1 (term 1, voted for C)
+[C 21:12:22.157] A rejected the vote, term 1
+[C 21:12:22.308] election timeout, no majority in term 1 -> candidate, term 2
+[C 21:12:22.311] reject vote for A in term 2 (term 2, voted for C)
+[C 21:12:22.311] A rejected the vote, term 2
+[C 21:12:22.311] reject vote for B in term 2 (term 2, voted for C)
+[C 21:12:22.311] B rejected the vote, term 2
+[C 21:12:22.461] election timeout, no majority in term 2 -> candidate, term 3
+[C 21:12:22.463] reject vote for A in term 3 (term 3, voted for C)
+[C 21:12:22.463] A rejected the vote, term 3
+[C 21:12:22.467] vote from B (2/3, need 2)
+[C 21:12:22.467] elected leader, term 3, votes ['B', 'C'] (8.3 ms after becoming candidate)
+[C 21:12:23.003] leader, term 3, heartbeat acks in the last 1s: A 11, B 11
+[C 21:12:24.004] leader, term 3, heartbeat acks in the last 1s: A 20, B 20
+[C 21:12:25.004] stop as leader, term 3
+### run 8 start_at 1794345149.257008
+[A 21:12:29.259] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[A 21:12:29.412] election timeout, no leader -> candidate, term 1
+[A 21:12:29.413] reject vote for C in term 1 (term 1, voted for A)
+[A 21:12:29.413] reject vote for B in term 1 (term 1, voted for A)
+[A 21:12:29.413] B rejected the vote, term 1
+[A 21:12:29.413] C rejected the vote, term 1
+[A 21:12:29.566] election timeout, no majority in term 1 -> candidate, term 2
+[A 21:12:29.566] reject vote for C in term 2 (term 2, voted for A)
+[A 21:12:29.566] C rejected the vote, term 2
+[A 21:12:29.566] reject vote for B in term 2 (term 2, voted for A)
+[A 21:12:29.567] B rejected the vote, term 2
+[A 21:12:29.720] election timeout, no majority in term 2 -> candidate, term 3
+[A 21:12:29.720] reject vote for C in term 3 (term 3, voted for A)
+[A 21:12:29.720] reject vote for B in term 3 (term 3, voted for A)
+[A 21:12:29.720] B rejected the vote, term 3
+[A 21:12:29.720] C rejected the vote, term 3
+[A 21:12:29.873] election timeout, no majority in term 3 -> candidate, term 4
+[A 21:12:29.873] reject vote for C in term 4 (term 4, voted for A)
+[A 21:12:29.873] reject vote for B in term 4 (term 4, voted for A)
+[A 21:12:29.874] B rejected the vote, term 4
+[A 21:12:29.874] C rejected the vote, term 4
+[A 21:12:30.024] term 4 -> 5 (vote_req from C), candidate -> follower
+[A 21:12:30.028] vote for C in term 5
+[A 21:12:30.029] following C, term 5
+[A 21:12:30.260] follower, term 5, heartbeats in the last 1s: C 5
+[A 21:12:31.260] follower, term 5, heartbeats in the last 1s: C 20
+[A 21:12:32.260] stop as follower, term 5
+[B 21:12:29.259] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[B 21:12:29.412] election timeout, no leader -> candidate, term 1
+[B 21:12:29.413] reject vote for C in term 1 (term 1, voted for B)
+[B 21:12:29.413] reject vote for A in term 1 (term 1, voted for B)
+[B 21:12:29.413] A rejected the vote, term 1
+[B 21:12:29.413] C rejected the vote, term 1
+[B 21:12:29.566] election timeout, no majority in term 1 -> candidate, term 2
+[B 21:12:29.566] reject vote for C in term 2 (term 2, voted for B)
+[B 21:12:29.567] reject vote for A in term 2 (term 2, voted for B)
+[B 21:12:29.567] A rejected the vote, term 2
+[B 21:12:29.567] C rejected the vote, term 2
+[B 21:12:29.720] election timeout, no majority in term 2 -> candidate, term 3
+[B 21:12:29.720] reject vote for C in term 3 (term 3, voted for B)
+[B 21:12:29.720] reject vote for A in term 3 (term 3, voted for B)
+[B 21:12:29.720] C rejected the vote, term 3
+[B 21:12:29.720] A rejected the vote, term 3
+[B 21:12:29.873] election timeout, no majority in term 3 -> candidate, term 4
+[B 21:12:29.873] reject vote for C in term 4 (term 4, voted for B)
+[B 21:12:29.873] C rejected the vote, term 4
+[B 21:12:29.873] reject vote for A in term 4 (term 4, voted for B)
+[B 21:12:29.874] A rejected the vote, term 4
+[B 21:12:30.024] term 4 -> 5 (vote_req from C), candidate -> follower
+[B 21:12:30.028] vote for C in term 5
+[B 21:12:30.029] following C, term 5
+[B 21:12:30.260] follower, term 5, heartbeats in the last 1s: C 5
+[B 21:12:31.260] follower, term 5, heartbeats in the last 1s: C 20
+[B 21:12:32.260] stop as follower, term 5
+[C 21:12:29.259] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[C 21:12:29.412] election timeout, no leader -> candidate, term 1
+[C 21:12:29.413] reject vote for A in term 1 (term 1, voted for C)
+[C 21:12:29.413] reject vote for B in term 1 (term 1, voted for C)
+[C 21:12:29.413] A rejected the vote, term 1
+[C 21:12:29.413] B rejected the vote, term 1
+[C 21:12:29.565] election timeout, no majority in term 1 -> candidate, term 2
+[C 21:12:29.566] reject vote for A in term 2 (term 2, voted for C)
+[C 21:12:29.566] A rejected the vote, term 2
+[C 21:12:29.566] reject vote for B in term 2 (term 2, voted for C)
+[C 21:12:29.567] B rejected the vote, term 2
+[C 21:12:29.718] election timeout, no majority in term 2 -> candidate, term 3
+[C 21:12:29.720] reject vote for B in term 3 (term 3, voted for C)
+[C 21:12:29.720] B rejected the vote, term 3
+[C 21:12:29.720] reject vote for A in term 3 (term 3, voted for C)
+[C 21:12:29.720] A rejected the vote, term 3
+[C 21:12:29.870] election timeout, no majority in term 3 -> candidate, term 4
+[C 21:12:29.873] reject vote for B in term 4 (term 4, voted for C)
+[C 21:12:29.873] B rejected the vote, term 4
+[C 21:12:29.873] reject vote for A in term 4 (term 4, voted for C)
+[C 21:12:29.873] A rejected the vote, term 4
+[C 21:12:30.023] election timeout, no majority in term 4 -> candidate, term 5
+[C 21:12:30.028] vote from A (2/3, need 2)
+[C 21:12:30.028] elected leader, term 5, votes ['A', 'C'] (7.5 ms after becoming candidate)
+[C 21:12:30.260] leader, term 5, heartbeat acks in the last 1s: A 5, B 5
+[C 21:12:31.260] leader, term 5, heartbeat acks in the last 1s: A 20, B 20
+[C 21:12:32.260] stop as leader, term 5
+### run 9 start_at 1794345156.721822
+[A 21:12:36.724] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[A 21:12:36.877] election timeout, no leader -> candidate, term 1
+[A 21:12:36.877] reject vote for B in term 1 (term 1, voted for A)
+[A 21:12:36.877] B rejected the vote, term 1
+[A 21:12:36.878] reject vote for C in term 1 (term 1, voted for A)
+[A 21:12:36.878] C rejected the vote, term 1
+[A 21:12:37.030] election timeout, no majority in term 1 -> candidate, term 2
+[A 21:12:37.031] reject vote for B in term 2 (term 2, voted for A)
+[A 21:12:37.031] reject vote for C in term 2 (term 2, voted for A)
+[A 21:12:37.031] B rejected the vote, term 2
+[A 21:12:37.031] C rejected the vote, term 2
+[A 21:12:37.184] election timeout, no majority in term 2 -> candidate, term 3
+[A 21:12:37.184] reject vote for B in term 3 (term 3, voted for A)
+[A 21:12:37.184] reject vote for C in term 3 (term 3, voted for A)
+[A 21:12:37.184] B rejected the vote, term 3
+[A 21:12:37.184] C rejected the vote, term 3
+[A 21:12:37.337] election timeout, no majority in term 3 -> candidate, term 4
+[A 21:12:37.337] reject vote for B in term 4 (term 4, voted for A)
+[A 21:12:37.337] reject vote for C in term 4 (term 4, voted for A)
+[A 21:12:37.337] B rejected the vote, term 4
+[A 21:12:37.337] C rejected the vote, term 4
+[A 21:12:37.490] election timeout, no majority in term 4 -> candidate, term 5
+[A 21:12:37.490] reject vote for B in term 5 (term 5, voted for A)
+[A 21:12:37.490] reject vote for C in term 5 (term 5, voted for A)
+[A 21:12:37.490] B rejected the vote, term 5
+[A 21:12:37.490] C rejected the vote, term 5
+[A 21:12:37.643] election timeout, no majority in term 5 -> candidate, term 6
+[A 21:12:37.643] reject vote for B in term 6 (term 6, voted for A)
+[A 21:12:37.643] reject vote for C in term 6 (term 6, voted for A)
+[A 21:12:37.643] B rejected the vote, term 6
+[A 21:12:37.643] C rejected the vote, term 6
+[A 21:12:37.797] election timeout, no majority in term 6 -> candidate, term 7
+[A 21:12:37.797] reject vote for C in term 7 (term 7, voted for A)
+[A 21:12:37.797] reject vote for B in term 7 (term 7, voted for A)
+[A 21:12:37.798] B rejected the vote, term 7
+[A 21:12:37.798] C rejected the vote, term 7
+[A 21:12:37.950] election timeout, no majority in term 7 -> candidate, term 8
+[A 21:12:37.951] reject vote for B in term 8 (term 8, voted for A)
+[A 21:12:37.951] reject vote for C in term 8 (term 8, voted for A)
+[A 21:12:37.951] C rejected the vote, term 8
+[A 21:12:37.951] B rejected the vote, term 8
+[A 21:12:38.104] election timeout, no majority in term 8 -> candidate, term 9
+[A 21:12:38.104] reject vote for C in term 9 (term 9, voted for A)
+[A 21:12:38.104] reject vote for B in term 9 (term 9, voted for A)
+[A 21:12:38.104] B rejected the vote, term 9
+[A 21:12:38.104] C rejected the vote, term 9
+[A 21:12:38.255] term 9 -> 10 (vote_req from C), candidate -> follower
+[A 21:12:38.260] vote for C in term 10
+[A 21:12:38.260] reject vote for B in term 10 (term 10, voted for C)
+[A 21:12:38.260] following C, term 10
+[A 21:12:38.725] follower, term 10, heartbeats in the last 1s: C 10
+[A 21:12:39.724] stop as follower, term 10
+[B 21:12:36.723] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[B 21:12:36.876] election timeout, no leader -> candidate, term 1
+[B 21:12:36.877] reject vote for A in term 1 (term 1, voted for B)
+[B 21:12:36.877] A rejected the vote, term 1
+[B 21:12:36.878] reject vote for C in term 1 (term 1, voted for B)
+[B 21:12:36.878] C rejected the vote, term 1
+[B 21:12:37.029] election timeout, no majority in term 1 -> candidate, term 2
+[B 21:12:37.030] reject vote for C in term 2 (term 2, voted for B)
+[B 21:12:37.031] C rejected the vote, term 2
+[B 21:12:37.031] reject vote for A in term 2 (term 2, voted for B)
+[B 21:12:37.031] A rejected the vote, term 2
+[B 21:12:37.182] election timeout, no majority in term 2 -> candidate, term 3
+[B 21:12:37.184] reject vote for C in term 3 (term 3, voted for B)
+[B 21:12:37.184] C rejected the vote, term 3
+[B 21:12:37.184] reject vote for A in term 3 (term 3, voted for B)
+[B 21:12:37.184] A rejected the vote, term 3
+[B 21:12:37.336] election timeout, no majority in term 3 -> candidate, term 4
+[B 21:12:37.337] reject vote for A in term 4 (term 4, voted for B)
+[B 21:12:37.337] reject vote for C in term 4 (term 4, voted for B)
+[B 21:12:37.337] A rejected the vote, term 4
+[B 21:12:37.337] C rejected the vote, term 4
+[B 21:12:37.489] election timeout, no majority in term 4 -> candidate, term 5
+[B 21:12:37.490] reject vote for C in term 5 (term 5, voted for B)
+[B 21:12:37.490] C rejected the vote, term 5
+[B 21:12:37.490] reject vote for A in term 5 (term 5, voted for B)
+[B 21:12:37.490] A rejected the vote, term 5
+[B 21:12:37.642] election timeout, no majority in term 5 -> candidate, term 6
+[B 21:12:37.642] reject vote for C in term 6 (term 6, voted for B)
+[B 21:12:37.642] C rejected the vote, term 6
+[B 21:12:37.643] reject vote for A in term 6 (term 6, voted for B)
+[B 21:12:37.643] A rejected the vote, term 6
+[B 21:12:37.795] election timeout, no majority in term 6 -> candidate, term 7
+[B 21:12:37.796] reject vote for C in term 7 (term 7, voted for B)
+[B 21:12:37.796] C rejected the vote, term 7
+[B 21:12:37.797] reject vote for A in term 7 (term 7, voted for B)
+[B 21:12:37.798] A rejected the vote, term 7
+[B 21:12:37.948] election timeout, no majority in term 7 -> candidate, term 8
+[B 21:12:37.949] reject vote for C in term 8 (term 8, voted for B)
+[B 21:12:37.949] C rejected the vote, term 8
+[B 21:12:37.951] reject vote for A in term 8 (term 8, voted for B)
+[B 21:12:37.951] A rejected the vote, term 8
+[B 21:12:38.102] election timeout, no majority in term 8 -> candidate, term 9
+[B 21:12:38.102] reject vote for C in term 9 (term 9, voted for B)
+[B 21:12:38.102] C rejected the vote, term 9
+[B 21:12:38.104] reject vote for A in term 9 (term 9, voted for B)
+[B 21:12:38.104] A rejected the vote, term 9
+[B 21:12:38.255] election timeout, no majority in term 9 -> candidate, term 10
+[B 21:12:38.255] reject vote for C in term 10 (term 10, voted for B)
+[B 21:12:38.255] C rejected the vote, term 10
+[B 21:12:38.260] A rejected the vote, term 10
+[B 21:12:38.260] heartbeat from C in term 10, candidate -> follower
+[B 21:12:38.260] following C, term 10
+[B 21:12:38.723] follower, term 10, heartbeats in the last 1s: C 10
+[B 21:12:39.723] stop as follower, term 10
+[C 21:12:36.724] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[C 21:12:36.877] election timeout, no leader -> candidate, term 1
+[C 21:12:36.878] reject vote for B in term 1 (term 1, voted for C)
+[C 21:12:36.878] reject vote for A in term 1 (term 1, voted for C)
+[C 21:12:36.878] A rejected the vote, term 1
+[C 21:12:36.878] B rejected the vote, term 1
+[C 21:12:37.030] election timeout, no majority in term 1 -> candidate, term 2
+[C 21:12:37.030] reject vote for B in term 2 (term 2, voted for C)
+[C 21:12:37.031] B rejected the vote, term 2
+[C 21:12:37.031] reject vote for A in term 2 (term 2, voted for C)
+[C 21:12:37.031] A rejected the vote, term 2
+[C 21:12:37.183] election timeout, no majority in term 2 -> candidate, term 3
+[C 21:12:37.183] reject vote for B in term 3 (term 3, voted for C)
+[C 21:12:37.184] reject vote for A in term 3 (term 3, voted for C)
+[C 21:12:37.184] B rejected the vote, term 3
+[C 21:12:37.184] A rejected the vote, term 3
+[C 21:12:37.337] election timeout, no majority in term 3 -> candidate, term 4
+[C 21:12:37.337] reject vote for B in term 4 (term 4, voted for C)
+[C 21:12:37.337] reject vote for A in term 4 (term 4, voted for C)
+[C 21:12:37.337] A rejected the vote, term 4
+[C 21:12:37.337] B rejected the vote, term 4
+[C 21:12:37.489] election timeout, no majority in term 4 -> candidate, term 5
+[C 21:12:37.490] reject vote for B in term 5 (term 5, voted for C)
+[C 21:12:37.490] B rejected the vote, term 5
+[C 21:12:37.490] reject vote for A in term 5 (term 5, voted for C)
+[C 21:12:37.490] A rejected the vote, term 5
+[C 21:12:37.642] election timeout, no majority in term 5 -> candidate, term 6
+[C 21:12:37.642] reject vote for B in term 6 (term 6, voted for C)
+[C 21:12:37.642] B rejected the vote, term 6
+[C 21:12:37.643] reject vote for A in term 6 (term 6, voted for C)
+[C 21:12:37.643] A rejected the vote, term 6
+[C 21:12:37.795] election timeout, no majority in term 6 -> candidate, term 7
+[C 21:12:37.796] reject vote for B in term 7 (term 7, voted for C)
+[C 21:12:37.796] B rejected the vote, term 7
+[C 21:12:37.798] reject vote for A in term 7 (term 7, voted for C)
+[C 21:12:37.798] A rejected the vote, term 7
+[C 21:12:37.948] election timeout, no majority in term 7 -> candidate, term 8
+[C 21:12:37.949] reject vote for B in term 8 (term 8, voted for C)
+[C 21:12:37.949] B rejected the vote, term 8
+[C 21:12:37.951] reject vote for A in term 8 (term 8, voted for C)
+[C 21:12:37.951] A rejected the vote, term 8
+[C 21:12:38.101] election timeout, no majority in term 8 -> candidate, term 9
+[C 21:12:38.102] reject vote for B in term 9 (term 9, voted for C)
+[C 21:12:38.102] B rejected the vote, term 9
+[C 21:12:38.104] reject vote for A in term 9 (term 9, voted for C)
+[C 21:12:38.104] A rejected the vote, term 9
+[C 21:12:38.254] election timeout, no majority in term 9 -> candidate, term 10
+[C 21:12:38.255] reject vote for B in term 10 (term 10, voted for C)
+[C 21:12:38.255] B rejected the vote, term 10
+[C 21:12:38.260] vote from A (2/3, need 2)
+[C 21:12:38.260] elected leader, term 10, votes ['A', 'C'] (7.6 ms after becoming candidate)
+[C 21:12:38.724] leader, term 10, heartbeat acks in the last 1s: A 10, B 10
+[C 21:12:39.725] stop as leader, term 10
+### run 10 start_at 1794345164.009085
+[A 21:12:44.011] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[A 21:12:44.164] election timeout, no leader -> candidate, term 1
+[A 21:12:44.165] reject vote for C in term 1 (term 1, voted for A)
+[A 21:12:44.165] reject vote for B in term 1 (term 1, voted for A)
+[A 21:12:44.165] C rejected the vote, term 1
+[A 21:12:44.165] B rejected the vote, term 1
+[A 21:12:44.318] election timeout, no majority in term 1 -> candidate, term 2
+[A 21:12:44.318] reject vote for C in term 2 (term 2, voted for A)
+[A 21:12:44.318] reject vote for B in term 2 (term 2, voted for A)
+[A 21:12:44.318] B rejected the vote, term 2
+[A 21:12:44.318] C rejected the vote, term 2
+[A 21:12:44.471] election timeout, no majority in term 2 -> candidate, term 3
+[A 21:12:44.471] reject vote for C in term 3 (term 3, voted for A)
+[A 21:12:44.471] reject vote for B in term 3 (term 3, voted for A)
+[A 21:12:44.471] B rejected the vote, term 3
+[A 21:12:44.472] C rejected the vote, term 3
+[A 21:12:44.624] election timeout, no majority in term 3 -> candidate, term 4
+[A 21:12:44.624] reject vote for C in term 4 (term 4, voted for A)
+[A 21:12:44.625] reject vote for B in term 4 (term 4, voted for A)
+[A 21:12:44.625] B rejected the vote, term 4
+[A 21:12:44.625] C rejected the vote, term 4
+[A 21:12:44.777] election timeout, no majority in term 4 -> candidate, term 5
+[A 21:12:44.778] reject vote for C in term 5 (term 5, voted for A)
+[A 21:12:44.778] C rejected the vote, term 5
+[A 21:12:44.778] reject vote for B in term 5 (term 5, voted for A)
+[A 21:12:44.778] B rejected the vote, term 5
+[A 21:12:44.931] election timeout, no majority in term 5 -> candidate, term 6
+[A 21:12:44.931] reject vote for B in term 6 (term 6, voted for A)
+[A 21:12:44.931] B rejected the vote, term 6
+[A 21:12:44.931] reject vote for C in term 6 (term 6, voted for A)
+[A 21:12:44.932] C rejected the vote, term 6
+[A 21:12:45.084] election timeout, no majority in term 6 -> candidate, term 7
+[A 21:12:45.084] reject vote for B in term 7 (term 7, voted for A)
+[A 21:12:45.084] B rejected the vote, term 7
+[A 21:12:45.085] reject vote for C in term 7 (term 7, voted for A)
+[A 21:12:45.085] C rejected the vote, term 7
+[A 21:12:45.237] election timeout, no majority in term 7 -> candidate, term 8
+[A 21:12:45.237] reject vote for B in term 8 (term 8, voted for A)
+[A 21:12:45.237] B rejected the vote, term 8
+[A 21:12:45.239] reject vote for C in term 8 (term 8, voted for A)
+[A 21:12:45.239] C rejected the vote, term 8
+[A 21:12:45.391] election timeout, no majority in term 8 -> candidate, term 9
+[A 21:12:45.391] reject vote for B in term 9 (term 9, voted for A)
+[A 21:12:45.391] reject vote for C in term 9 (term 9, voted for A)
+[A 21:12:45.391] B rejected the vote, term 9
+[A 21:12:45.391] C rejected the vote, term 9
+[A 21:12:45.544] election timeout, no majority in term 9 -> candidate, term 10
+[A 21:12:45.544] reject vote for B in term 10 (term 10, voted for A)
+[A 21:12:45.544] reject vote for C in term 10 (term 10, voted for A)
+[A 21:12:45.544] C rejected the vote, term 10
+[A 21:12:45.544] B rejected the vote, term 10
+[A 21:12:45.697] election timeout, no majority in term 10 -> candidate, term 11
+[A 21:12:45.697] reject vote for B in term 11 (term 11, voted for A)
+[A 21:12:45.697] B rejected the vote, term 11
+[A 21:12:45.697] reject vote for C in term 11 (term 11, voted for A)
+[A 21:12:45.697] C rejected the vote, term 11
+[A 21:12:45.850] election timeout, no majority in term 11 -> candidate, term 12
+[A 21:12:45.850] reject vote for B in term 12 (term 12, voted for A)
+[A 21:12:45.850] reject vote for C in term 12 (term 12, voted for A)
+[A 21:12:45.850] B rejected the vote, term 12
+[A 21:12:45.850] C rejected the vote, term 12
+[A 21:12:46.003] election timeout, no majority in term 12 -> candidate, term 13
+[A 21:12:46.003] reject vote for B in term 13 (term 13, voted for A)
+[A 21:12:46.003] reject vote for C in term 13 (term 13, voted for A)
+[A 21:12:46.003] B rejected the vote, term 13
+[A 21:12:46.004] C rejected the vote, term 13
+[A 21:12:46.157] election timeout, no majority in term 13 -> candidate, term 14
+[A 21:12:46.157] reject vote for B in term 14 (term 14, voted for A)
+[A 21:12:46.158] reject vote for C in term 14 (term 14, voted for A)
+[A 21:12:46.158] B rejected the vote, term 14
+[A 21:12:46.158] C rejected the vote, term 14
+[A 21:12:46.311] election timeout, no majority in term 14 -> candidate, term 15
+[A 21:12:46.311] reject vote for B in term 15 (term 15, voted for A)
+[A 21:12:46.311] reject vote for C in term 15 (term 15, voted for A)
+[A 21:12:46.311] B rejected the vote, term 15
+[A 21:12:46.311] C rejected the vote, term 15
+[A 21:12:46.464] election timeout, no majority in term 15 -> candidate, term 16
+[A 21:12:46.465] reject vote for B in term 16 (term 16, voted for A)
+[A 21:12:46.465] reject vote for C in term 16 (term 16, voted for A)
+[A 21:12:46.465] B rejected the vote, term 16
+[A 21:12:46.465] C rejected the vote, term 16
+[A 21:12:46.617] election timeout, no majority in term 16 -> candidate, term 17
+[A 21:12:46.618] reject vote for B in term 17 (term 17, voted for A)
+[A 21:12:46.618] reject vote for C in term 17 (term 17, voted for A)
+[A 21:12:46.618] B rejected the vote, term 17
+[A 21:12:46.618] C rejected the vote, term 17
+[A 21:12:46.770] election timeout, no majority in term 17 -> candidate, term 18
+[A 21:12:46.771] reject vote for B in term 18 (term 18, voted for A)
+[A 21:12:46.771] B rejected the vote, term 18
+[A 21:12:46.771] reject vote for C in term 18 (term 18, voted for A)
+[A 21:12:46.771] C rejected the vote, term 18
+[A 21:12:46.924] election timeout, no majority in term 18 -> candidate, term 19
+[A 21:12:46.924] reject vote for B in term 19 (term 19, voted for A)
+[A 21:12:46.924] B rejected the vote, term 19
+[A 21:12:46.924] reject vote for C in term 19 (term 19, voted for A)
+[A 21:12:46.924] C rejected the vote, term 19
+[A 21:12:47.012] stop as candidate, term 19
+[B 21:12:44.011] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[B 21:12:44.165] election timeout, no leader -> candidate, term 1
+[B 21:12:44.165] reject vote for C in term 1 (term 1, voted for B)
+[B 21:12:44.165] reject vote for A in term 1 (term 1, voted for B)
+[B 21:12:44.165] A rejected the vote, term 1
+[B 21:12:44.165] C rejected the vote, term 1
+[B 21:12:44.318] election timeout, no majority in term 1 -> candidate, term 2
+[B 21:12:44.318] reject vote for A in term 2 (term 2, voted for B)
+[B 21:12:44.318] reject vote for C in term 2 (term 2, voted for B)
+[B 21:12:44.318] A rejected the vote, term 2
+[B 21:12:44.318] C rejected the vote, term 2
+[B 21:12:44.471] election timeout, no majority in term 2 -> candidate, term 3
+[B 21:12:44.471] reject vote for C in term 3 (term 3, voted for B)
+[B 21:12:44.471] reject vote for A in term 3 (term 3, voted for B)
+[B 21:12:44.472] A rejected the vote, term 3
+[B 21:12:44.472] C rejected the vote, term 3
+[B 21:12:44.624] election timeout, no majority in term 3 -> candidate, term 4
+[B 21:12:44.624] reject vote for C in term 4 (term 4, voted for B)
+[B 21:12:44.625] reject vote for A in term 4 (term 4, voted for B)
+[B 21:12:44.625] A rejected the vote, term 4
+[B 21:12:44.625] C rejected the vote, term 4
+[B 21:12:44.778] election timeout, no majority in term 4 -> candidate, term 5
+[B 21:12:44.778] reject vote for A in term 5 (term 5, voted for B)
+[B 21:12:44.778] reject vote for C in term 5 (term 5, voted for B)
+[B 21:12:44.778] A rejected the vote, term 5
+[B 21:12:44.778] C rejected the vote, term 5
+[B 21:12:44.931] election timeout, no majority in term 5 -> candidate, term 6
+[B 21:12:44.931] reject vote for A in term 6 (term 6, voted for B)
+[B 21:12:44.931] A rejected the vote, term 6
+[B 21:12:44.931] reject vote for C in term 6 (term 6, voted for B)
+[B 21:12:44.932] C rejected the vote, term 6
+[B 21:12:45.083] election timeout, no majority in term 6 -> candidate, term 7
+[B 21:12:45.084] reject vote for A in term 7 (term 7, voted for B)
+[B 21:12:45.084] A rejected the vote, term 7
+[B 21:12:45.085] reject vote for C in term 7 (term 7, voted for B)
+[B 21:12:45.085] C rejected the vote, term 7
+[B 21:12:45.236] election timeout, no majority in term 7 -> candidate, term 8
+[B 21:12:45.237] reject vote for A in term 8 (term 8, voted for B)
+[B 21:12:45.237] A rejected the vote, term 8
+[B 21:12:45.238] reject vote for C in term 8 (term 8, voted for B)
+[B 21:12:45.238] C rejected the vote, term 8
+[B 21:12:45.390] election timeout, no majority in term 8 -> candidate, term 9
+[B 21:12:45.391] reject vote for C in term 9 (term 9, voted for B)
+[B 21:12:45.391] C rejected the vote, term 9
+[B 21:12:45.391] reject vote for A in term 9 (term 9, voted for B)
+[B 21:12:45.391] A rejected the vote, term 9
+[B 21:12:45.543] election timeout, no majority in term 9 -> candidate, term 10
+[B 21:12:45.544] reject vote for A in term 10 (term 10, voted for B)
+[B 21:12:45.544] reject vote for C in term 10 (term 10, voted for B)
+[B 21:12:45.544] C rejected the vote, term 10
+[B 21:12:45.544] A rejected the vote, term 10
+[B 21:12:45.696] election timeout, no majority in term 10 -> candidate, term 11
+[B 21:12:45.697] reject vote for A in term 11 (term 11, voted for B)
+[B 21:12:45.697] A rejected the vote, term 11
+[B 21:12:45.697] reject vote for C in term 11 (term 11, voted for B)
+[B 21:12:45.697] C rejected the vote, term 11
+[B 21:12:45.849] election timeout, no majority in term 11 -> candidate, term 12
+[B 21:12:45.850] reject vote for A in term 12 (term 12, voted for B)
+[B 21:12:45.850] A rejected the vote, term 12
+[B 21:12:45.850] reject vote for C in term 12 (term 12, voted for B)
+[B 21:12:45.850] C rejected the vote, term 12
+[B 21:12:46.002] election timeout, no majority in term 12 -> candidate, term 13
+[B 21:12:46.003] reject vote for A in term 13 (term 13, voted for B)
+[B 21:12:46.003] A rejected the vote, term 13
+[B 21:12:46.003] reject vote for C in term 13 (term 13, voted for B)
+[B 21:12:46.004] C rejected the vote, term 13
+[B 21:12:46.156] election timeout, no majority in term 13 -> candidate, term 14
+[B 21:12:46.157] reject vote for C in term 14 (term 14, voted for B)
+[B 21:12:46.158] reject vote for A in term 14 (term 14, voted for B)
+[B 21:12:46.158] C rejected the vote, term 14
+[B 21:12:46.158] A rejected the vote, term 14
+[B 21:12:46.309] election timeout, no majority in term 14 -> candidate, term 15
+[B 21:12:46.311] reject vote for C in term 15 (term 15, voted for B)
+[B 21:12:46.311] C rejected the vote, term 15
+[B 21:12:46.311] reject vote for A in term 15 (term 15, voted for B)
+[B 21:12:46.311] A rejected the vote, term 15
+[B 21:12:46.463] election timeout, no majority in term 15 -> candidate, term 16
+[B 21:12:46.465] reject vote for C in term 16 (term 16, voted for B)
+[B 21:12:46.465] C rejected the vote, term 16
+[B 21:12:46.465] reject vote for A in term 16 (term 16, voted for B)
+[B 21:12:46.465] A rejected the vote, term 16
+[B 21:12:46.616] election timeout, no majority in term 16 -> candidate, term 17
+[B 21:12:46.618] reject vote for A in term 17 (term 17, voted for B)
+[B 21:12:46.618] A rejected the vote, term 17
+[B 21:12:46.618] reject vote for C in term 17 (term 17, voted for B)
+[B 21:12:46.618] C rejected the vote, term 17
+[B 21:12:46.769] election timeout, no majority in term 17 -> candidate, term 18
+[B 21:12:46.771] reject vote for A in term 18 (term 18, voted for B)
+[B 21:12:46.771] A rejected the vote, term 18
+[B 21:12:46.771] reject vote for C in term 18 (term 18, voted for B)
+[B 21:12:46.771] C rejected the vote, term 18
+[B 21:12:46.923] election timeout, no majority in term 18 -> candidate, term 19
+[B 21:12:46.924] reject vote for A in term 19 (term 19, voted for B)
+[B 21:12:46.924] A rejected the vote, term 19
+[B 21:12:46.924] reject vote for C in term 19 (term 19, voted for B)
+[B 21:12:46.924] C rejected the vote, term 19
+[B 21:12:47.012] stop as candidate, term 19
+[C 21:12:44.011] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-150 ms
+[C 21:12:44.164] election timeout, no leader -> candidate, term 1
+[C 21:12:44.165] reject vote for A in term 1 (term 1, voted for C)
+[C 21:12:44.165] A rejected the vote, term 1
+[C 21:12:44.165] reject vote for B in term 1 (term 1, voted for C)
+[C 21:12:44.165] B rejected the vote, term 1
+[C 21:12:44.318] election timeout, no majority in term 1 -> candidate, term 2
+[C 21:12:44.318] reject vote for A in term 2 (term 2, voted for C)
+[C 21:12:44.318] A rejected the vote, term 2
+[C 21:12:44.318] reject vote for B in term 2 (term 2, voted for C)
+[C 21:12:44.318] B rejected the vote, term 2
+[C 21:12:44.471] election timeout, no majority in term 2 -> candidate, term 3
+[C 21:12:44.471] reject vote for B in term 3 (term 3, voted for C)
+[C 21:12:44.471] B rejected the vote, term 3
+[C 21:12:44.471] reject vote for A in term 3 (term 3, voted for C)
+[C 21:12:44.472] A rejected the vote, term 3
+[C 21:12:44.624] election timeout, no majority in term 3 -> candidate, term 4
+[C 21:12:44.625] reject vote for A in term 4 (term 4, voted for C)
+[C 21:12:44.625] reject vote for B in term 4 (term 4, voted for C)
+[C 21:12:44.625] A rejected the vote, term 4
+[C 21:12:44.625] B rejected the vote, term 4
+[C 21:12:44.777] election timeout, no majority in term 4 -> candidate, term 5
+[C 21:12:44.778] reject vote for A in term 5 (term 5, voted for C)
+[C 21:12:44.778] A rejected the vote, term 5
+[C 21:12:44.778] reject vote for B in term 5 (term 5, voted for C)
+[C 21:12:44.778] B rejected the vote, term 5
+[C 21:12:44.931] election timeout, no majority in term 5 -> candidate, term 6
+[C 21:12:44.931] reject vote for A in term 6 (term 6, voted for C)
+[C 21:12:44.931] reject vote for B in term 6 (term 6, voted for C)
+[C 21:12:44.932] A rejected the vote, term 6
+[C 21:12:44.932] B rejected the vote, term 6
+[C 21:12:45.084] election timeout, no majority in term 6 -> candidate, term 7
+[C 21:12:45.085] reject vote for B in term 7 (term 7, voted for C)
+[C 21:12:45.085] reject vote for A in term 7 (term 7, voted for C)
+[C 21:12:45.085] B rejected the vote, term 7
+[C 21:12:45.085] A rejected the vote, term 7
+[C 21:12:45.238] election timeout, no majority in term 7 -> candidate, term 8
+[C 21:12:45.238] reject vote for B in term 8 (term 8, voted for C)
+[C 21:12:45.238] reject vote for A in term 8 (term 8, voted for C)
+[C 21:12:45.238] B rejected the vote, term 8
+[C 21:12:45.239] A rejected the vote, term 8
+[C 21:12:45.390] election timeout, no majority in term 8 -> candidate, term 9
+[C 21:12:45.390] reject vote for B in term 9 (term 9, voted for C)
+[C 21:12:45.391] reject vote for A in term 9 (term 9, voted for C)
+[C 21:12:45.391] B rejected the vote, term 9
+[C 21:12:45.391] A rejected the vote, term 9
+[C 21:12:45.544] election timeout, no majority in term 9 -> candidate, term 10
+[C 21:12:45.544] reject vote for B in term 10 (term 10, voted for C)
+[C 21:12:45.544] reject vote for A in term 10 (term 10, voted for C)
+[C 21:12:45.544] A rejected the vote, term 10
+[C 21:12:45.544] B rejected the vote, term 10
+[C 21:12:45.697] election timeout, no majority in term 10 -> candidate, term 11
+[C 21:12:45.697] reject vote for B in term 11 (term 11, voted for C)
+[C 21:12:45.697] reject vote for A in term 11 (term 11, voted for C)
+[C 21:12:45.697] A rejected the vote, term 11
+[C 21:12:45.698] B rejected the vote, term 11
+[C 21:12:45.850] election timeout, no majority in term 11 -> candidate, term 12
+[C 21:12:45.850] reject vote for B in term 12 (term 12, voted for C)
+[C 21:12:45.850] reject vote for A in term 12 (term 12, voted for C)
+[C 21:12:45.850] B rejected the vote, term 12
+[C 21:12:45.850] A rejected the vote, term 12
+[C 21:12:46.003] election timeout, no majority in term 12 -> candidate, term 13
+[C 21:12:46.003] reject vote for B in term 13 (term 13, voted for C)
+[C 21:12:46.003] reject vote for A in term 13 (term 13, voted for C)
+[C 21:12:46.003] A rejected the vote, term 13
+[C 21:12:46.004] B rejected the vote, term 13
+[C 21:12:46.157] election timeout, no majority in term 13 -> candidate, term 14
+[C 21:12:46.157] reject vote for B in term 14 (term 14, voted for C)
+[C 21:12:46.158] reject vote for A in term 14 (term 14, voted for C)
+[C 21:12:46.158] B rejected the vote, term 14
+[C 21:12:46.158] A rejected the vote, term 14
+[C 21:12:46.311] election timeout, no majority in term 14 -> candidate, term 15
+[C 21:12:46.311] reject vote for B in term 15 (term 15, voted for C)
+[C 21:12:46.311] B rejected the vote, term 15
+[C 21:12:46.311] reject vote for A in term 15 (term 15, voted for C)
+[C 21:12:46.311] A rejected the vote, term 15
+[C 21:12:46.464] election timeout, no majority in term 15 -> candidate, term 16
+[C 21:12:46.464] reject vote for B in term 16 (term 16, voted for C)
+[C 21:12:46.465] reject vote for A in term 16 (term 16, voted for C)
+[C 21:12:46.465] B rejected the vote, term 16
+[C 21:12:46.465] A rejected the vote, term 16
+[C 21:12:46.617] election timeout, no majority in term 16 -> candidate, term 17
+[C 21:12:46.618] reject vote for B in term 17 (term 17, voted for C)
+[C 21:12:46.618] reject vote for A in term 17 (term 17, voted for C)
+[C 21:12:46.618] A rejected the vote, term 17
+[C 21:12:46.618] B rejected the vote, term 17
+[C 21:12:46.771] election timeout, no majority in term 17 -> candidate, term 18
+[C 21:12:46.771] reject vote for B in term 18 (term 18, voted for C)
+[C 21:12:46.771] reject vote for A in term 18 (term 18, voted for C)
+[C 21:12:46.771] A rejected the vote, term 18
+[C 21:12:46.771] B rejected the vote, term 18
+[C 21:12:46.924] election timeout, no majority in term 18 -> candidate, term 19
+[C 21:12:46.924] reject vote for B in term 19 (term 19, voted for C)
+[C 21:12:46.924] reject vote for A in term 19 (term 19, voted for C)
+[C 21:12:46.924] A rejected the vote, term 19
+[C 21:12:46.924] B rejected the vote, term 19
+[C 21:12:47.012] stop as candidate, term 19

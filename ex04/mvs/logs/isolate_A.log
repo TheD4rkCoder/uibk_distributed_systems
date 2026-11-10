@@ -1,0 +1,41 @@
+[A 21:10:54.596] start as follower, term 0, cluster ['A', 'B', 'C'], majority 2, timeout 150-300 ms
+[A 21:10:54.772] election timeout, no leader -> candidate, term 1
+[A 21:10:54.775] vote from B (2/3, need 2)
+[A 21:10:54.775] elected leader, term 1, votes ['A', 'B'] (5.3 ms after becoming candidate)
+[A 21:10:55.597] leader, term 1, heartbeat acks in the last 1s: B 17, C 17
+[A 21:10:56.597] leader, term 1, heartbeat acks in the last 1s: B 20, C 20
+[A 21:10:57.597] leader, term 1, heartbeat acks in the last 1s: B 20, C 20
+[A 21:10:58.597] leader, term 1, heartbeat acks in the last 1s: B 20, C 20
+[A 21:10:59.596] leader, term 1, heartbeat acks in the last 1s: B 20, C 20
+[A 21:11:00.597] leader, term 1, heartbeat acks in the last 1s: B 7, C 7
+[A 21:11:01.596] leader, term 1, heartbeat acks in the last 1s: B 0, C 0
+[A 21:11:02.597] leader, term 1, heartbeat acks in the last 1s: B 0, C 0
+[A 21:11:02.876] term 1 -> 2 (heartbeat_resp from B), leader -> follower
+[A 21:11:02.906] following C, term 2
+[A 21:11:03.597] follower, term 2, heartbeats in the last 1s: C 14
+[A 21:11:04.597] follower, term 2, heartbeats in the last 1s: C 20
+[A 21:11:05.597] follower, term 2, heartbeats in the last 1s: C 20
+[A 21:11:06.597] follower, term 2, heartbeats in the last 1s: C 20
+[A 21:11:07.597] follower, term 2, heartbeats in the last 1s: C 20
+[A 21:11:08.392] election timeout, no heartbeat from C for 233 ms -> candidate, term 3
+[A 21:11:08.597] candidate, term 3, heartbeats in the last 1s: C 12
+[A 21:11:08.646] election timeout, no majority in term 3 -> candidate, term 4
+[A 21:11:08.827] election timeout, no majority in term 4 -> candidate, term 5
+[A 21:11:09.027] election timeout, no majority in term 5 -> candidate, term 6
+[A 21:11:09.250] election timeout, no majority in term 6 -> candidate, term 7
+[A 21:11:09.406] election timeout, no majority in term 7 -> candidate, term 8
+[A 21:11:09.561] election timeout, no majority in term 8 -> candidate, term 9
+[A 21:11:09.796] election timeout, no majority in term 9 -> candidate, term 10
+[A 21:11:10.021] election timeout, no majority in term 10 -> candidate, term 11
+[A 21:11:10.259] election timeout, no majority in term 11 -> candidate, term 12
+[A 21:11:10.454] election timeout, no majority in term 12 -> candidate, term 13
+[A 21:11:10.618] election timeout, no majority in term 13 -> candidate, term 14
+[A 21:11:10.874] election timeout, no majority in term 14 -> candidate, term 15
+[A 21:11:11.106] reject heartbeat from C (term 2 < 15)
+[A 21:11:11.158] election timeout, no majority in term 15 -> candidate, term 16
+[A 21:11:11.160] vote from B (2/3, need 2)
+[A 21:11:11.160] elected leader, term 16, votes ['A', 'B'] (5.5 ms after becoming candidate)
+[A 21:11:11.596] leader, term 16, heartbeat acks in the last 1s: B 9, C 9
+[A 21:11:12.597] leader, term 16, heartbeat acks in the last 1s: B 20, C 20
+[A 21:11:13.596] leader, term 16, heartbeat acks in the last 1s: B 20, C 20
+[A 21:11:14.138] stop as leader, term 16
