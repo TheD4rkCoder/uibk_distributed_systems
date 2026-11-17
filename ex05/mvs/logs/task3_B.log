@@ -1,0 +1,38 @@
+[B 23:49:35.331] start, zookeeper 172.31.95.3:2181
+[B 23:49:35.337] zookeeper connected
+[B 23:49:35.358] members ['B']
+[B 23:49:35.360] created auction car (item)
+[B 23:49:35.361] watch car v0: open, no bids
+[B 23:49:35.362] members ['A', 'B']
+[B 23:49:35.363] query car (item) v0: open, no bids, 0 accepted bids
+[B 23:49:39.691] watch car v1: open, highest alice 1000 (bid via A)
+[B 23:49:45.186] members ['B']
+[B 23:49:47.911] bid car bob 1200 accepted, id B-1794872987905-1 (v1 -> v2, zxid 0x11c)
+[B 23:49:47.911] watch car v2: open, highest bob 1200 (bid via B)
+[B 23:49:49.300] close car: closed by B, winner bob 1200 (bid via B) (v2 -> v3, zxid 0x11d)
+[B 23:49:49.300] watch car v3: closed by B, winner bob 1200 (bid via B)
+[B 23:49:51.158] members ['A', 'B']
+[B 23:49:59.295] watch boat v0: open, no bids
+[B 23:49:59.299] query boat (item) v0: open, no bids, 0 accepted bids
+[B 23:50:03.016] bid boat bob 2500 accepted, id B-1794873003012-2 (v0 -> v1, zxid 0x123)
+[B 23:50:03.017] watch boat v1: open, highest bob 2500 (bid via B)
+[B 23:50:03.514] close boat: closed by B, winner bob 2500 (bid via B) (v1 -> v2, zxid 0x125)
+[B 23:50:03.515] watch boat v2: closed by B, winner bob 2500 (bid via B)
+[B 23:50:07.778] watch kite v0: open, no bids
+[B 23:50:07.780] query kite (item) v0: open, no bids, 0 accepted bids
+[B 23:50:09.213] bid kite bob 100 accepted, id B-1794873009208-3 (v0 -> v1, zxid 0x12a)
+[B 23:50:09.213] watch kite v1: open, highest bob 100 (bid via B)
+[B 23:50:13.568] bid kite carol 150 accepted, id B-1794873013563-4 (v1 -> v2, zxid 0x12b)
+[B 23:50:13.568] watch kite v2: open, highest carol 150 (bid via B)
+[B 23:50:15.188] members ['B']
+[B 23:50:21.319] members ['A', 'B']
+[B 23:50:24.193] watch kite v3: closed by A, winner carol 150 (bid via B)
+[B 23:50:29.746] watch sled v0: open, no bids
+[B 23:50:29.748] query sled (item) v0: open, no bids, 0 accepted bids
+[B 23:50:31.244] bid sled bob 10 accepted, id B-1794873031237-5 (v0 -> v1, zxid 0x133)
+[B 23:50:31.245] watch sled v1: open, highest bob 10 (bid via B)
+[B 23:50:37.188] members ['B']
+[B 23:50:38.761] bid sled bob 60 accepted, id B-1794873038757-6 (v1 -> v2, zxid 0x135)
+[B 23:50:38.762] watch sled v2: open, highest bob 60 (bid via B)
+[B 23:50:46.261] members ['A', 'B']
+[B 23:50:50.161] watch sled v3: open, highest alice 70 (bid via A)

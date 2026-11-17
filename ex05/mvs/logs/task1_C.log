@@ -1,0 +1,17 @@
+[C 23:45:38.265] start, zookeeper 172.31.95.3:2181
+[C 23:45:38.271] zookeeper connected
+[C 23:45:38.275] members ['B', 'C']
+[C 23:45:38.279] watch bike v0: open, no bids
+[C 23:45:38.281] query bike (item) v0: open, no bids, 0 accepted bids
+[C 23:45:38.306] members ['A', 'B', 'C']
+[C 23:45:38.325] members ['A', 'B', 'C', 'E']
+[C 23:45:38.343] members ['A', 'B', 'C', 'D', 'E']
+[C 23:45:42.756] watch bike v1: open, highest alice 100 (bid via A)
+[C 23:45:44.434] bid bike bob 150 accepted, id C-1794872744428-1 (v1 -> v2, zxid 0xbc)
+[C 23:45:44.435] watch bike v2: open, highest bob 150 (bid via C)
+[C 23:45:50.365] watch bike v3: open, highest dave 200 (bid via B)
+[C 23:45:52.224] watch bike v4: open, highest erin 250 (bid via D)
+[C 23:45:54.957] query bike (item) v4: open, highest erin 250 (bid via D), 4 accepted bids
+[C 23:48:34.431] close bike: closed by C, winner erin 250 (bid via D) (v4 -> v5, zxid 0xc1)
+[C 23:48:34.432] watch bike v5: closed by C, winner erin 250 (bid via D)
+[C 23:48:39.339] query bike (item) v5: closed by C, winner erin 250 (bid via D), 4 accepted bids

@@ -1,0 +1,26 @@
+[E 23:48:51.504] start, zookeeper 172.31.95.3:2181
+[E 23:48:51.510] zookeeper connected
+[E 23:48:51.526] members ['D', 'E']
+[E 23:48:51.531] members ['A', 'B', 'C', 'D', 'E']
+[E 23:48:51.533] watch lamp v0: open, no bids
+[E 23:48:51.536] query lamp (item) v0: open, no bids, 0 accepted bids
+[E 23:48:58.430] watch lamp v1: open, highest bob 310 (bid via B)
+[E 23:49:02.015] bid lamp u4 530: state changed since v1, retry
+[E 23:49:02.016] watch lamp v2: open, highest u3 510 (bid via D)
+[E 23:49:02.321] bid lamp u4 530 accepted, id E-1794872941708-1 (v2 -> v3, zxid 0xe9)
+[E 23:49:02.323] watch lamp v3: open, highest u4 530 (bid via E)
+[E 23:49:02.629] watch lamp v4: open, highest u1 540 (bid via B)
+[E 23:49:08.218] watch lamp v5: closed by B, winner u1 540 (bid via B)
+[E 23:49:09.959] watch vase v0: open, no bids
+[E 23:49:09.961] query vase (item) v0: open, no bids, 0 accepted bids
+[E 23:49:13.189] watch vase v1: open, highest carol 650 (bid via C)
+[E 23:49:16.220] watch vase v2: open, highest alice 700 (bid via A)
+[E 23:49:17.323] watch vase v3: closed by B, winner alice 700 (bid via A)
+[E 23:49:18.106] watch clock v0: open, no bids
+[E 23:49:18.108] query clock (item) v0: open, no bids, 0 accepted bids
+[E 23:49:20.723] bid clock erin 800 accepted, id E-1794872960417-2 (v0 -> v1, zxid 0xfe)
+[E 23:49:20.723] watch clock v1: open, highest erin 800 (bid via E)
+[E 23:49:23.952] watch clock v2: closed by D, winner erin 800 (bid via E)
+[E 23:49:25.343] query lamp (item) v5: closed by B, winner u1 540 (bid via B), 4 accepted bids
+[E 23:49:25.727] query vase (item) v3: closed by B, winner alice 700 (bid via A), 2 accepted bids
+[E 23:49:26.184] query clock (item) v2: closed by D, winner erin 800 (bid via E), 1 accepted bids

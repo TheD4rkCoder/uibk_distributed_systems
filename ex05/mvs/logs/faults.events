@@ -1,0 +1,87 @@
+disconnect B 08:44:42.780
+f01 (disconnect B for 6.08s) 08:44:42.796
+reconnect B 08:44:49.274
+disconnect D 08:44:59.910
+f02 (disconnect D for 4.26s) 08:44:59.928
+disconnect E 08:45:03.042
+f02 (disconnect E for 6.37s) 08:45:03.057
+reconnect D 08:45:04.594
+reconnect E 08:45:09.831
+disconnect E 08:45:23.269
+f03 (disconnect E for 7.16s) 08:45:23.288
+reconnect E 08:45:30.834
+pause A 08:45:45.836
+f04 (pause A for 5.79s) 08:45:45.854
+resume A 08:45:51.983
+pause A 08:46:05.759
+f05 (pause A for 2.32s) 08:46:05.778
+disconnect E 08:46:06.259
+f05 (disconnect E for 2.54s) 08:46:06.278
+resume A 08:46:08.392
+reconnect E 08:46:09.188
+pause B 08:46:20.045
+f06 (pause B for 8.0s) 08:46:20.063
+resume B 08:46:28.450
+kill -9 B 08:46:40.497
+f07 (crash B for 2.49s) 08:46:40.512
+restart B 08:46:43.676
+kill -9 E 08:46:56.599
+f08 (crash E for 1.17s) 08:46:56.612
+kill -9 B 08:46:57.921
+f08 (crash B for 1.45s) 08:46:57.933
+restart E 08:46:58.341
+restart B 08:47:00.013
+kill -9 A 08:47:12.963
+f09 (crash A for 4.27s) 08:47:12.977
+kill -9 C 08:47:14.657
+f09 (crash C for 3.9s) 08:47:14.674
+restart A 08:47:17.950
+restart C 08:47:19.154
+kill -9 A 08:47:32.542
+f10 (crash A for 2.63s) 08:47:32.560
+kill -9 B 08:47:33.310
+f10 (crash B for 6.25s) 08:47:33.328
+restart A 08:47:35.794
+restart B 08:47:40.233
+pause B 08:47:51.520
+f11 (pause B for 6.36s) 08:47:51.537
+resume B 08:47:58.213
+disconnect D 08:48:11.160
+f12 (disconnect D for 4.55s) 08:48:11.176
+reconnect D 08:48:16.163
+kill -9 A 08:48:27.196
+f13 (crash A for 1.39s) 08:48:27.213
+restart A 08:48:29.176
+disconnect B 08:48:29.624
+f13 (disconnect B for 1.48s) 08:48:29.642
+reconnect B 08:48:31.562
+disconnect A 08:48:46.164
+f14 (disconnect A for 2.05s) 08:48:46.181
+reconnect A 08:48:48.672
+kill -9 C 08:48:59.708
+f15 (crash C for 1.79s) 08:48:59.726
+restart C 08:49:02.174
+kill -9 A 08:49:16.984
+f16 (crash A for 4.99s) 08:49:16.999
+pause B 08:49:17.247
+f16 (pause B for 5.11s) 08:49:17.265
+restart A 08:49:22.634
+resume B 08:49:22.729
+kill -9 B 08:49:34.611
+f17 (crash B for 1.34s) 08:49:34.628
+disconnect A 08:49:36.524
+f17 (disconnect A for 6.82s) 08:49:36.542
+restart B 08:49:36.617
+reconnect A 08:49:43.833
+kill -9 A 08:49:57.607
+f18 (crash A for 5.83s) 08:49:57.624
+restart A 08:50:06.645
+kill -9 C 08:50:21.508
+f19 (crash C for 2.5s) 08:50:21.526
+kill -9 B 08:50:21.619
+f19 (crash B for 3.11s) 08:50:21.635
+restart C 08:50:24.616
+restart B 08:50:25.387
+disconnect E 08:50:38.242
+f20 (disconnect E for 5.2s) 08:50:38.261
+reconnect E 08:50:43.858

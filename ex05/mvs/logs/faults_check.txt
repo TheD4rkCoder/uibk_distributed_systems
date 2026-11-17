@@ -1,0 +1,26 @@
+| Auction | Accepted bids | Increasing | Winner = highest | All bids before close | Close results | Not acked |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| f01 | 63 | yes | yes (e1 353) | yes | 1 | 0 |
+| f02 | 63 | yes | yes (e3 338) | yes | 1 | 0 |
+| f03 | 59 | yes | yes (e3 328) | yes | 1 | 0 |
+| f04 | 72 | yes | yes (a2 436) | yes | 1 | 0 |
+| f05 | 103 | yes | yes (a3 586) | yes | 1 | 0 |
+| f06 | 92 | yes | yes (d3 539) | yes | 1 | 0 |
+| f07 | 87 | yes | yes (c1 490) | yes | 1 | 0 |
+| f08 | 82 | yes | yes (c3 470) | yes | 1 | 0 |
+| f09 | 115 | yes | yes (d2 648) | yes | 1 | 0 |
+| f10 | 70 | yes | yes (a3 419) | yes | 1 | 0 |
+| f11 | 101 | yes | yes (a3 513) | yes | 1 | 0 |
+| f12 | 89 | yes | yes (e3 528) | yes | 1 | 0 |
+| f13 | 78 | yes | yes (d1 461) | yes | 1 | 0 |
+| f14 | 76 | yes | yes (e2 470) | yes | 1 | 0 |
+| f15 | 41 | yes | yes (a3 195) | yes | 1 | 0 |
+| f16 | 121 | yes | yes (d1 675) | yes | 1 | 0 |
+| f17 | 58 | yes | yes (a2 333) | yes | 1 | 0 |
+| f18 | 69 | yes | yes (d2 316) | yes | 1 | 0 |
+| f19 | 89 | yes | yes (e3 471) | yes | 1 | 0 |
+| f20 | 77 | yes | yes (b3 428) | yes | 1 | 0 |
+
+acked bids: 1605, lost: 0
+outcome unknown: 0, of these committed: 0
+all invariants hold

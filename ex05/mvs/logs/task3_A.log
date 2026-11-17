@@ -1,0 +1,52 @@
+[A 23:49:35.332] start, zookeeper 172.31.95.3:2181
+[A 23:49:35.343] zookeeper connected
+[A 23:49:35.359] members ['B']
+[A 23:49:35.362] members ['A', 'B']
+[A 23:49:35.362] watch car v0: open, no bids
+[A 23:49:35.364] query car (item) v0: open, no bids, 0 accepted bids
+[A 23:49:39.690] bid car alice 1000 accepted, id A-1794872979684-1 (v0 -> v1, zxid 0x11a)
+[A 23:49:39.691] watch car v1: open, highest alice 1000 (bid via A)
+[A 23:49:51.150] start, zookeeper 172.31.95.3:2181
+[A 23:49:51.155] zookeeper connected
+[A 23:49:51.158] members ['A', 'B']
+[A 23:49:51.161] watch car v3: closed by B, winner bob 1200 (bid via B)
+[A 23:49:51.163] query car (item) v3: closed by B, winner bob 1200 (bid via B), 2 accepted bids
+[A 23:49:55.607] bid car alice 5000 rejected: closed by B, winner bob 1200 (bid via B)
+[A 23:49:55.987] close car: already closed by B, winner bob 1200 (bid via B) (v3)
+[A 23:49:56.374] query car (item) v3: closed by B, winner bob 1200 (bid via B), 2 accepted bids
+[A 23:49:58.915] created auction boat (item)
+[A 23:49:58.916] watch boat v0: open, no bids
+[A 23:49:58.917] query boat (item) v0: open, no bids, 0 accepted bids
+[A 23:50:03.017] watch boat v1: open, highest bob 2500 (bid via B)
+[A 23:50:03.515] watch boat v2: closed by B, winner bob 2500 (bid via B)
+[A 23:50:05.519] bid boat alice 2000: state changed since v0, retry
+[A 23:50:05.519] bid boat alice 2000 rejected: closed by B, winner bob 2500 (bid via B)
+[A 23:50:07.279] created auction kite (item)
+[A 23:50:07.280] watch kite v0: open, no bids
+[A 23:50:07.282] query kite (item) v0: open, no bids, 0 accepted bids
+[A 23:50:09.214] watch kite v1: open, highest bob 100 (bid via B)
+[A 23:50:21.079] zookeeper connection suspended, rejecting operations
+[A 23:50:21.207] zookeeper session lost (expired), rejecting operations
+[A 23:50:21.309] zookeeper connected
+[A 23:50:21.311] members ['B']
+[A 23:50:21.325] watch kite v2: open, highest carol 150 (bid via B)
+[A 23:50:21.328] members ['A', 'B']
+[A 23:50:22.187] close kite: state changed since v1, retry
+[A 23:50:24.192] close kite: closed by A, winner carol 150 (bid via B) (v2 -> v3, zxid 0x130)
+[A 23:50:24.193] watch kite v3: closed by A, winner carol 150 (bid via B)
+[A 23:50:26.894] close kite: already closed by A, winner carol 150 (bid via B) (v3)
+[A 23:50:29.273] created auction sled (item)
+[A 23:50:29.274] watch sled v0: open, no bids
+[A 23:50:29.276] query sled (item) v0: open, no bids, 0 accepted bids
+[A 23:50:31.244] watch sled v1: open, highest bob 10 (bid via B)
+[A 23:50:34.539] zookeeper connection suspended, rejecting operations
+[A 23:50:37.773] bid sled alice 50 rejected: no zookeeper connection
+[A 23:50:38.154] query rejected: no zookeeper connection
+[A 23:50:46.130] zookeeper session lost (expired), rejecting operations
+[A 23:50:46.256] zookeeper connected
+[A 23:50:46.259] members ['B']
+[A 23:50:46.260] watch sled v2: open, highest bob 60 (bid via B)
+[A 23:50:46.372] members ['A', 'B']
+[A 23:50:49.713] query sled (item) v2: open, highest bob 60 (bid via B), 2 accepted bids
+[A 23:50:50.160] bid sled alice 70 accepted, id A-1794873050155-3 (v2 -> v3, zxid 0x138)
+[A 23:50:50.161] watch sled v3: open, highest alice 70 (bid via A)
