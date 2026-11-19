@@ -3,7 +3,7 @@
 **Student Name:** Maurits van Staalduinen  
 **Student ID:** `c9881018`  
 
-Claude Opus 5.5 used for the code, running the aws experiments and the report draft
+Claude Sonnet 5.5 used for handin formating, table formating, and clearer wording
 
 **Chosen stack:** python 3.9 + kazoo 2.10, standalone zookeeper 3.9.3 (docker)
 
@@ -298,6 +298,3 @@ with a cached state the node would accept bids that are lower than bids accepted
 
 and it could tell a participant "accepted" or "you won" although that is never written, rejecting keeps the answers consistent (CP instead of AP), the cost is that the node is unavailable while disconnected
 
----
-
-instances destroyed with terraform destroy after the runs
