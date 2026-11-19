@@ -1,6 +1,7 @@
 **/*.hcl
 **/.terraform
 **/*.fstate
+**/*.tfstate
 **/*.backup
 **/*.zip
 **/.venv/
@@ -9,3 +10,5 @@
 **/*.pem
 .vscode/
 **/build/
+.work/
+ex05/dm/results
