@@ -1,0 +1,141 @@
+--- round 1/10: bidding for 15.0s
+  ! blip      node1
+  ! crash     node1
+  ! partition node1
+  ! freeze    node3
+  ! partition node2
+  ! partition node4
+  ! freeze    node1
+  close: closed         auction 26 CLOSED by closer-1, winner eve=392
+  close: already_closed already closed: auction 26 CLOSED by closer-1, winner eve=392
+  ! crash     node5
+  new:   auction 27 started
+--- round 2/10: bidding for 15.0s
+  ! partition node4
+  ! blip      node2
+  ! freeze    node1
+  ! partition node4
+  ! crash     node3
+  ! partition node5
+  ! blip      node2
+  close: already_closed already closed: auction 27 CLOSED by closer-2, winner eve=392
+  close: closed         auction 27 CLOSED by closer-2, winner eve=392
+  new:   auction 28 started
+--- round 3/10: bidding for 15.0s
+  ! blip      node4
+  ! blip      node3
+  ! freeze    node4
+  ! freeze    node3
+  ! partition node1
+  ! crash     node2
+  ! crash     node5
+  ! blip      node3
+  ! crash     node1
+  close: closed         auction 28 CLOSED by closer-1, winner bob=389
+  close: already_closed already closed: auction 28 CLOSED by closer-1, winner bob=389
+  new:   auction 29 started
+--- round 4/10: bidding for 15.0s
+  ! blip      node1
+  ! partition node3
+  ! partition node4
+  ! crash     node5
+  ! blip      node1
+  ! partition node3
+  ! crash     node1
+  ! partition node5
+  close: already_closed already closed: auction 29 CLOSED by closer-2, winner eve=424
+  close: closed         auction 29 CLOSED by closer-2, winner eve=424
+  ! freeze    node2
+  new:   auction 30 started
+--- round 5/10: bidding for 15.0s
+  ! freeze    node4
+  ! freeze    node3
+  ! crash     node5
+  ! crash     node1
+  ! crash     node2
+  ! partition node1
+  ! freeze    node3
+  close: closed         auction 30 CLOSED by closer-1, winner alice=369
+  close: already_closed already closed: auction 30 CLOSED by closer-1, winner alice=369
+  ! blip      node4
+  new:   auction 31 started
+--- round 6/10: bidding for 15.0s
+  ! crash     node5
+  ! crash     node1
+  ! partition node1
+  ! freeze    node3
+  ! freeze    node2
+  ! crash     node4
+  ! crash     node1
+  close: closed         auction 31 CLOSED by closer-1, winner dave=369
+  close: already_closed already closed: auction 31 CLOSED by closer-1, winner dave=369
+  ! partition node5
+  new:   auction 32 started
+--- round 7/10: bidding for 15.0s
+  ! freeze    node2
+  ! blip      node3
+  ! partition node4
+  ! crash     node1
+  ! freeze    node5
+  ! crash     node1
+  ! crash     node2
+  close: closed         auction 32 CLOSED by closer-1, winner bob=438
+  close: already_closed already closed: auction 32 CLOSED by closer-1, winner bob=438
+  ! crash     node3
+  new:   auction 33 started
+--- round 8/10: bidding for 15.0s
+  ! blip      node5
+  ! partition node3
+  ! freeze    node4
+  ! crash     node1
+  ! crash     node2
+  ! blip      node1
+  ! blip      node3
+  close: already_closed already closed: auction 33 CLOSED by closer-2, winner dave=403
+  close: closed         auction 33 CLOSED by closer-2, winner dave=403
+  ! blip      node1
+  new:   auction 34 started
+--- round 9/10: bidding for 15.0s
+  ! blip      node2
+  ! partition node5
+  ! partition node3
+  ! freeze    node4
+  ! crash     node1
+  ! crash     node2
+  ! partition node2
+  close: already_closed already closed: auction 34 CLOSED by closer-2, winner carol=391
+  close: closed         auction 34 CLOSED by closer-2, winner carol=391
+  ! crash     node1
+  new:   auction 35 started
+--- round 10/10: bidding for 15.0s
+  ! blip      node1
+  ! crash     node2
+  ! blip      node1
+  ! blip      node1
+  ! partition node4
+  ! partition node2
+  close: closed         auction 35 CLOSED by closer-1, winner alice=482
+  close: already_closed already closed: auction 35 CLOSED by closer-1, winner alice=482
+--- stopping, waiting for running faults to end
+
+=== summary
+auctions tested : [26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+faults injected : {'blip': 18, 'crash': 25, 'partition': 21, 'freeze': 15}
+bids accepted   : 805
+bids rejected   : 1096
+bids errored    : 16  (disconnected / session expired / timeout)
+CAS retries     : 554
+sessions lost   : 25, suspended: 38
+auction  26    :  86 bids, winner eve=392, closed by closer-1
+auction  27    :  76 bids, winner eve=392, closed by closer-2
+auction  28    :  76 bids, winner bob=389, closed by closer-1
+auction  29    :  90 bids, winner eve=424, closed by closer-2
+auction  30    :  74 bids, winner alice=369, closed by closer-1
+auction  31    :  70 bids, winner dave=369, closed by closer-1
+auction  32    :  82 bids, winner bob=438, closed by closer-1
+auction  33    :  85 bids, winner dave=403, closed by closer-2
+auction  34    :  70 bids, winner carol=391, closed by closer-2
+auction  35    :  97 bids, winner alice=482, closed by closer-1
+
+INVARIANTS: ALL OK
+raw results written to results/chaos_seed42.json

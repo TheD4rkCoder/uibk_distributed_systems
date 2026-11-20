@@ -1,0 +1,40 @@
+# 1 standalone ZooKeeper server + 5 application nodes, each in its own container with
+# its own IP on a private bridge network. Nodes reach ZooKeeper only over the network.
+name: ex05
+
+x-node: &node
+  build: .
+  image: ex05-auction-node
+  init: true                 # reaps killed worker processes
+  cap_add: [NET_ADMIN]       # allows iptables inside the node (manual disconnect experiments)
+  depends_on: [zookeeper]
+  networks: [auction]
+  volumes:
+    - .:/app:ro              # code changes need no rebuild (dir mount: survives editor file swaps)
+
+services:
+  zookeeper:
+    image: zookeeper:3.9.3
+    container_name: ex05-zookeeper
+    hostname: zookeeper
+    environment:
+      ZOO_4LW_COMMANDS_WHITELIST: "ruok,stat,srvr,mntr,cons"
+      ZOO_ADMINSERVER_ENABLED: "false"
+    volumes:
+      - zk-data:/data        # auction state survives ZooKeeper container restarts
+      - zk-datalog:/datalog
+    networks: [auction]
+
+  node1: { <<: *node, container_name: ex05-node1, hostname: node1, environment: { ZK_HOSTS: "zookeeper:2181", NODE_ID: node1 } }
+  node2: { <<: *node, container_name: ex05-node2, hostname: node2, environment: { ZK_HOSTS: "zookeeper:2181", NODE_ID: node2 } }
+  node3: { <<: *node, container_name: ex05-node3, hostname: node3, environment: { ZK_HOSTS: "zookeeper:2181", NODE_ID: node3 } }
+  node4: { <<: *node, container_name: ex05-node4, hostname: node4, environment: { ZK_HOSTS: "zookeeper:2181", NODE_ID: node4 } }
+  node5: { <<: *node, container_name: ex05-node5, hostname: node5, environment: { ZK_HOSTS: "zookeeper:2181", NODE_ID: node5 } }
+
+networks:
+  auction:
+    name: ex05-auction
+
+volumes:
+  zk-data:
+  zk-datalog:
