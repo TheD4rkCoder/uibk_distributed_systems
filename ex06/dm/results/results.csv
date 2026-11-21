@@ -1,0 +1,21 @@
+framework,run,processing_seconds,startup_seconds,wall_seconds,correct,completed,rejected,orders,return_code,log
+dapr,1,4.051,20.893,25.665,True,4,2,Order 1=COMPLETED;Order 2=COMPLETED;Order 3=REJECTED;Order 4=COMPLETED;Order 5=REJECTED;Order 6=COMPLETED,0,results/logs/dapr-01.log
+dapr,2,4.005,23.139,27.864,True,4,2,Order 1=COMPLETED;Order 2=COMPLETED;Order 3=REJECTED;Order 4=COMPLETED;Order 5=REJECTED;Order 6=COMPLETED,0,results/logs/dapr-02.log
+dapr,3,3.835,20.03,24.586,True,4,2,Order 1=COMPLETED;Order 2=COMPLETED;Order 3=REJECTED;Order 4=COMPLETED;Order 5=REJECTED;Order 6=COMPLETED,0,results/logs/dapr-03.log
+dapr,4,4.245,22.669,27.633,True,4,2,Order 1=COMPLETED;Order 2=COMPLETED;Order 3=REJECTED;Order 4=COMPLETED;Order 5=REJECTED;Order 6=COMPLETED,0,results/logs/dapr-04.log
+dapr,5,3.916,22.743,27.381,True,4,2,Order 1=COMPLETED;Order 2=COMPLETED;Order 3=REJECTED;Order 4=COMPLETED;Order 5=REJECTED;Order 6=COMPLETED,0,results/logs/dapr-05.log
+dapr,6,4.263,21.806,26.789,True,4,2,Order 1=COMPLETED;Order 2=COMPLETED;Order 3=REJECTED;Order 4=COMPLETED;Order 5=REJECTED;Order 6=COMPLETED,0,results/logs/dapr-06.log
+dapr,7,3.797,20.171,24.692,True,4,2,Order 1=COMPLETED;Order 2=COMPLETED;Order 3=REJECTED;Order 4=COMPLETED;Order 5=REJECTED;Order 6=COMPLETED,0,results/logs/dapr-07.log
+dapr,8,4.13,21.526,26.375,True,4,2,Order 1=COMPLETED;Order 2=COMPLETED;Order 3=REJECTED;Order 4=COMPLETED;Order 5=REJECTED;Order 6=COMPLETED,0,results/logs/dapr-08.log
+dapr,9,3.99,20.235,24.945,True,4,2,Order 1=COMPLETED;Order 2=COMPLETED;Order 3=REJECTED;Order 4=COMPLETED;Order 5=REJECTED;Order 6=COMPLETED,0,results/logs/dapr-09.log
+dapr,10,3.507,21.977,26.203,True,4,2,Order 1=COMPLETED;Order 2=COMPLETED;Order 3=REJECTED;Order 4=COMPLETED;Order 5=REJECTED;Order 6=COMPLETED,0,results/logs/dapr-10.log
+csml,1,4.461,10.592,26.403,True,4,2,Order 1=COMPLETED;Order 2=COMPLETED;Order 3=REJECTED;Order 4=COMPLETED;Order 5=REJECTED;Order 6=COMPLETED,0,results/logs/csml-01.log
+csml,2,4.72,7.652,24.087,True,4,2,Order 1=COMPLETED;Order 2=COMPLETED;Order 3=REJECTED;Order 4=COMPLETED;Order 5=REJECTED;Order 6=COMPLETED,0,results/logs/csml-02.log
+csml,3,4.816,8.376,24.604,True,4,2,Order 1=COMPLETED;Order 2=COMPLETED;Order 3=REJECTED;Order 4=COMPLETED;Order 5=REJECTED;Order 6=COMPLETED,0,results/logs/csml-03.log
+csml,4,4.964,8.396,24.802,True,4,2,Order 1=COMPLETED;Order 2=COMPLETED;Order 3=REJECTED;Order 4=COMPLETED;Order 5=REJECTED;Order 6=COMPLETED,0,results/logs/csml-04.log
+csml,5,5.162,9.117,27.257,True,4,2,Order 1=COMPLETED;Order 2=COMPLETED;Order 3=REJECTED;Order 4=COMPLETED;Order 5=REJECTED;Order 6=COMPLETED,0,results/logs/csml-05.log
+csml,6,4.468,9.919,25.927,True,4,2,Order 1=COMPLETED;Order 2=COMPLETED;Order 3=REJECTED;Order 4=COMPLETED;Order 5=REJECTED;Order 6=COMPLETED,0,results/logs/csml-06.log
+csml,7,5.291,10.3,27.003,True,4,2,Order 1=COMPLETED;Order 2=COMPLETED;Order 3=REJECTED;Order 4=COMPLETED;Order 5=REJECTED;Order 6=COMPLETED,0,results/logs/csml-07.log
+csml,8,4.499,7.392,24.18,True,4,2,Order 1=COMPLETED;Order 2=COMPLETED;Order 3=REJECTED;Order 4=COMPLETED;Order 5=REJECTED;Order 6=COMPLETED,0,results/logs/csml-08.log
+csml,9,5.243,7.809,24.824,True,4,2,Order 1=COMPLETED;Order 2=COMPLETED;Order 3=REJECTED;Order 4=COMPLETED;Order 5=REJECTED;Order 6=COMPLETED,0,results/logs/csml-09.log
+csml,10,4.033,8.589,24.06,True,4,2,Order 1=COMPLETED;Order 2=COMPLETED;Order 3=REJECTED;Order 4=COMPLETED;Order 5=REJECTED;Order 6=COMPLETED,0,results/logs/csml-10.log

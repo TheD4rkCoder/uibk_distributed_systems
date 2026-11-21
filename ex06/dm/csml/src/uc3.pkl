@@ -1,0 +1,231 @@
+amends "https://raw.githubusercontent.com/CollaborativeStateMachines/Cirrina/2.4.1/src/main/resources/pkl/csm/csml.pkl"
+
+collaborativeStateMachine {
+  // LLM-assisted note: persistent maps must be assigned as a whole, e.g.
+  //   orders = orders + { ($orderId): 'PAYMENT' }
+  // `{ ... }` is a one-entry map and `+` merges it. `orders[$orderId] = ...`
+  // would only mutate the copy returned by the etcd context and is not written back.
+  persistent {
+    ["orders"] =
+      "{ 'Order 1': 'PENDING', 'Order 2': 'PENDING', 'Order 3': 'PENDING', 'Order 4': 'PENDING', 'Order 5': 'PENDING', 'Order 6': 'PENDING' }"
+  }
+
+  stateMachines {
+    ["coordinator"] {
+      states {
+        ["running"] = new Initial {
+          entry {
+            // initially i just had 6 copy pasted Eval, Emit and Logs;
+            // an LLM simplified this to the for loop (didn't know pkl can do that)
+            // after I implemented everything.
+            for (id in List("Order 1", "Order 2", "Order 3", "Order 4", "Order 5", "Order 6")) {
+              new Eval { expression = "orders = orders + { '\(id)': 'CHECKING' }" }
+              new Emit {
+                event { topic = "inventory-request"; data { ["orderId"] = "'\(id)'" } }
+                target = "'inventory'"
+              }
+              new Log { message = "'coordinator: sent inventory-request for \(id)'" }
+            }
+          }
+          on {
+            ["inventory-result"] {
+              provided = "orders[$orderId] == 'CHECKING'"
+              yields {
+                new Log {
+                  message = "'coordinator: inventory ' + $orderId + ' success=' + $success"
+                }
+                new Match {
+                  cases {
+                    new Case {
+                      of = "$success == true"
+                      yields {
+                        new Eval { expression = "orders = orders + { ($orderId): 'PAYMENT' }" }
+                        new Emit {
+                          event { topic = "payment-request"; data { ["orderId"] = "$orderId" } }
+                          target = "'payment'"
+                        }
+                      }
+                    }
+                    new Case {
+                      of = "$success == false"
+                      yields {
+                        new Eval { expression = "orders = orders + { ($orderId): 'REJECTED' }" }
+                        new Log { message = "'coordinator: order ' + $orderId + ' rejected (inventory failed)'" }
+                      }
+                    }
+                  }
+                  default = new Log { message = "'unexpected inventory result for ' + $orderId" }
+                }
+                new Emit { event = new Internal { topic = "check" } }
+              }
+            }
+            ["payment-result"] {
+              provided = "orders[$orderId] == 'PAYMENT'"
+              yields {
+                new Log {
+                  message = "'coordinator: payment ' + $orderId + ' success=' + $success"
+                }
+                new Match {
+                  cases {
+                    new Case {
+                      of = "$success == true"
+                      yields {
+                        new Eval { expression = "orders = orders + { ($orderId): 'COMPLETED' }" }
+                        new Log { message = "'coordinator: order ' + $orderId + ' completed'" }
+                      }
+                    }
+                    new Case {
+                      of = "$success == false"
+                      yields {
+                        new Eval { expression = "orders = orders + { ($orderId): 'REJECTED' }" }
+                        new Log { message = "'coordinator: order ' + $orderId + ' rejected (payment failed)'" }
+                      }
+                    }
+                  }
+                  default = new Log { message = "'unexpected payment result for ' + $orderId" }
+                }
+                new Emit { event = new Internal { topic = "check" } }
+              }
+            }
+            ["check"] {
+              to = "done"
+              provided =
+                "!orders.values().contains('PENDING') && " +
+                "!orders.values().contains('CHECKING') && " +
+                "!orders.values().contains('PAYMENT')" // an LLM simplified this expression for me
+            }
+          }
+        }
+
+        ["done"] = new Terminal {
+          entry {
+            new Log { message = "'coordinator: all orders are terminal'" }
+            new Log { message = "'coordinator: final order states: ' + orders.toString()" }
+          }
+        }
+      }
+    }
+
+    ["inventory"] {
+      transient {
+        ["queue"] = "new('java.util.ArrayList')"
+        ["currentOrder"] = "''"
+      }
+
+      states {
+        ["idle"] = new Initial {
+          on {
+            ["inventory-request"] {
+              to = "checking"
+              yields { new Eval { expression = "currentOrder = $orderId" } }
+            }
+          }
+          always {
+            new Transition {
+              to = "checking"
+              provided = "queue.size() > 0"
+              yields { new Eval { expression = "currentOrder = queue.remove(0)" } }
+            }
+          }
+        }
+
+        ["checking"] {
+          after { // after block is where you can install timeouts; should maybe be renamed as it's confusing (for me at least)
+            ["decide"] = new Timeout { // timer is named "decide"; automatically cancelled when exiting state
+              delay = "std:randomAround(550, 250)" // 300..800 ms
+              triggers = new Emit { event = new Internal { topic = "decide" } }
+            }
+          }
+          on {
+            ["decide"] {
+              to = "idle"
+              yields {
+                new Log { message = "'inventory: decided ' + currentOrder" }
+                new Emit {
+                  event {
+                    topic = "inventory-result"
+                    data {
+                      ["orderId"] = "currentOrder"
+                      ["success"] = "currentOrder != 'Order 3'"
+                    }
+                  }
+                  target = "'coordinator'"
+                }
+              }
+            }
+            ["inventory-request"] {
+              yields {
+                new Log { message = "'inventory: queueing ' + $orderId" }
+                new Eval { expression = "queue.add($orderId)" } 
+               }
+            }
+          }
+        }
+      }
+    }
+
+    ["payment"] {
+      transient {
+        ["queue"] = "new('java.util.ArrayList')"
+        ["currentOrder"] = "''"
+      }
+
+      states {
+        ["idle"] = new Initial {
+          on {
+            ["payment-request"] {
+              to = "charging"
+              yields { new Eval { expression = "currentOrder = $orderId" } }
+            }
+          }
+          always {
+            new Transition {
+              to = "charging"
+              provided = "queue.size() > 0"
+              yields { new Eval { expression = "currentOrder = queue.remove(0)" } }
+            }
+          }
+        }
+
+        ["charging"] {
+          after {
+            ["decide"] = new Timeout {
+              delay = "std:randomAround(550, 250)" // 300..800 ms
+              triggers = new Emit { event = new Internal { topic = "decide" } }
+            }
+          }
+          on {
+            ["decide"] {
+              to = "idle"
+              yields {
+                new Log { message = "'payment: decided ' + currentOrder" }
+                new Emit {
+                  event {
+                    topic = "payment-result"
+                    data {
+                      ["orderId"] = "currentOrder"
+                      ["success"] = "currentOrder != 'Order 5'"
+                    }
+                  }
+                  target = "'coordinator'"
+                }
+              }
+            }
+            ["payment-request"] {
+              yields {
+                new Log { message = "'payment: queueing ' + $orderId" }
+                new Eval { expression = "queue.add($orderId)" } 
+               }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+instances {
+  ["coordinator"] { stateMachineName = "coordinator" }
+  ["inventory"] { stateMachineName = "inventory" }
+  ["payment"] { stateMachineName = "payment" }
+}

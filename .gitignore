@@ -10,5 +10,8 @@
 **/*.pem
 .vscode/
 **/build/
+**/target/
 .work/
 ex05/dm/results
+ex06/dm/results/logs/
+ex06/dm/results/.mplconfig/

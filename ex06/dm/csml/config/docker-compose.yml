@@ -1,0 +1,82 @@
+services:
+  etcd:
+    image: gcr.io/etcd-development/etcd:v3.5.0
+    command:
+      - /usr/local/bin/etcd
+      - --name=etcd
+      - --data-dir=/etcd-data
+      - --listen-client-urls=http://0.0.0.0:2379
+      - --advertise-client-urls=http://etcd:2379
+      - --listen-peer-urls=http://0.0.0.0:2380
+      - --initial-advertise-peer-urls=http://etcd:2380
+      - --initial-cluster=etcd=http://etcd:2380
+      - --initial-cluster-state=new
+    networks: [uc3]
+    healthcheck:
+      test: ["CMD", "etcdctl", "--endpoints=http://localhost:2379", "endpoint", "health"]
+      interval: 2s
+      timeout: 2s
+      retries: 15
+
+  zenoh:
+    image: eclipse/zenoh:latest
+    networks: [uc3]
+
+  # All three apps load the same uc3.pkl. RUN picks the instance in this container.
+  coordinator:
+    image: collaborativestatemachines/cirrina:2.4.1
+    depends_on:
+      etcd:
+        condition: service_healthy
+      zenoh:
+        condition: service_started
+    environment:
+      RUN: coordinator
+      MAIN_URI: file:///app/uc3.pkl
+      ETCD_CONTEXT_URL: http://etcd:2379
+      ZENOH_EVENT_HANDLER_CONFIG_URI: /zenoh.json5
+    volumes:
+      - ../src:/app:ro,z
+      - ./zenoh.json5:/zenoh.json5:ro,z
+    networks: [uc3]
+    restart: on-failure:5
+
+  inventory:
+    image: collaborativestatemachines/cirrina:2.4.1
+    depends_on:
+      etcd:
+        condition: service_healthy
+      zenoh:
+        condition: service_started
+    environment:
+      RUN: inventory
+      MAIN_URI: file:///app/uc3.pkl
+      ETCD_CONTEXT_URL: http://etcd:2379
+      ZENOH_EVENT_HANDLER_CONFIG_URI: /zenoh.json5
+    volumes:
+      - ../src:/app:ro,z
+      - ./zenoh.json5:/zenoh.json5:ro,z
+    networks: [uc3]
+    restart: on-failure:5
+
+  payment:
+    image: collaborativestatemachines/cirrina:2.4.1
+    depends_on:
+      etcd:
+        condition: service_healthy
+      zenoh:
+        condition: service_started
+    environment:
+      RUN: payment
+      MAIN_URI: file:///app/uc3.pkl
+      ETCD_CONTEXT_URL: http://etcd:2379
+      ZENOH_EVENT_HANDLER_CONFIG_URI: /zenoh.json5
+    volumes:
+      - ../src:/app:ro,z
+      - ./zenoh.json5:/zenoh.json5:ro,z
+    networks: [uc3]
+    restart: on-failure:5
+
+networks:
+  uc3:
+    driver: bridge
