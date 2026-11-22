@@ -1,0 +1,38 @@
+ℹ️  Starting Dapr with id manager. HTTP Port: 32773. gRPC Port: 43007
+ℹ️  Checking if Dapr sidecar is listening on HTTP port 32773
+time="2026-11-22T21:27:08.523478468+01:00" level=warning msg="mTLS is disabled. Skipping certificate request and tls validation" app_id=manager instance=diamond scope=dapr.runtime.security type=log ver=1.19.2
+time="2026-11-22T21:27:08.524020656+01:00" level=warning msg="The default value for 'spec.metric.http.increasedCardinality' will change to 'false' in Dapr 1.15 or later" app_id=manager instance=diamond scope=dapr.runtime.diagnostics type=log ver=1.19.2
+time="2026-11-22T21:27:08.534560236+01:00" level=warning msg="App channel is not initialized. Did you configure an app-port?" app_id=manager instance=diamond scope=dapr.runtime.channels type=log ver=1.19.2
+time="2026-11-22T21:27:08.535604898+01:00" level=warning msg="The default value for 'spec.metric.http.increasedCardinality' will change to 'false' in Dapr 1.15 or later" app_id=manager instance=diamond scope=dapr.runtime.http type=log ver=1.19.2
+time="2026-11-22T21:27:08.536686528+01:00" level=warning msg="Graceful shutdown timeout is infinite, will wait indefinitely to shutdown" app_id=manager instance=diamond scope=dapr.runtime.actor type=log ver=1.19.2
+time="2026-11-22T21:27:08.53683599+01:00" level=warning msg="Scheduler cluster does not serve actor placement, using the placement service" app_id=manager instance=diamond scope=dapr.runtime.actors.placement.loops.placement type=log ver=1.19.2
+ℹ️  Checking if Dapr sidecar is listening on GRPC port 43007
+ℹ️  Dapr sidecar is up and running.
+ℹ️  Updating metadata for appPID: 1604962
+ℹ️  Updating metadata for app command: java -cp target/classes:/home/odin/.m2/repository/io/dapr/dapr-sdk/1.19.1/dapr-sdk-1.19.1.jar:/home/odin/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/home/odin/.m2/repository/io/dapr/dapr-sdk-autogen/1.19.1/dapr-sdk-autogen-1.19.1.jar:/home/odin/.m2/repository/io/grpc/grpc-protobuf/1.84.0/grpc-protobuf-1.84.0.jar:/home/odin/.m2/repository/com/google/api/grpc/proto-google-common-protos/2.64.1/proto-google-common-protos-2.64.1.jar:/home/odin/.m2/repository/io/grpc/grpc-protobuf-lite/1.84.0/grpc-protobuf-lite-1.84.0.jar:/home/odin/.m2/repository/io/grpc/grpc-stub/1.84.0/grpc-stub-1.84.0.jar:/home/odin/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.21.7/jackson-databind-2.21.7.jar:/home/odin/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.21/jackson-annotations-2.21.jar:/home/odin/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.21.7/jackson-core-2.21.7.jar:/home/odin/.m2/repository/com/google/protobuf/protobuf-java-util/3.25.5/protobuf-java-util-3.25.5.jar:/home/odin/.m2/repository/com/google/protobuf/protobuf-java/3.25.5/protobuf-java-3.25.5.jar:/home/odin/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/odin/.m2/repository/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar:/home/odin/.m2/repository/com/google/errorprone/error_prone_annotations/2.18.0/error_prone_annotations-2.18.0.jar:/home/odin/.m2/repository/com/google/guava/guava/32.0.1-jre/guava-32.0.1-jre.jar:/home/odin/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/odin/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/odin/.m2/repository/org/checkerframework/checker-qual/3.33.0/checker-qual-3.33.0.jar:/home/odin/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/home/odin/.m2/repository/io/projectreactor/reactor-core/3.5.12/reactor-core-3.5.12.jar:/home/odin/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/home/odin/.m2/repository/io/grpc/grpc-netty/1.84.0/grpc-netty-1.84.0.jar:/home/odin/.m2/repository/io/grpc/grpc-api/1.84.0/grpc-api-1.84.0.jar:/home/odin/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.27/animal-sniffer-annotations-1.27.jar:/home/odin/.m2/repository/io/netty/netty-codec-http2/4.2.16.Final/netty-codec-http2-4.2.16.Final.jar:/home/odin/.m2/repository/io/netty/netty-common/4.2.16.Final/netty-common-4.2.16.Final.jar:/home/odin/.m2/repository/io/netty/netty-buffer/4.2.16.Final/netty-buffer-4.2.16.Final.jar:/home/odin/.m2/repository/io/netty/netty-transport/4.2.16.Final/netty-transport-4.2.16.Final.jar:/home/odin/.m2/repository/io/netty/netty-resolver/4.2.16.Final/netty-resolver-4.2.16.Final.jar:/home/odin/.m2/repository/io/netty/netty-codec-base/4.2.16.Final/netty-codec-base-4.2.16.Final.jar:/home/odin/.m2/repository/io/netty/netty-handler/4.2.16.Final/netty-handler-4.2.16.Final.jar:/home/odin/.m2/repository/io/netty/netty-codec-http/4.2.16.Final/netty-codec-http-4.2.16.Final.jar:/home/odin/.m2/repository/io/netty/netty-codec-compression/4.2.16.Final/netty-codec-compression-4.2.16.Final.jar:/home/odin/.m2/repository/io/grpc/grpc-core/1.84.0/grpc-core-1.84.0.jar:/home/odin/.m2/repository/com/google/android/annotations/4.1.1.4/annotations-4.1.1.4.jar:/home/odin/.m2/repository/io/grpc/grpc-context/1.84.0/grpc-context-1.84.0.jar:/home/odin/.m2/repository/io/netty/netty-handler-proxy/4.2.16.Final/netty-handler-proxy-4.2.16.Final.jar:/home/odin/.m2/repository/io/netty/netty-codec-socks/4.2.16.Final/netty-codec-socks-4.2.16.Final.jar:/home/odin/.m2/repository/io/perfmark/perfmark-api/0.27.0/perfmark-api-0.27.0.jar:/home/odin/.m2/repository/io/netty/netty-transport-native-unix-common/4.2.16.Final/netty-transport-native-unix-common-4.2.16.Final.jar:/home/odin/.m2/repository/io/grpc/grpc-util/1.84.0/grpc-util-1.84.0.jar:/home/odin/.m2/repository/org/slf4j/slf4j-simple/2.0.16/slf4j-simple-2.0.16.jar uc2.ResourceManager
+✅  You're up and running! Both Dapr and your app logs will appear here.
+
+Resource Manager initialized
+Resource 1 granted to Client 3
+Resource 2 granted to Client 1
+Request 6 pending
+Request 2 pending
+Request 3 pending
+Request 4 pending
+Client 3 released Resource 1
+Resource 1 granted to Client 3
+Client 1 released Resource 2
+Resource 2 granted to Client 1
+Client 3 released Resource 1
+Resource 1 granted to Client 2
+Client 1 released Resource 2
+Resource 2 granted to Client 2
+Client 2 released Resource 1
+Client 2 released Resource 2
+All resource requests completed
+ℹ️  
+terminated signal received: shutting down
+✅  Exited Dapr successfully
+❌  The daprd process exited with error code: signal: killed
+❌  The App process exited with error code: 143
+✅  Exited App successfully

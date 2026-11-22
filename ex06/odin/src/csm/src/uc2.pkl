@@ -1,0 +1,222 @@
+amends "https://raw.githubusercontent.com/CollaborativeStateMachines/Cirrina/2.4.1/src/main/resources/pkl/csm/csml.pkl"
+
+// UC2 - Distributed Resource Reservation
+// 1 resource manager + 3 clients (one `client` definition, instantiated three times).
+//
+// Topics (same as the Dapr version):
+//   resource-request  client  -> manager  { requestId, clientId, instance }
+//   resource-grant    manager -> client   { requestId, resource }
+//   resource-release  client  -> manager  { requestId, clientId, resource }
+
+/// Actions that grant resource `res` to the request `req` (a map with requestId/clientId/instance).
+local function grant(res: String, req: String): Listing<Action> = new Listing {
+  new Eval { expression = "resources = resources + { (\(res)): 'RESERVED' }" }
+  new Eval { expression = "requests = requests + { (\(req).requestId): 'GRANTED' }" }
+  new Log { message = "\(res) + ' granted to ' + \(req).clientId" }
+  new Emit {
+    event {
+      topic = "resource-grant"
+      data {
+        ["requestId"] = "\(req).requestId"
+        ["resource"] = "\(res)"
+      }
+    }
+    target = "\(req).instance"
+  }
+}
+
+collaborativeStateMachine {
+  persistent {
+    ["resources"] = "{ 'Resource 1': 'AVAILABLE', 'Resource 2': 'AVAILABLE' }"
+    ["requests"] = "{:}" // requestId -> PENDING | GRANTED | COMPLETED
+  }
+
+  stateMachines {
+    ["resourceManager"] {
+      transient {
+        // FIFO of pending requests, each a map { requestId, clientId, instance }
+        ["pending"] = "new('java.util.ArrayList')"
+        ["req"] = "{:}" // request currently being granted (null is not allowed as initial value)
+      }
+
+      states {
+        ["running"] = new Initial {
+          entry {
+            new Log { message = "'Resource Manager initialized'" }
+          }
+          on {
+            // Guards keep the handlers idempotent in case an event is delivered twice
+            ["resource-request"] {
+              provided = "!requests.containsKey($requestId)"
+              yields {
+                new Eval { expression = "requests = requests + { ($requestId): 'PENDING' }" }
+                new Eval { expression = "req = { 'requestId': $requestId, 'clientId': $clientId, 'instance': $instance }" }
+                new Match {
+                  cases {
+                    new Case {
+                      of = "resources['Resource 1'] == 'AVAILABLE'"
+                      yields { ...grant("'Resource 1'", "req") }
+                    }
+                    new Case {
+                      of = "resources['Resource 1'] != 'AVAILABLE' && resources['Resource 2'] == 'AVAILABLE'"
+                      yields { ...grant("'Resource 2'", "req") }
+                    }
+                    // all resources reserved: keep the request PENDING and queue it
+                    new Case {
+                      of = "!resources.values().contains('AVAILABLE')"
+                      yields {
+                        new Eval { expression = "pending.add(req)" }
+                        new Log { message = "$requestId + ' pending'" }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            ["resource-release"] {
+              provided = "requests[$requestId] == 'GRANTED'"
+              yields {
+                new Eval { expression = "resources = resources + { ($resource): 'AVAILABLE' }" }
+                new Eval { expression = "requests = requests + { ($requestId): 'COMPLETED' }" }
+                new Log { message = "$clientId + ' released ' + $resource" }
+                // automatically hand the freed resource to the oldest pending request
+                new Match {
+                  cases {
+                    new Case {
+                      of = "pending.size() > 0"
+                      yields {
+                        new Eval { expression = "req = pending.remove(0)" }
+                        ...grant("$resource", "req")
+                      }
+                    }
+                  }
+                }
+                new Emit { event = new Internal { topic = "check-done" } }
+              }
+            }
+
+            ["check-done"] {
+              to = "done"
+              provided =
+                "requests.size() == 6 && " +
+                "!requests.values().contains('PENDING') && " +
+                "!requests.values().contains('GRANTED')"
+            }
+          }
+        }
+
+        ["done"] = new Terminal {
+          entry {
+            new Log { message = "'All resource requests completed'" }
+            new Log { message = "'final request states: ' + requests.toString()" }
+            new Log { message = "'final resource states: ' + resources.toString()" }
+          }
+        }
+      }
+    }
+
+    // Each client submits Request 2n-1 on start and Request 2n after its first release
+    // `clientNo` comes from the instance data below.
+    ["client"] {
+      transient {
+        ["submitted"] = "0"
+        ["requestId"] = "''"
+        ["resource"] = "''"
+      }
+
+      states {
+        ["requesting"] = new Initial {
+          entry {
+            new Match {
+              cases {
+                new Case {
+                  of = "submitted == 0"
+                  yields { new Log { message = "'Client ' + clientNo + ' initialized'" } }
+                }
+              }
+            }
+            new Eval { expression = "submitted = submitted + 1" }
+            new Eval { expression = "requestId = 'Request ' + (2 * (clientNo - 1) + submitted)" }
+            new Emit {
+              event {
+                topic = "resource-request"
+                data {
+                  ["requestId"] = "requestId"
+                  ["clientId"] = "'Client ' + clientNo"
+                  ["instance"] = "'client' + clientNo"
+                }
+              }
+              target = "'resourceManager'"
+            }
+          }
+          always {
+            new Transition { to = "waiting" }
+          }
+        }
+
+        ["waiting"] {
+          on {
+            ["resource-grant"] {
+              to = "using"
+              provided = "$requestId == requestId" // ignore duplicate/stale grants
+              yields {
+                new Eval { expression = "resource = $resource" }
+                new Log { message = "'Client ' + clientNo + ' received ' + resource + ' for ' + requestId" }
+              }
+            }
+          }
+        }
+
+        ["using"] {
+          after {
+            // simulated usage, 500-1500 ms
+            ["use"] = new Timeout {
+              delay = "std:randomAround(1000, 500)"
+              triggers = new Emit { event = new Internal { topic = "finished-using" } }
+            }
+          }
+          on {
+            ["finished-using"] {
+              to = "released"
+              yields {
+                new Emit {
+                  event {
+                    topic = "resource-release"
+                    data {
+                      ["requestId"] = "requestId"
+                      ["clientId"] = "'Client ' + clientNo"
+                      ["resource"] = "resource"
+                    }
+                  }
+                  target = "'resourceManager'"
+                }
+                new Log { message = "'Client ' + clientNo + ' released ' + resource" }
+              }
+            }
+          }
+        }
+
+        ["released"] {
+          always {
+            new Transition { to = "requesting"; provided = "submitted < 2" }
+            new Transition { to = "finished"; provided = "submitted >= 2" }
+          }
+        }
+
+        ["finished"] = new Terminal {
+          entry {
+            new Log { message = "'Client ' + clientNo + ' finished'" }
+          }
+        }
+      }
+    }
+  }
+}
+
+instances {
+  ["resourceManager"] { stateMachineName = "resourceManager" }
+  ["client1"] { stateMachineName = "client"; data { ["clientNo"] = "1" } }
+  ["client2"] { stateMachineName = "client"; data { ["clientNo"] = "2" } }
+  ["client3"] { stateMachineName = "client"; data { ["clientNo"] = "3" } }
+}

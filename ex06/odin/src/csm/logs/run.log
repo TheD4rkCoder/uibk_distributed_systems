@@ -1,0 +1,173 @@
+client1-1  | Nov 22, 2026 10:31:57 PM at.ac.uibk.dps.cirrina.Cirrina run
+client1-1  | INFO: cirrina version 2.4.1
+manager-1  | Nov 22, 2026 10:31:57 PM at.ac.uibk.dps.cirrina.Cirrina run
+manager-1  | INFO: cirrina version 2.4.1
+manager-1  | Nov 22, 2026 10:31:57 PM at.ac.uibk.dps.cirrina.Cirrina run
+manager-1  | INFO: cirrina.295761f3-abe1-4387-a947-84bfee55d25a
+client3-1  | Nov 22, 2026 10:31:57 PM at.ac.uibk.dps.cirrina.Cirrina run
+client3-1  | INFO: cirrina version 2.4.1
+client3-1  | Nov 22, 2026 10:31:57 PM at.ac.uibk.dps.cirrina.Cirrina run
+client3-1  | INFO: cirrina.767764f6-9504-4604-973b-6654569d147b
+client1-1  | Nov 22, 2026 10:31:57 PM at.ac.uibk.dps.cirrina.Cirrina run
+client1-1  | INFO: cirrina.c2aca408-d512-49b3-8679-b07a73e82158
+client2-1  | Nov 22, 2026 10:31:58 PM at.ac.uibk.dps.cirrina.Cirrina run
+client2-1  | INFO: cirrina version 2.4.1
+client2-1  | Nov 22, 2026 10:31:58 PM at.ac.uibk.dps.cirrina.Cirrina run
+client2-1  | INFO: cirrina.31c9a9eb-5b8f-4a48-8921-041829e2bfe5
+manager-1  | 2026-11-22 10:32:02 INFO  Fory:165 [main] - Created new fory org.apache.fory.Fory@4f654cee
+client3-1  | 2026-11-22 10:32:03 INFO  Fory:165 [main] - Created new fory org.apache.fory.Fory@4f654cee
+client1-1  | 2026-11-22 10:32:03 INFO  Fory:165 [main] - Created new fory org.apache.fory.Fory@4f654cee
+client2-1  | 2026-11-22 10:32:03 INFO  Fory:165 [main] - Created new fory org.apache.fory.Fory@4f654cee
+manager-1  | Nov 22, 2026 10:32:03 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine start
+manager-1  | INFO: 'StateMachine(name='resourceManager')' entering initial state
+manager-1  | Nov 22, 2026 10:32:03 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+manager-1  | INFO: Resource Manager initialized
+manager-1  | Nov 22, 2026 10:32:03 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine start
+manager-1  | INFO: 'StateMachine(name='resourceManager')' starting event processor
+client3-1  | Nov 22, 2026 10:32:04 PM at.ac.uibk.dps.cirrina.Runtime <init>
+client3-1  | WARNING: variable 'resources' already exists or failed to create
+client3-1  | Nov 22, 2026 10:32:04 PM at.ac.uibk.dps.cirrina.Runtime <init>
+client3-1  | WARNING: variable 'requests' already exists or failed to create
+client1-1  | Nov 22, 2026 10:32:04 PM at.ac.uibk.dps.cirrina.Runtime <init>
+client1-1  | WARNING: variable 'resources' already exists or failed to create
+client1-1  | Nov 22, 2026 10:32:04 PM at.ac.uibk.dps.cirrina.Runtime <init>
+client1-1  | WARNING: variable 'requests' already exists or failed to create
+client3-1  | Nov 22, 2026 10:32:04 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine start
+client3-1  | INFO: 'StateMachine(name='client3')' entering initial state
+client1-1  | Nov 22, 2026 10:32:04 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine start
+client1-1  | INFO: 'StateMachine(name='client1')' entering initial state
+client2-1  | Nov 22, 2026 10:32:04 PM at.ac.uibk.dps.cirrina.Runtime <init>
+client2-1  | WARNING: variable 'resources' already exists or failed to create
+client2-1  | Nov 22, 2026 10:32:04 PM at.ac.uibk.dps.cirrina.Runtime <init>
+client2-1  | WARNING: variable 'requests' already exists or failed to create
+client3-1  | 2026-11-22 10:32:04 INFO  CompileUnit:55 [main] - Generate code for at.ac.uibk.dps.cirrina.spec.ContextVariableForyCodec_0 took 21 ms.
+client2-1  | Nov 22, 2026 10:32:04 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine start
+client2-1  | INFO: 'StateMachine(name='client2')' entering initial state
+client1-1  | 2026-11-22 10:32:05 INFO  CompileUnit:55 [main] - Generate code for at.ac.uibk.dps.cirrina.spec.ContextVariableForyCodec_0 took 37 ms.
+client1-1  | 2026-11-22 10:32:05 INFO  JaninoUtils:121 [main] - Compile [ContextVariableForyCodec_0] take 281 ms
+client1-1  | 2026-11-22 10:32:05 INFO  CompileUnit:55 [main] - Generate code for at.ac.uibk.dps.cirrina.spec.EventForyCodec_0 took 505 ms.
+client2-1  | 2026-11-22 10:32:05 INFO  CompileUnit:55 [main] - Generate code for at.ac.uibk.dps.cirrina.spec.ContextVariableForyCodec_0 took 72 ms.
+client3-1  | 2026-11-22 10:32:05 INFO  JaninoUtils:121 [main] - Compile [ContextVariableForyCodec_0] take 540 ms
+client1-1  | 2026-11-22 10:32:05 INFO  JaninoUtils:121 [main] - Compile [EventForyCodec_0] take 167 ms
+client3-1  | 2026-11-22 10:32:05 INFO  CompileUnit:55 [main] - Generate code for at.ac.uibk.dps.cirrina.spec.EventForyCodec_0 took 791 ms.
+client1-1  | Nov 22, 2026 10:32:05 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+client1-1  | INFO: Client 1 initialized
+client1-1  | Nov 22, 2026 10:32:05 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine start
+client1-1  | INFO: 'StateMachine(name='client1')' starting event processor
+client2-1  | 2026-11-22 10:32:05 INFO  Fory:165 [Thread-3] - Created new fory org.apache.fory.Fory@3d307748
+client3-1  | 2026-11-22 10:32:05 INFO  Fory:165 [Thread-3] - Created new fory org.apache.fory.Fory@734dfdc5
+manager-1  | 2026-11-22 10:32:05 INFO  Fory:165 [Thread-5] - Created new fory org.apache.fory.Fory@1604b4c
+client3-1  | 2026-11-22 10:32:05 INFO  JaninoUtils:121 [main] - Compile [EventForyCodec_0] take 136 ms
+client3-1  | Nov 22, 2026 10:32:05 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+client3-1  | INFO: Client 3 initialized
+client3-1  | Nov 22, 2026 10:32:05 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine start
+client3-1  | INFO: 'StateMachine(name='client3')' starting event processor
+client1-1  | 2026-11-22 10:32:05 INFO  Fory:165 [Thread-5] - Created new fory org.apache.fory.Fory@6cfbe9fc
+client2-1  | 2026-11-22 10:32:05 INFO  JaninoUtils:121 [main] - Compile [ContextVariableForyCodec_0] take 355 ms
+client2-1  | 2026-11-22 10:32:05 INFO  CompileUnit:55 [main] - Generate code for at.ac.uibk.dps.cirrina.spec.EventForyCodec_0 took 576 ms.
+manager-1  | 2026-11-22 10:32:05 INFO  CompileUnit:55 [Thread-5] - Generate code for at.ac.uibk.dps.cirrina.spec.ContextVariableForyCodec_0 took 25 ms.
+client2-1  | 2026-11-22 10:32:05 INFO  JaninoUtils:121 [main] - Compile [EventForyCodec_0] take 151 ms
+client2-1  | Nov 22, 2026 10:32:05 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+client2-1  | INFO: Client 2 initialized
+client2-1  | Nov 22, 2026 10:32:05 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine start
+client2-1  | INFO: 'StateMachine(name='client2')' starting event processor
+manager-1  | 2026-11-22 10:32:06 INFO  JaninoUtils:121 [Thread-5] - Compile [ContextVariableForyCodec_0] take 218 ms
+manager-1  | 2026-11-22 10:32:06 INFO  CompileUnit:55 [Thread-5] - Generate code for at.ac.uibk.dps.cirrina.spec.EventForyCodec_0 took 376 ms.
+manager-1  | 2026-11-22 10:32:06 INFO  JaninoUtils:121 [Thread-5] - Compile [EventForyCodec_0] take 76 ms
+manager-1  | 2026-11-22 10:32:06 INFO  Fory:165 [DefaultDispatcher-worker-1] - Created new fory org.apache.fory.Fory@4eaa1147
+manager-1  | Nov 22, 2026 10:32:06 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+manager-1  | INFO: Resource 1 granted to Client 1
+client1-1  | Nov 22, 2026 10:32:06 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+client1-1  | INFO: Client 1 received Resource 1 for Request 1
+manager-1  | Nov 22, 2026 10:32:06 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+manager-1  | INFO: Resource 2 granted to Client 3
+client3-1  | Nov 22, 2026 10:32:06 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+client3-1  | INFO: Client 3 received Resource 2 for Request 5
+manager-1  | Nov 22, 2026 10:32:06 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+manager-1  | INFO: Request 3 pending
+client1-1  | 2026-11-22 10:32:07 INFO  Fory:165 [DefaultDispatcher-worker-2] - Created new fory org.apache.fory.Fory@6cf8af21
+client1-1  | Nov 22, 2026 10:32:07 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+client1-1  | INFO: Client 1 released Resource 1
+manager-1  | Nov 22, 2026 10:32:07 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+manager-1  | INFO: Client 1 released Resource 1
+manager-1  | Nov 22, 2026 10:32:07 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+manager-1  | INFO: Resource 1 granted to Client 2
+client2-1  | 2026-11-22 10:32:07 INFO  Fory:165 [Thread-6] - Created new fory org.apache.fory.Fory@e67265a
+client2-1  | Nov 22, 2026 10:32:07 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+client2-1  | INFO: Client 2 received Resource 1 for Request 3
+manager-1  | Nov 22, 2026 10:32:07 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+manager-1  | INFO: Request 2 pending
+client3-1  | 2026-11-22 10:32:07 INFO  Fory:165 [DefaultDispatcher-worker-2] - Created new fory org.apache.fory.Fory@18d05de8
+client3-1  | Nov 22, 2026 10:32:07 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+client3-1  | INFO: Client 3 released Resource 2
+client1-1  | 2026-11-22 10:32:07 INFO  Fory:165 [Thread-6] - Created new fory org.apache.fory.Fory@510a4ab4
+manager-1  | Nov 22, 2026 10:32:07 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+manager-1  | INFO: Client 3 released Resource 2
+manager-1  | Nov 22, 2026 10:32:07 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+manager-1  | INFO: Resource 2 granted to Client 1
+client1-1  | Nov 22, 2026 10:32:07 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+client1-1  | INFO: Client 1 received Resource 2 for Request 2
+manager-1  | Nov 22, 2026 10:32:07 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+manager-1  | INFO: Request 6 pending
+client2-1  | 2026-11-22 10:32:08 INFO  Fory:165 [DefaultDispatcher-worker-1] - Created new fory org.apache.fory.Fory@1453b22f
+client2-1  | Nov 22, 2026 10:32:08 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+client2-1  | INFO: Client 2 released Resource 1
+manager-1  | Nov 22, 2026 10:32:08 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+manager-1  | INFO: Client 2 released Resource 1
+manager-1  | Nov 22, 2026 10:32:08 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+manager-1  | INFO: Resource 1 granted to Client 3
+client3-1  | 2026-11-22 10:32:08 INFO  Fory:165 [Thread-6] - Created new fory org.apache.fory.Fory@69c0cad7
+client3-1  | Nov 22, 2026 10:32:08 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+client3-1  | INFO: Client 3 received Resource 1 for Request 6
+client1-1  | Nov 22, 2026 10:32:08 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+client1-1  | INFO: Client 1 released Resource 2
+manager-1  | Nov 22, 2026 10:32:08 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+manager-1  | INFO: Request 4 pending
+client1-1  | Nov 22, 2026 10:32:08 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+client1-1  | INFO: Client 1 finished
+client1-1  | Nov 22, 2026 10:32:08 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine handleTermination
+client1-1  | INFO: 'StateMachine(name='client1')' terminated
+client1-1  | Nov 22, 2026 10:32:08 PM at.ac.uibk.dps.cirrina.Runtime$run$1 invokeSuspend
+client1-1  | INFO: runtime terminated in 2.993933223s
+manager-1  | Nov 22, 2026 10:32:08 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+manager-1  | INFO: Client 1 released Resource 2
+manager-1  | Nov 22, 2026 10:32:08 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+manager-1  | INFO: Resource 2 granted to Client 2
+client2-1  | Nov 22, 2026 10:32:08 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+client2-1  | INFO: Client 2 received Resource 2 for Request 4
+client3-1  | 2026-11-22 10:32:09 INFO  Fory:165 [DefaultDispatcher-worker-1] - Created new fory org.apache.fory.Fory@75bbbdd7
+client3-1  | Nov 22, 2026 10:32:09 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+client3-1  | INFO: Client 3 released Resource 1
+client3-1  | Nov 22, 2026 10:32:09 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+client3-1  | INFO: Client 3 finished
+client3-1  | Nov 22, 2026 10:32:09 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine handleTermination
+client3-1  | INFO: 'StateMachine(name='client3')' terminated
+manager-1  | 2026-11-22 10:32:09 INFO  Fory:165 [Thread-6] - Created new fory org.apache.fory.Fory@1c474630
+client3-1  | Nov 22, 2026 10:32:09 PM at.ac.uibk.dps.cirrina.Runtime$run$1 invokeSuspend
+client3-1  | INFO: runtime terminated in 3.383531272s
+manager-1  | Nov 22, 2026 10:32:09 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+manager-1  | INFO: Client 3 released Resource 1
+[Kclient1-1 exited with code 0
+[Kclient3-1 exited with code 0
+client2-1  | Nov 22, 2026 10:32:09 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+client2-1  | INFO: Client 2 released Resource 2
+client2-1  | Nov 22, 2026 10:32:09 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+client2-1  | INFO: Client 2 finished
+client2-1  | Nov 22, 2026 10:32:09 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine handleTermination
+client2-1  | INFO: 'StateMachine(name='client2')' terminated
+client2-1  | Nov 22, 2026 10:32:09 PM at.ac.uibk.dps.cirrina.Runtime$run$1 invokeSuspend
+client2-1  | INFO: runtime terminated in 3.739536547s
+manager-1  | Nov 22, 2026 10:32:09 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+manager-1  | INFO: Client 2 released Resource 2
+manager-1  | Nov 22, 2026 10:32:09 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+manager-1  | INFO: All resource requests completed
+manager-1  | Nov 22, 2026 10:32:09 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+manager-1  | INFO: final request states: {Request 1=COMPLETED, Request 5=COMPLETED, Request 3=COMPLETED, Request 2=COMPLETED, Request 6=COMPLETED, Request 4=COMPLETED}
+manager-1  | Nov 22, 2026 10:32:09 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+manager-1  | INFO: final resource states: {Resource 2=AVAILABLE, Resource 1=AVAILABLE}
+manager-1  | Nov 22, 2026 10:32:09 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine handleTermination
+manager-1  | INFO: 'StateMachine(name='resourceManager')' terminated
+manager-1  | Nov 22, 2026 10:32:09 PM at.ac.uibk.dps.cirrina.Runtime$run$1 invokeSuspend
+manager-1  | INFO: runtime terminated in 5.871834633s
+[Kclient2-1 exited with code 0
+[Kmanager-1 exited with code 0
