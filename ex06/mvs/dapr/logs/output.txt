@@ -1,0 +1,26 @@
+Monitoring Coordinator initialized
+Sensor 3 initialized
+Sensor 2 initialized
+Sensor 1 initialized
+Sensor 3: 40 -> NORMAL
+Sensor 1: 45 -> NORMAL
+Sensor 2: 52 -> NORMAL
+Sensor 1: 62 -> NORMAL
+Sensor 3: 48 -> NORMAL
+Sensor 2: 81 -> ALERT
+Active alerts: 1
+Sensor 3: 73 -> ALERT
+Active alerts: 2
+Sensor 1: 78 -> ALERT
+Active alerts: 3
+Sensor 2: 85 -> ALERT
+Sensor 3: 80 -> ALERT
+Sensor 2: 60 -> NORMAL
+Active alerts: 2
+Sensor 1: 55 -> NORMAL
+Active alerts: 1
+Measurements processed: 12
+Sensor 1 final state: NORMAL
+Sensor 2 final state: NORMAL
+Sensor 3 final state: ALERT
+Active alerts: 1

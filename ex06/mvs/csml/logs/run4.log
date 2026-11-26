@@ -1,0 +1,183 @@
+ Network config_default Creating 
+ Network config_default Creating 
+ Network config_default Created 
+ Network config_default Created 
+ Container config-zenoh-1 Creating 
+ Container config-etcd-1 Creating 
+ etcd The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested 
+ Container config-etcd-1 Created 
+ Container config-zenoh-1 Created 
+ Container config-coordinator-1 Creating 
+ Container config-coordinator-1 Created 
+ Container config-sensor1-1 Creating 
+ Container config-sensor2-1 Creating 
+ Container config-sensor3-1 Creating 
+ Container config-sensor1-1 Created 
+ Container config-sensor2-1 Created 
+ Container config-sensor3-1 Created 
+ Container config-zenoh-1 Starting 
+ Container config-etcd-1 Starting 
+ Container config-zenoh-1 Started 
+ Container config-etcd-1 Started 
+ Container config-coordinator-1 Starting 
+ Container config-coordinator-1 Started 
+ Container config-sensor2-1 Starting 
+ Container config-sensor3-1 Starting 
+ Container config-sensor1-1 Starting 
+ Container config-sensor2-1 Started 
+ Container config-sensor3-1 Started 
+ Container config-sensor1-1 Started 
+Nov 23, 2026 9:48:30 PM at.ac.uibk.dps.cirrina.Cirrina run
+INFO: cirrina version 2.4.1
+Nov 23, 2026 9:48:30 PM at.ac.uibk.dps.cirrina.Cirrina run
+INFO: cirrina.6cee40fe-8c75-429c-8c22-afe2d21d5ced
+Nov 23, 2026 9:48:30 PM at.ac.uibk.dps.cirrina.Cirrina run
+INFO: cirrina version 2.4.1
+Nov 23, 2026 9:48:30 PM at.ac.uibk.dps.cirrina.Cirrina run
+INFO: cirrina version 2.4.1
+Nov 23, 2026 9:48:30 PM at.ac.uibk.dps.cirrina.Cirrina run
+INFO: cirrina.61072742-aaf1-4976-98f9-fcf23aca0664
+Nov 23, 2026 9:48:30 PM at.ac.uibk.dps.cirrina.Cirrina run
+INFO: cirrina.ae6edf39-cec4-4c14-9b07-74902ac29980
+Nov 23, 2026 9:48:30 PM at.ac.uibk.dps.cirrina.Cirrina run
+INFO: cirrina version 2.4.1
+Nov 23, 2026 9:48:30 PM at.ac.uibk.dps.cirrina.Cirrina run
+INFO: cirrina.3344a92a-3398-49b6-8e34-3b1a5862f19f
+2026-11-23 09:48:38 INFO  Fory:165 [main] - Created new fory org.apache.fory.Fory@70f68288
+2026-11-23 09:48:38 INFO  Fory:165 [main] - Created new fory org.apache.fory.Fory@43c57161
+Nov 23, 2026 9:48:39 PM at.ac.uibk.dps.cirrina.Runtime <init>
+WARNING: variable 'processed' already exists or failed to create
+Nov 23, 2026 9:48:39 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine start
+INFO: 'StateMachine(name='sensor2')' entering initial state
+Nov 23, 2026 9:48:39 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 2 initialized
+Nov 23, 2026 9:48:39 PM at.ac.uibk.dps.cirrina.Runtime <init>
+WARNING: variable 'activeAlerts' already exists or failed to create
+Nov 23, 2026 9:48:39 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine start
+INFO: 'StateMachine(name='sensor3')' entering initial state
+Nov 23, 2026 9:48:39 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 3 initialized
+2026-11-23 09:48:39 INFO  CompileUnit:55 [main] - Generate code for at.ac.uibk.dps.cirrina.spec.ContextVariableForyCodec_0 took 15 ms.
+2026-11-23 09:48:39 INFO  CompileUnit:55 [main] - Generate code for at.ac.uibk.dps.cirrina.spec.ContextVariableForyCodec_0 took 15 ms.
+2026-11-23 09:48:39 INFO  JaninoUtils:121 [main] - Compile [ContextVariableForyCodec_0] take 156 ms
+2026-11-23 09:48:39 INFO  CompileUnit:55 [main] - Generate code for at.ac.uibk.dps.cirrina.spec.EventForyCodec_0 took 294 ms.
+2026-11-23 09:48:39 INFO  JaninoUtils:121 [main] - Compile [ContextVariableForyCodec_0] take 150 ms
+2026-11-23 09:48:39 INFO  CompileUnit:55 [main] - Generate code for at.ac.uibk.dps.cirrina.spec.EventForyCodec_0 took 278 ms.
+2026-11-23 09:48:39 INFO  JaninoUtils:121 [main] - Compile [EventForyCodec_0] take 183 ms
+Nov 23, 2026 9:48:39 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine start
+INFO: 'StateMachine(name='sensor2')' starting event processor
+2026-11-23 09:48:39 INFO  Fory:165 [Thread-3] - Created new fory org.apache.fory.Fory@18c29f48
+2026-11-23 09:48:39 INFO  JaninoUtils:121 [main] - Compile [EventForyCodec_0] take 186 ms
+2026-11-23 09:48:39 INFO  Fory:165 [Thread-5] - Created new fory org.apache.fory.Fory@213b1b3f
+Nov 23, 2026 9:48:39 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine start
+INFO: 'StateMachine(name='sensor3')' starting event processor
+2026-11-23 09:48:40 INFO  Fory:165 [DefaultDispatcher-worker-2] - Created new fory org.apache.fory.Fory@a47152f
+2026-11-23 09:48:40 INFO  Fory:165 [Thread-1] - Created new fory org.apache.fory.Fory@32b12303
+2026-11-23 09:48:40 INFO  Fory:165 [main] - Created new fory org.apache.fory.Fory@3bbf6abe
+2026-11-23 09:48:40 INFO  Fory:165 [DefaultDispatcher-worker-2] - Created new fory org.apache.fory.Fory@3098e117
+2026-11-23 09:48:41 INFO  CompileUnit:55 [Thread-1] - Generate code for at.ac.uibk.dps.cirrina.spec.ContextVariableForyCodec_0 took 17 ms.
+2026-11-23 09:48:41 INFO  JaninoUtils:121 [Thread-1] - Compile [ContextVariableForyCodec_0] take 174 ms
+2026-11-23 09:48:41 INFO  CompileUnit:55 [Thread-1] - Generate code for at.ac.uibk.dps.cirrina.spec.EventForyCodec_0 took 329 ms.
+2026-11-23 09:48:41 INFO  JaninoUtils:121 [Thread-1] - Compile [EventForyCodec_0] take 296 ms
+2026-11-23 09:48:41 INFO  Fory:165 [Thread-7] - Created new fory org.apache.fory.Fory@30da292
+Nov 23, 2026 9:48:41 PM at.ac.uibk.dps.cirrina.Runtime <init>
+WARNING: variable 'processed' already exists or failed to create
+Nov 23, 2026 9:48:41 PM at.ac.uibk.dps.cirrina.Runtime <init>
+WARNING: variable 'activeAlerts' already exists or failed to create
+Nov 23, 2026 9:48:41 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine start
+INFO: 'StateMachine(name='sensor1')' entering initial state
+Nov 23, 2026 9:48:41 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 1 initialized
+Nov 23, 2026 9:48:41 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine start
+INFO: 'StateMachine(name='sensor1')' starting event processor
+2026-11-23 09:48:42 INFO  Fory:165 [Thread-6] - Created new fory org.apache.fory.Fory@5b586bfc
+2026-11-23 09:48:42 INFO  Fory:165 [DefaultDispatcher-worker-3] - Created new fory org.apache.fory.Fory@41d25e2e
+2026-11-23 09:48:42 INFO  Fory:165 [DefaultDispatcher-worker-1] - Created new fory org.apache.fory.Fory@6ddac4e9
+2026-11-23 09:48:43 INFO  Fory:165 [DefaultDispatcher-worker-2] - Created new fory org.apache.fory.Fory@20472f9
+2026-11-23 09:48:46 INFO  Fory:165 [DefaultDispatcher-worker-3] - Created new fory org.apache.fory.Fory@1f34a1b7
+2026-11-23 09:48:47 INFO  Fory:165 [DefaultDispatcher-worker-3] - Created new fory org.apache.fory.Fory@f79300e
+2026-11-23 09:48:48 INFO  Fory:165 [Thread-1] - Created new fory org.apache.fory.Fory@4e1c11b4
+2026-11-23 09:48:48 INFO  Fory:165 [main] - Created new fory org.apache.fory.Fory@358ab600
+2026-11-23 09:48:48 INFO  CompileUnit:55 [Thread-1] - Generate code for at.ac.uibk.dps.cirrina.spec.ContextVariableForyCodec_0 took 8 ms.
+2026-11-23 09:48:48 INFO  JaninoUtils:121 [Thread-1] - Compile [ContextVariableForyCodec_0] take 155 ms
+2026-11-23 09:48:49 INFO  CompileUnit:55 [Thread-1] - Generate code for at.ac.uibk.dps.cirrina.spec.EventForyCodec_0 took 298 ms.
+2026-11-23 09:48:49 INFO  JaninoUtils:121 [Thread-1] - Compile [EventForyCodec_0] take 252 ms
+Nov 23, 2026 9:48:49 PM at.ac.uibk.dps.cirrina.Runtime <init>
+WARNING: variable 'processed' already exists or failed to create
+Nov 23, 2026 9:48:49 PM at.ac.uibk.dps.cirrina.Runtime <init>
+WARNING: variable 'activeAlerts' already exists or failed to create
+Nov 23, 2026 9:48:49 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine start
+INFO: 'StateMachine(name='coordinator')' entering initial state
+Nov 23, 2026 9:48:49 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Monitoring Coordinator initialized
+Nov 23, 2026 9:48:49 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine start
+INFO: 'StateMachine(name='coordinator')' starting event processor
+2026-11-23 09:48:49 INFO  Fory:165 [DefaultDispatcher-worker-1] - Created new fory org.apache.fory.Fory@47f1dfd2
+2026-11-23 09:48:49 INFO  Fory:165 [Thread-8] - Created new fory org.apache.fory.Fory@7bbde40a
+2026-11-23 09:48:49 INFO  Fory:165 [DefaultDispatcher-worker-4] - Created new fory org.apache.fory.Fory@7cdbd220
+2026-11-23 09:48:50 INFO  Fory:165 [Thread-6] - Created new fory org.apache.fory.Fory@7a7ab1bd
+Nov 23, 2026 9:48:50 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 2: 52 -> NORMAL
+Nov 23, 2026 9:48:50 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 1: 45 -> NORMAL
+Nov 23, 2026 9:48:50 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 3: 40 -> NORMAL
+Nov 23, 2026 9:48:51 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 2: 81 -> ALERT
+Nov 23, 2026 9:48:51 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Active alerts: 1
+Nov 23, 2026 9:48:51 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 3: 48 -> NORMAL
+Nov 23, 2026 9:48:51 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 1: 62 -> NORMAL
+2026-11-23 09:48:51 INFO  Fory:165 [DefaultDispatcher-worker-1] - Created new fory org.apache.fory.Fory@de90616
+Nov 23, 2026 9:48:51 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 2: 85 -> ALERT
+Nov 23, 2026 9:48:52 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 3: 73 -> ALERT
+Nov 23, 2026 9:48:52 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Active alerts: 2
+Nov 23, 2026 9:48:52 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 1: 78 -> ALERT
+Nov 23, 2026 9:48:52 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Active alerts: 3
+Nov 23, 2026 9:48:52 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine handleTermination
+INFO: 'StateMachine(name='sensor2')' terminated
+Nov 23, 2026 9:48:52 PM at.ac.uibk.dps.cirrina.Runtime$run$1 invokeSuspend
+INFO: runtime terminated in 12.786339673s
+Nov 23, 2026 9:48:52 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 2: 60 -> NORMAL
+Nov 23, 2026 9:48:52 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Active alerts: 2
+[Ksensor2-1 exited with code 0
+Nov 23, 2026 9:48:53 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine handleTermination
+INFO: 'StateMachine(name='sensor3')' terminated
+Nov 23, 2026 9:48:53 PM at.ac.uibk.dps.cirrina.Runtime$run$1 invokeSuspend
+INFO: runtime terminated in 13.266298965s
+Nov 23, 2026 9:48:53 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 3: 80 -> ALERT
+Nov 23, 2026 9:48:53 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine handleTermination
+INFO: 'StateMachine(name='sensor1')' terminated
+Nov 23, 2026 9:48:53 PM at.ac.uibk.dps.cirrina.Runtime$run$1 invokeSuspend
+INFO: runtime terminated in 11.260907339s
+Nov 23, 2026 9:48:53 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 1: 55 -> NORMAL
+Nov 23, 2026 9:48:53 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Active alerts: 1
+Nov 23, 2026 9:48:53 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Measurements processed: 12
+Nov 23, 2026 9:48:53 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 1 final state: NORMAL
+Nov 23, 2026 9:48:53 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 2 final state: NORMAL
+Nov 23, 2026 9:48:53 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 3 final state: ALERT
+Nov 23, 2026 9:48:53 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Active alerts: 1
+Nov 23, 2026 9:48:53 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine handleTermination
+INFO: 'StateMachine(name='coordinator')' terminated
+Nov 23, 2026 9:48:53 PM at.ac.uibk.dps.cirrina.Runtime$run$1 invokeSuspend
+INFO: runtime terminated in 3.680962751s
+[Ksensor3-1 exited with code 0
+[Ksensor1-1 exited with code 0
+[Kcoordinator-1 exited with code 0

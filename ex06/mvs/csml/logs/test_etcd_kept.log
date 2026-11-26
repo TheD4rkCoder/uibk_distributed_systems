@@ -1,0 +1,70 @@
+Nov 23, 2026 9:48:03 PM at.ac.uibk.dps.cirrina.Cirrina run
+INFO: cirrina version 2.4.1
+Nov 23, 2026 9:48:03 PM at.ac.uibk.dps.cirrina.Cirrina run
+INFO: cirrina.5569d9b6-c43b-4554-822d-f86c2113a586
+2026-11-23 09:48:08 INFO  Fory:165 [main] - Created new fory org.apache.fory.Fory@43c57161
+Nov 23, 2026 9:48:10 PM at.ac.uibk.dps.cirrina.Runtime <init>
+WARNING: variable 'processed' already exists or failed to create
+Nov 23, 2026 9:48:10 PM at.ac.uibk.dps.cirrina.Runtime <init>
+WARNING: variable 'activeAlerts' already exists or failed to create
+Nov 23, 2026 9:48:10 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine start
+INFO: 'StateMachine(name='coordinator')' entering initial state
+Nov 23, 2026 9:48:10 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Monitoring Coordinator initialized
+Nov 23, 2026 9:48:10 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine start
+INFO: 'StateMachine(name='coordinator')' starting event processor
+2026-11-23 09:48:13 INFO  Fory:165 [Thread-5] - Created new fory org.apache.fory.Fory@723947f4
+2026-11-23 09:48:13 INFO  CompileUnit:55 [Thread-5] - Generate code for at.ac.uibk.dps.cirrina.spec.ContextVariableForyCodec_0 took 22 ms.
+2026-11-23 09:48:13 INFO  JaninoUtils:121 [Thread-5] - Compile [ContextVariableForyCodec_0] take 338 ms
+2026-11-23 09:48:13 INFO  CompileUnit:55 [Thread-5] - Generate code for at.ac.uibk.dps.cirrina.spec.EventForyCodec_0 took 664 ms.
+2026-11-23 09:48:14 INFO  JaninoUtils:121 [Thread-5] - Compile [EventForyCodec_0] take 240 ms
+2026-11-23 09:48:14 INFO  Fory:165 [DefaultDispatcher-worker-1] - Created new fory org.apache.fory.Fory@2e032063
+2026-11-23 09:48:14 INFO  Fory:165 [Thread-6] - Created new fory org.apache.fory.Fory@7c7fb97e
+Nov 23, 2026 9:48:15 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 3: 40 -> NORMAL
+Nov 23, 2026 9:48:15 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 2: 52 -> NORMAL
+Nov 23, 2026 9:48:15 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 1: 45 -> NORMAL
+Nov 23, 2026 9:48:15 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 3: 48 -> NORMAL
+Nov 23, 2026 9:48:16 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 1: 62 -> NORMAL
+Nov 23, 2026 9:48:16 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 2: 81 -> ALERT
+Nov 23, 2026 9:48:16 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Active alerts: 1
+Nov 23, 2026 9:48:16 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 3: 73 -> ALERT
+Nov 23, 2026 9:48:16 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Active alerts: 2
+Nov 23, 2026 9:48:16 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 1: 78 -> ALERT
+Nov 23, 2026 9:48:16 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Active alerts: 3
+Nov 23, 2026 9:48:16 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 2: 85 -> ALERT
+Nov 23, 2026 9:48:17 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 1: 55 -> NORMAL
+Nov 23, 2026 9:48:17 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Active alerts: 2
+Nov 23, 2026 9:48:17 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 3: 80 -> ALERT
+Nov 23, 2026 9:48:17 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 2: 60 -> NORMAL
+Nov 23, 2026 9:48:17 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Active alerts: 1
+Nov 23, 2026 9:48:17 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Measurements processed: 12
+Nov 23, 2026 9:48:17 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 1 final state: NORMAL
+Nov 23, 2026 9:48:17 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 2 final state: NORMAL
+Nov 23, 2026 9:48:17 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Sensor 3 final state: ALERT
+Nov 23, 2026 9:48:17 PM at.ac.uibk.dps.cirrina.execution.object.ActionExecutor executeLog
+INFO: Active alerts: 1
+Nov 23, 2026 9:48:17 PM at.ac.uibk.dps.cirrina.execution.object.StateMachine handleTermination
+INFO: 'StateMachine(name='coordinator')' terminated
+Nov 23, 2026 9:48:17 PM at.ac.uibk.dps.cirrina.Runtime$run$1 invokeSuspend
+INFO: runtime terminated in 7.401323962s

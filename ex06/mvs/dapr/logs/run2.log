@@ -1,0 +1,408 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/opt/homebrew/Cellar/maven/3.9.11/libexec/lib/guice-5.1.0-classes.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+ℹ️  Starting Dapr with id coordinator. HTTP Port: 3500. gRPC Port: 50001
+ℹ️  Checking if Dapr sidecar is listening on HTTP port 3500
+time="2026-11-23T10:23:04.465885+01:00" level=info msg="Starting Dapr Runtime -- version 1.19.1 -- commit cfb5ee090dda7cfc26145c7703605d831350aa2a" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:04.465989+01:00" level=info msg="Log level set to: info" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:04.467816+01:00" level=warning msg="mTLS is disabled. Skipping certificate request and tls validation" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.security type=log ver=1.19.1
+time="2026-11-23T10:23:04.470027+01:00" level=info msg="Enabled features: WorkflowsRemoteActivityReminder HotReload" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:04.470591+01:00" level=info msg="metric spec: {\"enabled\":true}" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.diagnostics type=log ver=1.19.1
+time="2026-11-23T10:23:04.470617+01:00" level=info msg="Using default latency distribution buckets: [1 2 3 4 5 6 8 10 13 16 20 25 30 40 50 65 80 100 130 160 200 250 300 400 500 650 800 1000 2000 5000 10000 20000 50000 100000]" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.diagnostics type=log ver=1.19.1
+time="2026-11-23T10:23:04.470675+01:00" level=warning msg="The default value for 'spec.metric.http.increasedCardinality' will change to 'false' in Dapr 1.15 or later" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.diagnostics type=log ver=1.19.1
+time="2026-11-23T10:23:04.471929+01:00" level=info msg="Watching directories: [./config]" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.loader.disk type=log ver=1.19.1
+time="2026-11-23T10:23:04.473345+01:00" level=info msg="standalone mode configured" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:04.473355+01:00" level=info msg="app id: coordinator" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:04.475109+01:00" level=info msg="metrics server started on 0.0.0.0:59342/" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:04.475278+01:00" level=info msg="Dapr trace sampler initialized: ParentBased{root:TraceIDRatioBased{1},remoteParentSampled:AlwaysOnSampler,remoteParentNotSampled:AlwaysOffSampler,localParentSampled:AlwaysOnSampler,localParentNotSampled:AlwaysOffSampler}" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:04.475767+01:00" level=info msg="local service entry announced: coordinator -> 172.25.44.150:59343" app_id=coordinator component="nr (mdns/v1)" instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.contrib type=log ver=1.19.1
+time="2026-11-23T10:23:04.475799+01:00" level=info msg="Initialized name resolution to mdns" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:04.475972+01:00" level=info msg="Loading components…" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:04.481319+01:00" level=info msg="Received scheduler hosts addresses: [localhost:50006] (placement leader \"\")" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.watchhosts type=log ver=1.19.1
+time="2026-11-23T10:23:04.48145+01:00" level=info msg="Scheduler client initialized for address: localhost:50006" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.clients type=log ver=1.19.1
+time="2026-11-23T10:23:04.481461+01:00" level=info msg="Scheduler clients initialized" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.clients type=log ver=1.19.1
+time="2026-11-23T10:23:04.486503+01:00" level=info msg="Component loaded: pubsub (pubsub.redis/v1)" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.processor.loops.root type=log ver=1.19.1
+time="2026-11-23T10:23:04.49107+01:00" level=info msg="Component loaded: statestore (state.redis/v1)" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.processor.loops.root type=log ver=1.19.1
+time="2026-11-23T10:23:04.491103+01:00" level=info msg="Waiting for all outstanding components to be processed…" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:04.491116+01:00" level=info msg="All outstanding components processed" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:04.491124+01:00" level=info msg="Loading endpoints…" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:04.491325+01:00" level=info msg="Waiting for all outstanding http endpoints to be processed…" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:04.491334+01:00" level=info msg="All outstanding http endpoints processed" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:04.49134+01:00" level=info msg="Loading Declarative Subscriptions…" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:04.491522+01:00" level=warning msg="App channel is not initialized. Did you configure an app-port?" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.channels type=log ver=1.19.1
+time="2026-11-23T10:23:04.491671+01:00" level=info msg="Hot reloading enabled. Daprd will reload 'Component', 'Subscription', 'MCPServer', 'Configuration', 'HTTPEndpoint', 'Resiliency' and 'WorkflowAccessPolicy' resources when they are added, updated or deleted." app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload type=log ver=1.19.1
+time="2026-11-23T10:23:04.491866+01:00" level=info msg="Starting to watch WorkflowAccessPolicy updates" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:04.491867+01:00" level=info msg="Starting to watch Component updates" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:04.49187+01:00" level=info msg="gRPC server listening on TCP address: :50001" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T10:23:04.491896+01:00" level=info msg="Enabled gRPC tracing middleware" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T10:23:04.491907+01:00" level=info msg="Enabled gRPC metrics middleware" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T10:23:04.492003+01:00" level=info msg="Starting to watch Resiliency updates for SIGHUP reload" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:04.492005+01:00" level=info msg="Starting to watch Configuration updates for SIGHUP reload" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:04.492006+01:00" level=info msg="Starting to watch HTTPEndpoint updates for SIGHUP reload" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:04.492009+01:00" level=info msg="Starting to watch Subscription updates" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:04.492009+01:00" level=info msg="Starting to watch MCPServer updates" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:04.492185+01:00" level=info msg="Registering workflow engine for gRPC endpoint: [::]:50001" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T10:23:04.492426+01:00" level=info msg="API gRPC server is running on port 50001" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:04.492629+01:00" level=warning msg="The default value for 'spec.metric.http.increasedCardinality' will change to 'false' in Dapr 1.15 or later" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T10:23:04.492873+01:00" level=info msg="Enabled max body size HTTP middleware with size 4194304 bytes" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T10:23:04.492879+01:00" level=info msg="Enabled tracing HTTP middleware" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T10:23:04.492883+01:00" level=info msg="Enabled metrics HTTP middleware" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T10:23:04.493038+01:00" level=info msg="HTTP server listening on TCP address: :3500" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T10:23:04.493068+01:00" level=info msg="HTTP server is running on port 3500" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:04.493073+01:00" level=info msg="The request body size parameter is: 4194304 bytes" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:04.493081+01:00" level=info msg="gRPC server listening on pre-bound TCP address: [::]:59343" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.internal type=log ver=1.19.1
+time="2026-11-23T10:23:04.493087+01:00" level=info msg="Enabled gRPC tracing middleware" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.internal type=log ver=1.19.1
+time="2026-11-23T10:23:04.493091+01:00" level=info msg="Enabled gRPC metrics middleware" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.internal type=log ver=1.19.1
+time="2026-11-23T10:23:04.493104+01:00" level=info msg="Internal gRPC server is running on :59343" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:04.49311+01:00" level=info msg="actors: state store is not configured - actor state and workflow operations will be unavailable until an actor state store component is loaded" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:04.493183+01:00" level=info msg="Actor state store not configured - actor hosting disabled until one is configured, but invocation enabled" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actor type=log ver=1.19.1
+time="2026-11-23T10:23:04.49319+01:00" level=info msg="Using Scheduler service for reminders." app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actor.reminders.scheduler type=log ver=1.19.1
+time="2026-11-23T10:23:04.493201+01:00" level=info msg="Scheduler address configured; asking the scheduler whether it serves actor placement" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actors.placement type=log ver=1.19.1
+time="2026-11-23T10:23:04.493215+01:00" level=info msg="Loading MCP servers…" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:04.493222+01:00" level=info msg="Actor runtime started" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actor type=log ver=1.19.1
+time="2026-11-23T10:23:04.493233+01:00" level=warning msg="Graceful shutdown timeout is infinite, will wait indefinitely to shutdown" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actor type=log ver=1.19.1
+time="2026-11-23T10:23:04.493351+01:00" level=info msg="Waiting for all outstanding MCP servers to be processed…" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:04.493358+01:00" level=info msg="All outstanding MCP servers processed" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:04.493368+01:00" level=info msg="dapr initialized. Status: Running. Init Elapsed 20ms" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:04.493946+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:04.493953+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:04.493962+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:04.494179+01:00" level=info msg="worker started with backend dapr.actors/v1" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.wfengine.durabletask.backend type=log ver=1.19.1
+time="2026-11-23T10:23:04.494452+01:00" level=info msg="Workflow engine started" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.wfengine type=log ver=1.19.1
+time="2026-11-23T10:23:04.494567+01:00" level=warning msg="Scheduler cluster does not serve actor placement, using the placement service" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actors.placement.loops.placement type=log ver=1.19.1
+time="2026-11-23T10:23:04.497768+01:00" level=info msg="Connected to placement service: localhost:50005" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actors.placement.loops.placement type=log ver=1.19.1
+time="2026-11-23T10:23:04.497801+01:00" level=info msg="Reporting initial host to placement service with initial types []" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actors.placement.loops.placement type=log ver=1.19.1
+time="2026-11-23T10:23:04.499442+01:00" level=info msg="Dissemination complete for version 0 (changed types []), unlocking disseminator default/coordinator" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actors.placement.loops.disseminator type=log ver=1.19.1
+time="2026-11-23T10:23:04.499476+01:00" level=info msg="Scheduler stream disconnected" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:04.499931+01:00" level=info msg="Scheduler stream disconnected" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:04.499933+01:00" level=info msg="Scheduler stream disconnected" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:04.499974+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:04.499976+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:04.499979+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+ℹ️  Checking if Dapr sidecar is listening on GRPC port 50001
+ℹ️  Dapr sidecar is up and running.
+ℹ️  Updating metadata for appPID: 73691
+ℹ️  Updating metadata for app command: mvn -q exec:java -Dexec.mainClass=uc4.CoordinatorKt
+✅  You're up and running! Both Dapr and your app logs will appear here.
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/opt/homebrew/Cellar/maven/3.9.11/libexec/lib/guice-5.1.0-classes.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+time="2026-11-23T10:23:06.801921+01:00" level=warning msg="Redis does not support transaction rollbacks and should not be used in production as an actor state store." app_id=coordinator component="statestore (state.redis/v1)" instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.contrib type=log ver=1.19.1
+Monitoring Coordinator initialized
+time="2026-11-23T10:23:06.821914+01:00" level=info msg="Subscribing to pubsub 'pubsub' topic 'measurements' ConnectionID 1" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.pubsub.streamer type=log ver=1.19.1
+ℹ️  Starting Dapr with id sensor-1. HTTP Port: 3501. gRPC Port: 50002
+ℹ️  Starting Dapr with id sensor-2. HTTP Port: 3502. gRPC Port: 50003
+ℹ️  Starting Dapr with id sensor-3. HTTP Port: 3503. gRPC Port: 50004
+ℹ️  Checking if Dapr sidecar is listening on HTTP port 3502
+ℹ️  Checking if Dapr sidecar is listening on HTTP port 3501
+ℹ️  Checking if Dapr sidecar is listening on HTTP port 3503
+time="2026-11-23T10:23:12.08791+01:00" level=info msg="Starting Dapr Runtime -- version 1.19.1 -- commit cfb5ee090dda7cfc26145c7703605d831350aa2a" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.087979+01:00" level=info msg="Log level set to: info" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.089183+01:00" level=warning msg="mTLS is disabled. Skipping certificate request and tls validation" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.security type=log ver=1.19.1
+time="2026-11-23T10:23:12.089529+01:00" level=info msg="Enabled features: HotReload WorkflowsRemoteActivityReminder" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.089965+01:00" level=info msg="metric spec: {\"enabled\":true}" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.diagnostics type=log ver=1.19.1
+time="2026-11-23T10:23:12.089999+01:00" level=info msg="Using default latency distribution buckets: [1 2 3 4 5 6 8 10 13 16 20 25 30 40 50 65 80 100 130 160 200 250 300 400 500 650 800 1000 2000 5000 10000 20000 50000 100000]" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.diagnostics type=log ver=1.19.1
+time="2026-11-23T10:23:12.090077+01:00" level=warning msg="The default value for 'spec.metric.http.increasedCardinality' will change to 'false' in Dapr 1.15 or later" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.diagnostics type=log ver=1.19.1
+time="2026-11-23T10:23:12.09057+01:00" level=info msg="Watching directories: [./config]" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.loader.disk type=log ver=1.19.1
+time="2026-11-23T10:23:12.091458+01:00" level=info msg="standalone mode configured" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.09155+01:00" level=info msg="app id: sensor-3" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.091556+01:00" level=info msg="metrics server started on 0.0.0.0:59380/" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.091772+01:00" level=info msg="Dapr trace sampler initialized: ParentBased{root:TraceIDRatioBased{1},remoteParentSampled:AlwaysOnSampler,remoteParentNotSampled:AlwaysOffSampler,localParentSampled:AlwaysOnSampler,localParentNotSampled:AlwaysOffSampler}" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.09187+01:00" level=info msg="Starting Dapr Runtime -- version 1.19.1 -- commit cfb5ee090dda7cfc26145c7703605d831350aa2a" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.091957+01:00" level=info msg="Log level set to: info" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.092231+01:00" level=info msg="local service entry announced: sensor-3 -> 172.25.44.150:59383" app_id=sensor-3 component="nr (mdns/v1)" instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.contrib type=log ver=1.19.1
+time="2026-11-23T10:23:12.092986+01:00" level=info msg="Starting Dapr Runtime -- version 1.19.1 -- commit cfb5ee090dda7cfc26145c7703605d831350aa2a" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.093777+01:00" level=info msg="Initialized name resolution to mdns" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.093952+01:00" level=info msg="Log level set to: info" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.09404+01:00" level=info msg="Loading components…" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.094242+01:00" level=warning msg="mTLS is disabled. Skipping certificate request and tls validation" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.security type=log ver=1.19.1
+time="2026-11-23T10:23:12.094366+01:00" level=warning msg="mTLS is disabled. Skipping certificate request and tls validation" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.security type=log ver=1.19.1
+time="2026-11-23T10:23:12.094647+01:00" level=info msg="Enabled features: HotReload WorkflowsRemoteActivityReminder" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.094647+01:00" level=info msg="Enabled features: HotReload WorkflowsRemoteActivityReminder" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.094978+01:00" level=info msg="metric spec: {\"enabled\":true}" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.diagnostics type=log ver=1.19.1
+time="2026-11-23T10:23:12.094987+01:00" level=info msg="metric spec: {\"enabled\":true}" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.diagnostics type=log ver=1.19.1
+time="2026-11-23T10:23:12.095374+01:00" level=info msg="Using default latency distribution buckets: [1 2 3 4 5 6 8 10 13 16 20 25 30 40 50 65 80 100 130 160 200 250 300 400 500 650 800 1000 2000 5000 10000 20000 50000 100000]" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.diagnostics type=log ver=1.19.1
+time="2026-11-23T10:23:12.095377+01:00" level=info msg="Using default latency distribution buckets: [1 2 3 4 5 6 8 10 13 16 20 25 30 40 50 65 80 100 130 160 200 250 300 400 500 650 800 1000 2000 5000 10000 20000 50000 100000]" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.diagnostics type=log ver=1.19.1
+time="2026-11-23T10:23:12.095665+01:00" level=warning msg="The default value for 'spec.metric.http.increasedCardinality' will change to 'false' in Dapr 1.15 or later" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.diagnostics type=log ver=1.19.1
+time="2026-11-23T10:23:12.096205+01:00" level=warning msg="The default value for 'spec.metric.http.increasedCardinality' will change to 'false' in Dapr 1.15 or later" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.diagnostics type=log ver=1.19.1
+time="2026-11-23T10:23:12.096463+01:00" level=info msg="Watching directories: [./config]" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.loader.disk type=log ver=1.19.1
+time="2026-11-23T10:23:12.09653+01:00" level=info msg="Watching directories: [./config]" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.loader.disk type=log ver=1.19.1
+time="2026-11-23T10:23:12.096702+01:00" level=info msg="standalone mode configured" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.096713+01:00" level=info msg="app id: sensor-1" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.096773+01:00" level=info msg="metrics server started on 0.0.0.0:59381/" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.096817+01:00" level=info msg="metrics server started on 0.0.0.0:59382/" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.096819+01:00" level=info msg="Dapr trace sampler initialized: ParentBased{root:TraceIDRatioBased{1},remoteParentSampled:AlwaysOnSampler,remoteParentNotSampled:AlwaysOffSampler,localParentSampled:AlwaysOnSampler,localParentNotSampled:AlwaysOffSampler}" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.096852+01:00" level=info msg="standalone mode configured" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.09686+01:00" level=info msg="app id: sensor-2" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.096935+01:00" level=info msg="Dapr trace sampler initialized: ParentBased{root:TraceIDRatioBased{1},remoteParentSampled:AlwaysOnSampler,remoteParentNotSampled:AlwaysOffSampler,localParentSampled:AlwaysOnSampler,localParentNotSampled:AlwaysOffSampler}" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.096998+01:00" level=info msg="local service entry announced: sensor-1 -> 172.25.44.150:59385" app_id=sensor-1 component="nr (mdns/v1)" instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.contrib type=log ver=1.19.1
+time="2026-11-23T10:23:12.097009+01:00" level=info msg="Initialized name resolution to mdns" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.097072+01:00" level=info msg="Loading components…" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.097272+01:00" level=info msg="local service entry announced: sensor-2 -> 172.25.44.150:59384" app_id=sensor-2 component="nr (mdns/v1)" instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.contrib type=log ver=1.19.1
+time="2026-11-23T10:23:12.097283+01:00" level=info msg="Initialized name resolution to mdns" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.097346+01:00" level=info msg="Loading components…" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.101795+01:00" level=info msg="Received scheduler hosts addresses: [localhost:50006] (placement leader \"\")" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.watchhosts type=log ver=1.19.1
+time="2026-11-23T10:23:12.101872+01:00" level=info msg="Scheduler client initialized for address: localhost:50006" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.clients type=log ver=1.19.1
+time="2026-11-23T10:23:12.10188+01:00" level=info msg="Scheduler clients initialized" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.clients type=log ver=1.19.1
+time="2026-11-23T10:23:12.102571+01:00" level=info msg="Component loaded: pubsub (pubsub.redis/v1)" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.processor.loops.root type=log ver=1.19.1
+time="2026-11-23T10:23:12.104012+01:00" level=info msg="Received scheduler hosts addresses: [localhost:50006] (placement leader \"\")" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.watchhosts type=log ver=1.19.1
+time="2026-11-23T10:23:12.104018+01:00" level=info msg="Received scheduler hosts addresses: [localhost:50006] (placement leader \"\")" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.watchhosts type=log ver=1.19.1
+time="2026-11-23T10:23:12.104078+01:00" level=info msg="Scheduler client initialized for address: localhost:50006" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.clients type=log ver=1.19.1
+time="2026-11-23T10:23:12.10408+01:00" level=info msg="Scheduler client initialized for address: localhost:50006" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.clients type=log ver=1.19.1
+time="2026-11-23T10:23:12.10416+01:00" level=info msg="Scheduler clients initialized" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.clients type=log ver=1.19.1
+time="2026-11-23T10:23:12.104166+01:00" level=info msg="Scheduler clients initialized" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.clients type=log ver=1.19.1
+time="2026-11-23T10:23:12.105131+01:00" level=info msg="Component loaded: pubsub (pubsub.redis/v1)" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.processor.loops.root type=log ver=1.19.1
+time="2026-11-23T10:23:12.106555+01:00" level=info msg="Component loaded: pubsub (pubsub.redis/v1)" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.processor.loops.root type=log ver=1.19.1
+time="2026-11-23T10:23:12.111473+01:00" level=info msg="Component loaded: statestore (state.redis/v1)" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.processor.loops.root type=log ver=1.19.1
+time="2026-11-23T10:23:12.11149+01:00" level=info msg="Waiting for all outstanding components to be processed…" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.111499+01:00" level=info msg="All outstanding components processed" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.111506+01:00" level=info msg="Loading endpoints…" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.111649+01:00" level=info msg="Waiting for all outstanding http endpoints to be processed…" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.111657+01:00" level=info msg="All outstanding http endpoints processed" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.111663+01:00" level=info msg="Loading Declarative Subscriptions…" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.111706+01:00" level=info msg="Component loaded: statestore (state.redis/v1)" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.processor.loops.root type=log ver=1.19.1
+time="2026-11-23T10:23:12.111721+01:00" level=info msg="Waiting for all outstanding components to be processed…" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.11173+01:00" level=info msg="All outstanding components processed" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.111737+01:00" level=info msg="Loading endpoints…" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.111855+01:00" level=warning msg="App channel is not initialized. Did you configure an app-port?" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.channels type=log ver=1.19.1
+time="2026-11-23T10:23:12.111872+01:00" level=info msg="Waiting for all outstanding http endpoints to be processed…" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.111882+01:00" level=info msg="All outstanding http endpoints processed" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.111887+01:00" level=info msg="Loading Declarative Subscriptions…" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.111895+01:00" level=info msg="Component loaded: statestore (state.redis/v1)" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.processor.loops.root type=log ver=1.19.1
+time="2026-11-23T10:23:12.11191+01:00" level=info msg="Waiting for all outstanding components to be processed…" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.111919+01:00" level=info msg="All outstanding components processed" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.111925+01:00" level=info msg="Loading endpoints…" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.111982+01:00" level=info msg="Hot reloading enabled. Daprd will reload 'Component', 'Subscription', 'MCPServer', 'Configuration', 'HTTPEndpoint', 'Resiliency' and 'WorkflowAccessPolicy' resources when they are added, updated or deleted." app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload type=log ver=1.19.1
+time="2026-11-23T10:23:12.112005+01:00" level=info msg="gRPC server listening on TCP address: :50004" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T10:23:12.112013+01:00" level=info msg="Enabled gRPC tracing middleware" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T10:23:12.112017+01:00" level=info msg="Enabled gRPC metrics middleware" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T10:23:12.112026+01:00" level=info msg="Starting to watch WorkflowAccessPolicy updates" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:12.112045+01:00" level=info msg="Starting to watch Resiliency updates for SIGHUP reload" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:12.112055+01:00" level=info msg="Registering workflow engine for gRPC endpoint: [::]:50004" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T10:23:12.112056+01:00" level=info msg="Waiting for all outstanding http endpoints to be processed…" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.112074+01:00" level=info msg="All outstanding http endpoints processed" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.112081+01:00" level=info msg="Loading Declarative Subscriptions…" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.112076+01:00" level=info msg="API gRPC server is running on port 50004" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.112079+01:00" level=warning msg="App channel is not initialized. Did you configure an app-port?" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.channels type=log ver=1.19.1
+time="2026-11-23T10:23:12.112105+01:00" level=warning msg="The default value for 'spec.metric.http.increasedCardinality' will change to 'false' in Dapr 1.15 or later" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T10:23:12.112151+01:00" level=info msg="Enabled max body size HTTP middleware with size 4194304 bytes" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T10:23:12.112157+01:00" level=info msg="Enabled tracing HTTP middleware" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T10:23:12.112163+01:00" level=info msg="Enabled metrics HTTP middleware" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T10:23:12.112222+01:00" level=info msg="Hot reloading enabled. Daprd will reload 'Component', 'Subscription', 'MCPServer', 'Configuration', 'HTTPEndpoint', 'Resiliency' and 'WorkflowAccessPolicy' resources when they are added, updated or deleted." app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload type=log ver=1.19.1
+time="2026-11-23T10:23:12.112239+01:00" level=info msg="gRPC server listening on TCP address: :50003" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T10:23:12.112246+01:00" level=info msg="Enabled gRPC tracing middleware" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T10:23:12.112251+01:00" level=info msg="Enabled gRPC metrics middleware" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T10:23:12.112249+01:00" level=info msg="Starting to watch WorkflowAccessPolicy updates" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:12.112265+01:00" level=warning msg="App channel is not initialized. Did you configure an app-port?" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.channels type=log ver=1.19.1
+time="2026-11-23T10:23:12.112269+01:00" level=info msg="Starting to watch Resiliency updates for SIGHUP reload" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:12.112288+01:00" level=info msg="Registering workflow engine for gRPC endpoint: [::]:50003" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T10:23:12.112285+01:00" level=info msg="Starting to watch HTTPEndpoint updates for SIGHUP reload" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:12.112326+01:00" level=info msg="HTTP server listening on TCP address: :3503" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T10:23:12.112366+01:00" level=info msg="HTTP server is running on port 3503" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.112269+01:00" level=info msg="Starting to watch MCPServer updates" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:12.112371+01:00" level=info msg="The request body size parameter is: 4194304 bytes" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.112381+01:00" level=info msg="gRPC server listening on pre-bound TCP address: [::]:59383" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.internal type=log ver=1.19.1
+time="2026-11-23T10:23:12.112387+01:00" level=info msg="Enabled gRPC tracing middleware" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.internal type=log ver=1.19.1
+time="2026-11-23T10:23:12.112418+01:00" level=info msg="Enabled gRPC metrics middleware" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.internal type=log ver=1.19.1
+time="2026-11-23T10:23:12.112411+01:00" level=info msg="Starting to watch Configuration updates for SIGHUP reload" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:12.112436+01:00" level=info msg="Internal gRPC server is running on :59383" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.112448+01:00" level=info msg="gRPC server listening on TCP address: :50002" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T10:23:12.112454+01:00" level=info msg="actors: state store is not configured - actor state and workflow operations will be unavailable until an actor state store component is loaded" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.11246+01:00" level=info msg="Enabled gRPC tracing middleware" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T10:23:12.112473+01:00" level=info msg="Enabled gRPC metrics middleware" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T10:23:12.112448+01:00" level=info msg="Hot reloading enabled. Daprd will reload 'Component', 'Subscription', 'MCPServer', 'Configuration', 'HTTPEndpoint', 'Resiliency' and 'WorkflowAccessPolicy' resources when they are added, updated or deleted." app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload type=log ver=1.19.1
+time="2026-11-23T10:23:12.112497+01:00" level=info msg="Starting to watch WorkflowAccessPolicy updates" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:12.112522+01:00" level=info msg="Starting to watch Resiliency updates for SIGHUP reload" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:12.112544+01:00" level=info msg="Starting to watch HTTPEndpoint updates for SIGHUP reload" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:12.112559+01:00" level=info msg="Registering workflow engine for gRPC endpoint: [::]:50002" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T10:23:12.112556+01:00" level=info msg="Starting to watch Configuration updates for SIGHUP reload" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:12.112574+01:00" level=info msg="API gRPC server is running on port 50002" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.112544+01:00" level=info msg="Starting to watch Component updates" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:12.112562+01:00" level=info msg="Starting to watch Subscription updates" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:12.112598+01:00" level=warning msg="The default value for 'spec.metric.http.increasedCardinality' will change to 'false' in Dapr 1.15 or later" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T10:23:12.112056+01:00" level=info msg="Starting to watch HTTPEndpoint updates for SIGHUP reload" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:12.112563+01:00" level=info msg="Starting to watch MCPServer updates" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:12.11262+01:00" level=info msg="Actor state store not configured - actor hosting disabled until one is configured, but invocation enabled" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actor type=log ver=1.19.1
+time="2026-11-23T10:23:12.112638+01:00" level=info msg="Using Scheduler service for reminders." app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actor.reminders.scheduler type=log ver=1.19.1
+time="2026-11-23T10:23:12.112648+01:00" level=info msg="Scheduler address configured; asking the scheduler whether it serves actor placement" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actors.placement type=log ver=1.19.1
+time="2026-11-23T10:23:12.112663+01:00" level=info msg="Loading MCP servers…" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.112056+01:00" level=info msg="Starting to watch MCPServer updates" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:12.112428+01:00" level=info msg="Starting to watch Component updates" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:12.112103+01:00" level=info msg="Starting to watch Subscription updates" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:12.112131+01:00" level=info msg="Starting to watch Configuration updates for SIGHUP reload" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:12.11231+01:00" level=info msg="API gRPC server is running on port 50003" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.112413+01:00" level=info msg="Starting to watch Component updates" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:12.112715+01:00" level=info msg="Actor runtime started" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actor type=log ver=1.19.1
+time="2026-11-23T10:23:12.112728+01:00" level=warning msg="Graceful shutdown timeout is infinite, will wait indefinitely to shutdown" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actor type=log ver=1.19.1
+time="2026-11-23T10:23:12.11273+01:00" level=warning msg="The default value for 'spec.metric.http.increasedCardinality' will change to 'false' in Dapr 1.15 or later" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T10:23:12.112339+01:00" level=info msg="Starting to watch Subscription updates" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T10:23:12.112652+01:00" level=info msg="Enabled max body size HTTP middleware with size 4194304 bytes" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T10:23:12.112745+01:00" level=info msg="worker started with backend dapr.actors/v1" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.wfengine.durabletask.backend type=log ver=1.19.1
+time="2026-11-23T10:23:12.112789+01:00" level=info msg="Enabled tracing HTTP middleware" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T10:23:12.112765+01:00" level=warning msg="Scheduler cluster does not serve actor placement, using the placement service" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actors.placement.loops.placement type=log ver=1.19.1
+time="2026-11-23T10:23:12.112796+01:00" level=info msg="Workflow engine started" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.wfengine type=log ver=1.19.1
+time="2026-11-23T10:23:12.112795+01:00" level=info msg="Enabled metrics HTTP middleware" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T10:23:12.112781+01:00" level=info msg="Waiting for all outstanding MCP servers to be processed…" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.112817+01:00" level=info msg="All outstanding MCP servers processed" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.112827+01:00" level=info msg="dapr initialized. Status: Running. Init Elapsed 21ms" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.112833+01:00" level=info msg="Enabled max body size HTTP middleware with size 4194304 bytes" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T10:23:12.112849+01:00" level=info msg="Enabled tracing HTTP middleware" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T10:23:12.112854+01:00" level=info msg="Enabled metrics HTTP middleware" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T10:23:12.112926+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:12.112935+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:12.112939+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:12.112968+01:00" level=info msg="HTTP server listening on TCP address: :3501" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T10:23:12.11298+01:00" level=info msg="HTTP server is running on port 3501" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.112984+01:00" level=info msg="The request body size parameter is: 4194304 bytes" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.112991+01:00" level=info msg="gRPC server listening on pre-bound TCP address: [::]:59385" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.internal type=log ver=1.19.1
+time="2026-11-23T10:23:12.112996+01:00" level=info msg="Enabled gRPC tracing middleware" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.internal type=log ver=1.19.1
+time="2026-11-23T10:23:12.113004+01:00" level=info msg="Enabled gRPC metrics middleware" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.internal type=log ver=1.19.1
+time="2026-11-23T10:23:12.113016+01:00" level=info msg="Internal gRPC server is running on :59385" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.113021+01:00" level=info msg="actors: state store is not configured - actor state and workflow operations will be unavailable until an actor state store component is loaded" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.113066+01:00" level=info msg="Actor state store not configured - actor hosting disabled until one is configured, but invocation enabled" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actor type=log ver=1.19.1
+time="2026-11-23T10:23:12.113075+01:00" level=info msg="Using Scheduler service for reminders." app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actor.reminders.scheduler type=log ver=1.19.1
+time="2026-11-23T10:23:12.113083+01:00" level=info msg="Scheduler address configured; asking the scheduler whether it serves actor placement" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actors.placement type=log ver=1.19.1
+time="2026-11-23T10:23:12.113093+01:00" level=info msg="Loading MCP servers…" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.113107+01:00" level=info msg="Actor runtime started" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actor type=log ver=1.19.1
+time="2026-11-23T10:23:12.113118+01:00" level=warning msg="Graceful shutdown timeout is infinite, will wait indefinitely to shutdown" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actor type=log ver=1.19.1
+time="2026-11-23T10:23:12.113131+01:00" level=info msg="worker started with backend dapr.actors/v1" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.wfengine.durabletask.backend type=log ver=1.19.1
+time="2026-11-23T10:23:12.113148+01:00" level=info msg="Workflow engine started" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.wfengine type=log ver=1.19.1
+time="2026-11-23T10:23:12.113159+01:00" level=warning msg="Scheduler cluster does not serve actor placement, using the placement service" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actors.placement.loops.placement type=log ver=1.19.1
+time="2026-11-23T10:23:12.113167+01:00" level=info msg="HTTP server listening on TCP address: :3502" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T10:23:12.113181+01:00" level=info msg="HTTP server is running on port 3502" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.113186+01:00" level=info msg="The request body size parameter is: 4194304 bytes" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.113193+01:00" level=info msg="gRPC server listening on pre-bound TCP address: [::]:59384" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.internal type=log ver=1.19.1
+time="2026-11-23T10:23:12.113198+01:00" level=info msg="Enabled gRPC tracing middleware" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.internal type=log ver=1.19.1
+time="2026-11-23T10:23:12.113202+01:00" level=info msg="Enabled gRPC metrics middleware" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.grpc.internal type=log ver=1.19.1
+time="2026-11-23T10:23:12.113204+01:00" level=info msg="Waiting for all outstanding MCP servers to be processed…" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.113216+01:00" level=info msg="Internal gRPC server is running on :59384" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.113228+01:00" level=info msg="actors: state store is not configured - actor state and workflow operations will be unavailable until an actor state store component is loaded" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.113216+01:00" level=info msg="All outstanding MCP servers processed" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.113243+01:00" level=info msg="dapr initialized. Status: Running. Init Elapsed 16ms" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.113273+01:00" level=info msg="Actor state store not configured - actor hosting disabled until one is configured, but invocation enabled" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actor type=log ver=1.19.1
+time="2026-11-23T10:23:12.11328+01:00" level=info msg="Using Scheduler service for reminders." app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actor.reminders.scheduler type=log ver=1.19.1
+time="2026-11-23T10:23:12.113289+01:00" level=info msg="Scheduler address configured; asking the scheduler whether it serves actor placement" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actors.placement type=log ver=1.19.1
+time="2026-11-23T10:23:12.113302+01:00" level=info msg="Loading MCP servers…" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.113323+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:12.113323+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:12.113326+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:12.113373+01:00" level=info msg="Actor runtime started" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actor type=log ver=1.19.1
+time="2026-11-23T10:23:12.113386+01:00" level=warning msg="Graceful shutdown timeout is infinite, will wait indefinitely to shutdown" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actor type=log ver=1.19.1
+time="2026-11-23T10:23:12.11339+01:00" level=info msg="worker started with backend dapr.actors/v1" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.wfengine.durabletask.backend type=log ver=1.19.1
+time="2026-11-23T10:23:12.113405+01:00" level=info msg="Waiting for all outstanding MCP servers to be processed…" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.113405+01:00" level=info msg="Workflow engine started" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.wfengine type=log ver=1.19.1
+time="2026-11-23T10:23:12.113411+01:00" level=info msg="All outstanding MCP servers processed" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.11342+01:00" level=info msg="dapr initialized. Status: Running. Init Elapsed 16ms" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T10:23:12.113422+01:00" level=warning msg="Scheduler cluster does not serve actor placement, using the placement service" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actors.placement.loops.placement type=log ver=1.19.1
+time="2026-11-23T10:23:12.113502+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:12.113505+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:12.11351+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:12.118004+01:00" level=info msg="Connected to placement service: localhost:50005" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actors.placement.loops.placement type=log ver=1.19.1
+time="2026-11-23T10:23:12.118048+01:00" level=info msg="Connected to placement service: localhost:50005" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actors.placement.loops.placement type=log ver=1.19.1
+time="2026-11-23T10:23:12.118128+01:00" level=info msg="Connected to placement service: localhost:50005" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actors.placement.loops.placement type=log ver=1.19.1
+time="2026-11-23T10:23:12.118149+01:00" level=info msg="Reporting initial host to placement service with initial types []" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actors.placement.loops.placement type=log ver=1.19.1
+time="2026-11-23T10:23:12.118184+01:00" level=info msg="Reporting initial host to placement service with initial types []" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actors.placement.loops.placement type=log ver=1.19.1
+time="2026-11-23T10:23:12.118069+01:00" level=info msg="Reporting initial host to placement service with initial types []" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actors.placement.loops.placement type=log ver=1.19.1
+time="2026-11-23T10:23:12.119226+01:00" level=info msg="Dissemination complete for version 0 (changed types []), unlocking disseminator default/sensor-3" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actors.placement.loops.disseminator type=log ver=1.19.1
+time="2026-11-23T10:23:12.119238+01:00" level=info msg="Dissemination complete for version 0 (changed types []), unlocking disseminator default/sensor-2" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actors.placement.loops.disseminator type=log ver=1.19.1
+time="2026-11-23T10:23:12.119275+01:00" level=info msg="Scheduler stream disconnected" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:12.119269+01:00" level=info msg="Dissemination complete for version 0 (changed types []), unlocking disseminator default/sensor-1" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.actors.placement.loops.disseminator type=log ver=1.19.1
+time="2026-11-23T10:23:12.119431+01:00" level=info msg="Scheduler stream disconnected" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:12.119444+01:00" level=info msg="Scheduler stream disconnected" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:12.119477+01:00" level=info msg="Scheduler stream disconnected" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:12.119317+01:00" level=info msg="Scheduler stream disconnected" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:12.119374+01:00" level=info msg="Scheduler stream disconnected" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:12.119595+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:12.119662+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:12.119609+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-1 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:12.119403+01:00" level=info msg="Scheduler stream disconnected" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:12.119321+01:00" level=info msg="Scheduler stream disconnected" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:12.119369+01:00" level=info msg="Scheduler stream disconnected" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:12.119782+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:12.119812+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:12.119782+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-3 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:12.119851+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:12.119891+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T10:23:12.11991+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-2 instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+ℹ️  Checking if Dapr sidecar is listening on GRPC port 50003
+ℹ️  Checking if Dapr sidecar is listening on GRPC port 50004
+ℹ️  Checking if Dapr sidecar is listening on GRPC port 50002
+ℹ️  Dapr sidecar is up and running.
+ℹ️  Dapr sidecar is up and running.
+ℹ️  Dapr sidecar is up and running.
+ℹ️  Updating metadata for appPID: 73783
+ℹ️  Updating metadata for appPID: 73784
+ℹ️  Updating metadata for app command: mvn -q exec:java -Dexec.mainClass=uc4.SensorKt -Dexec.args=2
+ℹ️  Updating metadata for appPID: 73785
+ℹ️  Updating metadata for app command: mvn -q exec:java -Dexec.mainClass=uc4.SensorKt -Dexec.args=1
+✅  You're up and running! Both Dapr and your app logs will appear here.
+
+✅  You're up and running! Both Dapr and your app logs will appear here.
+
+ℹ️  Updating metadata for app command: mvn -q exec:java -Dexec.mainClass=uc4.SensorKt -Dexec.args=3
+✅  You're up and running! Both Dapr and your app logs will appear here.
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/opt/homebrew/Cellar/maven/3.9.11/libexec/lib/guice-5.1.0-classes.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/opt/homebrew/Cellar/maven/3.9.11/libexec/lib/guice-5.1.0-classes.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/opt/homebrew/Cellar/maven/3.9.11/libexec/lib/guice-5.1.0-classes.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+Sensor 2 initialized
+Sensor 3 initialized
+Sensor 1 initialized
+Sensor 3: 40 -> NORMAL
+Sensor 2: 52 -> NORMAL
+Sensor 1: 45 -> NORMAL
+Sensor 3: 48 -> NORMAL
+Sensor 2: 81 -> ALERT
+Active alerts: 1
+Sensor 1: 62 -> NORMAL
+Sensor 3: 73 -> ALERT
+Active alerts: 2
+Sensor 2: 85 -> ALERT
+Sensor 1: 78 -> ALERT
+Active alerts: 3
+Sensor 3: 80 -> ALERT
+Sensor 1: 55 -> NORMAL
+Active alerts: 2
+Sensor 2: 60 -> NORMAL
+Active alerts: 1
+time="2026-11-23T10:23:18.29379+01:00" level=info msg="Unsubscribed from pubsub 'pubsub' topic 'measurements'" app_id=coordinator instance=ydWLI-U2-44-150.uibk.ac.at scope=dapr.runtime.pubsub.streamer type=log ver=1.19.1
+Measurements processed: 12
+Sensor 1 final state: NORMAL
+Sensor 2 final state: NORMAL
+Sensor 3 final state: ALERT
+Active alerts: 1
+✅  Exited App successfully
+ℹ️  
+terminated signal received: shutting down
+✅  Exited Dapr successfully
+✅  Exited App successfully
+ℹ️  
+terminated signal received: shutting down
+ℹ️  
+terminated signal received: shutting down
+ℹ️  
+terminated signal received: shutting down
+✅  Exited Dapr successfully
+✅  Exited Dapr successfully
+✅  Exited Dapr successfully
+❌  The daprd process exited with error code: signal: killed
+❌  The daprd process exited with error code: signal: killed
+❌  The daprd process exited with error code: signal: killed
+❌  The App process exited with error code: 143
+❌  The App process exited with error code: 143
+❌  The App process exited with error code: 143
+✅  Exited App successfully
+✅  Exited App successfully
+✅  Exited App successfully

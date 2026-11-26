@@ -1,0 +1,425 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/opt/homebrew/Cellar/maven/3.9.11/libexec/lib/guice-5.1.0-classes.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+ℹ️  Starting Dapr with id coordinator. HTTP Port: 3500. gRPC Port: 50001
+ℹ️  Checking if Dapr sidecar is listening on HTTP port 3500
+time="2026-11-23T22:43:38.399471+01:00" level=info msg="Starting Dapr Runtime -- version 1.19.1 -- commit cfb5ee090dda7cfc26145c7703605d831350aa2a" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:38.399503+01:00" level=info msg="Log level set to: info" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:38.400637+01:00" level=warning msg="mTLS is disabled. Skipping certificate request and tls validation" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.security type=log ver=1.19.1
+time="2026-11-23T22:43:38.403078+01:00" level=info msg="Enabled features: HotReload WorkflowsRemoteActivityReminder" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:38.403351+01:00" level=info msg="metric spec: {\"enabled\":true}" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.diagnostics type=log ver=1.19.1
+time="2026-11-23T22:43:38.403365+01:00" level=info msg="Using default latency distribution buckets: [1 2 3 4 5 6 8 10 13 16 20 25 30 40 50 65 80 100 130 160 200 250 300 400 500 650 800 1000 2000 5000 10000 20000 50000 100000]" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.diagnostics type=log ver=1.19.1
+time="2026-11-23T22:43:38.403813+01:00" level=warning msg="The default value for 'spec.metric.http.increasedCardinality' will change to 'false' in Dapr 1.15 or later" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.diagnostics type=log ver=1.19.1
+time="2026-11-23T22:43:38.404302+01:00" level=info msg="Watching directories: [./config]" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.loader.disk type=log ver=1.19.1
+time="2026-11-23T22:43:38.406856+01:00" level=info msg="standalone mode configured" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:38.406869+01:00" level=info msg="app id: coordinator" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:38.408221+01:00" level=info msg="metrics server started on 0.0.0.0:53335/" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:38.409175+01:00" level=info msg="Dapr trace sampler initialized: ParentBased{root:TraceIDRatioBased{1},remoteParentSampled:AlwaysOnSampler,remoteParentNotSampled:AlwaysOffSampler,localParentSampled:AlwaysOnSampler,localParentNotSampled:AlwaysOffSampler}" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:38.409762+01:00" level=info msg="local service entry announced: coordinator -> 172.20.10.2:53336" app_id=coordinator component="nr (mdns/v1)" instance=Mauritss-MacBook-Air.local scope=dapr.contrib type=log ver=1.19.1
+time="2026-11-23T22:43:38.434921+01:00" level=info msg="Initialized name resolution to mdns" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:38.435744+01:00" level=info msg="Loading components…" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:38.445905+01:00" level=info msg="Received scheduler hosts addresses: [localhost:50006] (placement leader \"\")" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.watchhosts type=log ver=1.19.1
+time="2026-11-23T22:43:38.445992+01:00" level=info msg="Scheduler client initialized for address: localhost:50006" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.clients type=log ver=1.19.1
+time="2026-11-23T22:43:38.446002+01:00" level=info msg="Scheduler clients initialized" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.clients type=log ver=1.19.1
+time="2026-11-23T22:43:38.446914+01:00" level=info msg="Component loaded: pubsub (pubsub.redis/v1)" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.processor.loops.root type=log ver=1.19.1
+time="2026-11-23T22:43:38.452238+01:00" level=info msg="Component loaded: statestore (state.redis/v1)" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.processor.loops.root type=log ver=1.19.1
+time="2026-11-23T22:43:38.45225+01:00" level=info msg="Waiting for all outstanding components to be processed…" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:38.452258+01:00" level=info msg="All outstanding components processed" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:38.452265+01:00" level=info msg="Loading endpoints…" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:38.452406+01:00" level=info msg="Waiting for all outstanding http endpoints to be processed…" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:38.452413+01:00" level=info msg="All outstanding http endpoints processed" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:38.452419+01:00" level=info msg="Loading Declarative Subscriptions…" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:38.4526+01:00" level=warning msg="App channel is not initialized. Did you configure an app-port?" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.channels type=log ver=1.19.1
+time="2026-11-23T22:43:38.452709+01:00" level=info msg="Hot reloading enabled. Daprd will reload 'Component', 'Subscription', 'MCPServer', 'Configuration', 'HTTPEndpoint', 'Resiliency' and 'WorkflowAccessPolicy' resources when they are added, updated or deleted." app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload type=log ver=1.19.1
+time="2026-11-23T22:43:38.452904+01:00" level=info msg="gRPC server listening on TCP address: :50001" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T22:43:38.452914+01:00" level=info msg="Enabled gRPC tracing middleware" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T22:43:38.452919+01:00" level=info msg="Enabled gRPC metrics middleware" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T22:43:38.452927+01:00" level=info msg="Starting to watch Subscription updates" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:38.452928+01:00" level=info msg="Starting to watch Configuration updates for SIGHUP reload" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:38.452942+01:00" level=info msg="Starting to watch MCPServer updates" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:38.452929+01:00" level=info msg="Starting to watch WorkflowAccessPolicy updates" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:38.452936+01:00" level=info msg="Starting to watch Resiliency updates for SIGHUP reload" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:38.453038+01:00" level=info msg="Starting to watch HTTPEndpoint updates for SIGHUP reload" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:38.453038+01:00" level=info msg="Starting to watch Component updates" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:38.45319+01:00" level=info msg="Registering workflow engine for gRPC endpoint: [::]:50001" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T22:43:38.453363+01:00" level=info msg="API gRPC server is running on port 50001" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:38.453698+01:00" level=warning msg="The default value for 'spec.metric.http.increasedCardinality' will change to 'false' in Dapr 1.15 or later" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T22:43:38.453879+01:00" level=info msg="Enabled max body size HTTP middleware with size 4194304 bytes" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T22:43:38.453885+01:00" level=info msg="Enabled tracing HTTP middleware" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T22:43:38.45389+01:00" level=info msg="Enabled metrics HTTP middleware" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T22:43:38.454054+01:00" level=info msg="HTTP server listening on TCP address: :3500" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T22:43:38.454082+01:00" level=info msg="HTTP server is running on port 3500" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:38.454088+01:00" level=info msg="The request body size parameter is: 4194304 bytes" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:38.454095+01:00" level=info msg="gRPC server listening on pre-bound TCP address: [::]:53336" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.internal type=log ver=1.19.1
+time="2026-11-23T22:43:38.454102+01:00" level=info msg="Enabled gRPC tracing middleware" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.internal type=log ver=1.19.1
+time="2026-11-23T22:43:38.454106+01:00" level=info msg="Enabled gRPC metrics middleware" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.internal type=log ver=1.19.1
+time="2026-11-23T22:43:38.454119+01:00" level=info msg="Internal gRPC server is running on :53336" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:38.454124+01:00" level=info msg="actors: state store is not configured - actor state and workflow operations will be unavailable until an actor state store component is loaded" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:38.45419+01:00" level=info msg="Actor state store not configured - actor hosting disabled until one is configured, but invocation enabled" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actor type=log ver=1.19.1
+time="2026-11-23T22:43:38.454197+01:00" level=info msg="Using Scheduler service for reminders." app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actor.reminders.scheduler type=log ver=1.19.1
+time="2026-11-23T22:43:38.454209+01:00" level=info msg="Scheduler address configured; asking the scheduler whether it serves actor placement" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actors.placement type=log ver=1.19.1
+time="2026-11-23T22:43:38.454222+01:00" level=info msg="Loading MCP servers…" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:38.454231+01:00" level=info msg="Actor runtime started" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actor type=log ver=1.19.1
+time="2026-11-23T22:43:38.454244+01:00" level=warning msg="Graceful shutdown timeout is infinite, will wait indefinitely to shutdown" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actor type=log ver=1.19.1
+time="2026-11-23T22:43:38.454342+01:00" level=info msg="Waiting for all outstanding MCP servers to be processed…" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:38.45435+01:00" level=info msg="All outstanding MCP servers processed" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:38.454359+01:00" level=info msg="dapr initialized. Status: Running. Init Elapsed 47ms" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:38.45426+01:00" level=info msg="worker started with backend dapr.actors/v1" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.wfengine.durabletask.backend type=log ver=1.19.1
+time="2026-11-23T22:43:38.454474+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:38.454486+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:38.454515+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:38.454693+01:00" level=info msg="Workflow engine started" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.wfengine type=log ver=1.19.1
+time="2026-11-23T22:43:38.454895+01:00" level=warning msg="Scheduler cluster does not serve actor placement, using the placement service" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actors.placement.loops.placement type=log ver=1.19.1
+time="2026-11-23T22:43:38.458698+01:00" level=info msg="Connected to placement service: localhost:50005" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actors.placement.loops.placement type=log ver=1.19.1
+time="2026-11-23T22:43:38.458727+01:00" level=info msg="Reporting initial host to placement service with initial types []" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actors.placement.loops.placement type=log ver=1.19.1
+time="2026-11-23T22:43:38.46095+01:00" level=info msg="Dissemination complete for version 0 (changed types []), unlocking disseminator default/coordinator" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actors.placement.loops.disseminator type=log ver=1.19.1
+time="2026-11-23T22:43:38.461097+01:00" level=info msg="Scheduler stream disconnected" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:38.461118+01:00" level=info msg="Scheduler stream disconnected" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:38.461508+01:00" level=info msg="Scheduler stream disconnected" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:38.461675+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:38.461727+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:38.461792+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+ℹ️  Checking if Dapr sidecar is listening on GRPC port 50001
+ℹ️  Dapr sidecar is up and running.
+ℹ️  Updating metadata for appPID: 28092
+ℹ️  Updating metadata for app command: mvn -q exec:java -Dexec.mainClass=uc4.CoordinatorKt
+✅  You're up and running! Both Dapr and your app logs will appear here.
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/opt/homebrew/Cellar/maven/3.9.11/libexec/lib/guice-5.1.0-classes.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+time="2026-11-23T22:43:40.675136+01:00" level=warning msg="Redis does not support transaction rollbacks and should not be used in production as an actor state store." app_id=coordinator component="statestore (state.redis/v1)" instance=Mauritss-MacBook-Air.local scope=dapr.contrib type=log ver=1.19.1
+Monitoring Coordinator initialized
+time="2026-11-23T22:43:40.697349+01:00" level=info msg="Subscribing to pubsub 'pubsub' topic 'measurements' ConnectionID 1" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.pubsub.streamer type=log ver=1.19.1
+ignored stale message {run=1795470001, sensor=3, seq=0, value=40}
+ignored stale message {run=1795470001, sensor=1, seq=0, value=45}
+ignored stale message {run=1795470001, sensor=2, seq=0, value=52}
+ignored stale message {run=1795470001, sensor=3, seq=1, value=48}
+ignored stale message {run=1795470001, sensor=1, seq=1, value=62}
+ignored stale message {run=1795470001, sensor=3, seq=2, value=73}
+ignored stale message {run=1795470001, sensor=2, seq=1, value=81}
+ignored stale message {run=1795470001, sensor=1, seq=2, value=78}
+ignored stale message {run=1795470001, sensor=2, seq=2, value=85}
+ignored stale message {run=1795470001, sensor=3, seq=3, value=80}
+ignored stale message {run=1795470001, sensor=1, seq=3, value=55}
+ignored stale message {run=1795470001, sensor=2, seq=3, value=60}
+ignored stale message {sensor=2, value=60}
+ignored stale message {run=111, sensor=1, seq=0, value=45}
+ignored stale message {run=111, sensor=1, seq=1, value=62}
+ignored stale message {run=111, sensor=1, seq=2, value=78}
+ignored stale message {run=111, sensor=1, seq=3, value=55}
+ℹ️  Starting Dapr with id sensor-1. HTTP Port: 3501. gRPC Port: 50002
+ℹ️  Starting Dapr with id sensor-3. HTTP Port: 3503. gRPC Port: 50004
+ℹ️  Starting Dapr with id sensor-2. HTTP Port: 3502. gRPC Port: 50003
+ℹ️  Checking if Dapr sidecar is listening on HTTP port 3502
+ℹ️  Checking if Dapr sidecar is listening on HTTP port 3503
+ℹ️  Checking if Dapr sidecar is listening on HTTP port 3501
+time="2026-11-23T22:43:45.994002+01:00" level=info msg="Starting Dapr Runtime -- version 1.19.1 -- commit cfb5ee090dda7cfc26145c7703605d831350aa2a" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:45.994065+01:00" level=info msg="Log level set to: info" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:45.994103+01:00" level=info msg="Starting Dapr Runtime -- version 1.19.1 -- commit cfb5ee090dda7cfc26145c7703605d831350aa2a" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:45.99414+01:00" level=info msg="Log level set to: info" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:45.994911+01:00" level=info msg="Starting Dapr Runtime -- version 1.19.1 -- commit cfb5ee090dda7cfc26145c7703605d831350aa2a" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:45.994941+01:00" level=info msg="Log level set to: info" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:45.995241+01:00" level=warning msg="mTLS is disabled. Skipping certificate request and tls validation" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.security type=log ver=1.19.1
+time="2026-11-23T22:43:45.995687+01:00" level=info msg="Enabled features: HotReload WorkflowsRemoteActivityReminder" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:45.995806+01:00" level=info msg="metric spec: {\"enabled\":true}" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.diagnostics type=log ver=1.19.1
+time="2026-11-23T22:43:45.995831+01:00" level=info msg="Using default latency distribution buckets: [1 2 3 4 5 6 8 10 13 16 20 25 30 40 50 65 80 100 130 160 200 250 300 400 500 650 800 1000 2000 5000 10000 20000 50000 100000]" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.diagnostics type=log ver=1.19.1
+time="2026-11-23T22:43:45.996109+01:00" level=warning msg="mTLS is disabled. Skipping certificate request and tls validation" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.security type=log ver=1.19.1
+time="2026-11-23T22:43:45.996068+01:00" level=warning msg="The default value for 'spec.metric.http.increasedCardinality' will change to 'false' in Dapr 1.15 or later" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.diagnostics type=log ver=1.19.1
+time="2026-11-23T22:43:45.99625+01:00" level=warning msg="mTLS is disabled. Skipping certificate request and tls validation" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.security type=log ver=1.19.1
+time="2026-11-23T22:43:45.996395+01:00" level=info msg="Enabled features: HotReload WorkflowsRemoteActivityReminder" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:45.996444+01:00" level=info msg="Enabled features: HotReload WorkflowsRemoteActivityReminder" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:45.99647+01:00" level=info msg="metric spec: {\"enabled\":true}" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.diagnostics type=log ver=1.19.1
+time="2026-11-23T22:43:45.996485+01:00" level=info msg="Using default latency distribution buckets: [1 2 3 4 5 6 8 10 13 16 20 25 30 40 50 65 80 100 130 160 200 250 300 400 500 650 800 1000 2000 5000 10000 20000 50000 100000]" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.diagnostics type=log ver=1.19.1
+time="2026-11-23T22:43:45.996513+01:00" level=info msg="metric spec: {\"enabled\":true}" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.diagnostics type=log ver=1.19.1
+time="2026-11-23T22:43:45.996527+01:00" level=info msg="Using default latency distribution buckets: [1 2 3 4 5 6 8 10 13 16 20 25 30 40 50 65 80 100 130 160 200 250 300 400 500 650 800 1000 2000 5000 10000 20000 50000 100000]" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.diagnostics type=log ver=1.19.1
+time="2026-11-23T22:43:45.996556+01:00" level=warning msg="The default value for 'spec.metric.http.increasedCardinality' will change to 'false' in Dapr 1.15 or later" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.diagnostics type=log ver=1.19.1
+time="2026-11-23T22:43:45.996584+01:00" level=warning msg="The default value for 'spec.metric.http.increasedCardinality' will change to 'false' in Dapr 1.15 or later" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.diagnostics type=log ver=1.19.1
+time="2026-11-23T22:43:45.996961+01:00" level=info msg="Watching directories: [./config]" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.loader.disk type=log ver=1.19.1
+time="2026-11-23T22:43:45.996961+01:00" level=info msg="Watching directories: [./config]" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.loader.disk type=log ver=1.19.1
+time="2026-11-23T22:43:45.997326+01:00" level=info msg="metrics server started on 0.0.0.0:53369/" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:45.99741+01:00" level=info msg="standalone mode configured" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:45.997416+01:00" level=info msg="app id: sensor-2" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:45.997654+01:00" level=info msg="metrics server started on 0.0.0.0:53371/" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:45.997815+01:00" level=info msg="Dapr trace sampler initialized: ParentBased{root:TraceIDRatioBased{1},remoteParentSampled:AlwaysOnSampler,remoteParentNotSampled:AlwaysOffSampler,localParentSampled:AlwaysOnSampler,localParentNotSampled:AlwaysOffSampler}" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:45.998305+01:00" level=info msg="Watching directories: [./config]" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.loader.disk type=log ver=1.19.1
+time="2026-11-23T22:43:45.998834+01:00" level=info msg="standalone mode configured" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:45.998868+01:00" level=info msg="app id: sensor-3" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:45.998984+01:00" level=info msg="Dapr trace sampler initialized: ParentBased{root:TraceIDRatioBased{1},remoteParentSampled:AlwaysOnSampler,remoteParentNotSampled:AlwaysOffSampler,localParentSampled:AlwaysOnSampler,localParentNotSampled:AlwaysOffSampler}" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:45.999272+01:00" level=info msg="local service entry announced: sensor-3 -> 172.20.10.2:53372" app_id=sensor-3 component="nr (mdns/v1)" instance=Mauritss-MacBook-Air.local scope=dapr.contrib type=log ver=1.19.1
+time="2026-11-23T22:43:45.999325+01:00" level=info msg="Initialized name resolution to mdns" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:45.999489+01:00" level=info msg="Loading components…" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:45.999276+01:00" level=info msg="local service entry announced: sensor-2 -> 172.20.10.2:53373" app_id=sensor-2 component="nr (mdns/v1)" instance=Mauritss-MacBook-Air.local scope=dapr.contrib type=log ver=1.19.1
+time="2026-11-23T22:43:46.000062+01:00" level=info msg="Initialized name resolution to mdns" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.000156+01:00" level=info msg="Loading components…" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.000439+01:00" level=info msg="standalone mode configured" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.000493+01:00" level=info msg="app id: sensor-1" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.000719+01:00" level=info msg="Dapr trace sampler initialized: ParentBased{root:TraceIDRatioBased{1},remoteParentSampled:AlwaysOnSampler,remoteParentNotSampled:AlwaysOffSampler,localParentSampled:AlwaysOnSampler,localParentNotSampled:AlwaysOffSampler}" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.000579+01:00" level=info msg="metrics server started on 0.0.0.0:53370/" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.001126+01:00" level=info msg="local service entry announced: sensor-1 -> 172.20.10.2:53374" app_id=sensor-1 component="nr (mdns/v1)" instance=Mauritss-MacBook-Air.local scope=dapr.contrib type=log ver=1.19.1
+time="2026-11-23T22:43:46.001547+01:00" level=info msg="Initialized name resolution to mdns" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.001619+01:00" level=info msg="Loading components…" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.011786+01:00" level=info msg="Received scheduler hosts addresses: [localhost:50006] (placement leader \"\")" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.watchhosts type=log ver=1.19.1
+time="2026-11-23T22:43:46.012199+01:00" level=info msg="Scheduler client initialized for address: localhost:50006" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.clients type=log ver=1.19.1
+time="2026-11-23T22:43:46.012383+01:00" level=info msg="Scheduler clients initialized" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.clients type=log ver=1.19.1
+time="2026-11-23T22:43:46.012536+01:00" level=info msg="Received scheduler hosts addresses: [localhost:50006] (placement leader \"\")" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.watchhosts type=log ver=1.19.1
+time="2026-11-23T22:43:46.012801+01:00" level=info msg="Scheduler client initialized for address: localhost:50006" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.clients type=log ver=1.19.1
+time="2026-11-23T22:43:46.012844+01:00" level=info msg="Scheduler clients initialized" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.clients type=log ver=1.19.1
+time="2026-11-23T22:43:46.015473+01:00" level=info msg="Received scheduler hosts addresses: [localhost:50006] (placement leader \"\")" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.watchhosts type=log ver=1.19.1
+time="2026-11-23T22:43:46.015586+01:00" level=info msg="Scheduler client initialized for address: localhost:50006" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.clients type=log ver=1.19.1
+time="2026-11-23T22:43:46.015595+01:00" level=info msg="Scheduler clients initialized" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.clients type=log ver=1.19.1
+time="2026-11-23T22:43:46.018142+01:00" level=info msg="Component loaded: pubsub (pubsub.redis/v1)" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.processor.loops.root type=log ver=1.19.1
+time="2026-11-23T22:43:46.018205+01:00" level=info msg="Component loaded: pubsub (pubsub.redis/v1)" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.processor.loops.root type=log ver=1.19.1
+time="2026-11-23T22:43:46.018252+01:00" level=info msg="Component loaded: pubsub (pubsub.redis/v1)" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.processor.loops.root type=log ver=1.19.1
+time="2026-11-23T22:43:46.026299+01:00" level=info msg="Component loaded: statestore (state.redis/v1)" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.processor.loops.root type=log ver=1.19.1
+time="2026-11-23T22:43:46.026326+01:00" level=info msg="Component loaded: statestore (state.redis/v1)" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.processor.loops.root type=log ver=1.19.1
+time="2026-11-23T22:43:46.026357+01:00" level=info msg="Waiting for all outstanding components to be processed…" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.026362+01:00" level=info msg="Component loaded: statestore (state.redis/v1)" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.processor.loops.root type=log ver=1.19.1
+time="2026-11-23T22:43:46.026368+01:00" level=info msg="Waiting for all outstanding components to be processed…" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.026391+01:00" level=info msg="Waiting for all outstanding components to be processed…" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.026371+01:00" level=info msg="All outstanding components processed" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.026494+01:00" level=info msg="All outstanding components processed" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.026612+01:00" level=info msg="All outstanding components processed" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.026625+01:00" level=info msg="Loading endpoints…" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.026807+01:00" level=info msg="Loading endpoints…" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.026815+01:00" level=info msg="Loading endpoints…" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.027104+01:00" level=info msg="Waiting for all outstanding http endpoints to be processed…" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.027118+01:00" level=info msg="Waiting for all outstanding http endpoints to be processed…" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.027166+01:00" level=info msg="All outstanding http endpoints processed" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.027126+01:00" level=info msg="Waiting for all outstanding http endpoints to be processed…" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.027174+01:00" level=info msg="All outstanding http endpoints processed" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.027174+01:00" level=info msg="Loading Declarative Subscriptions…" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.027227+01:00" level=info msg="All outstanding http endpoints processed" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.02723+01:00" level=info msg="Loading Declarative Subscriptions…" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.027395+01:00" level=info msg="Loading Declarative Subscriptions…" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.027662+01:00" level=warning msg="App channel is not initialized. Did you configure an app-port?" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.channels type=log ver=1.19.1
+time="2026-11-23T22:43:46.027813+01:00" level=warning msg="App channel is not initialized. Did you configure an app-port?" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.channels type=log ver=1.19.1
+time="2026-11-23T22:43:46.027822+01:00" level=warning msg="App channel is not initialized. Did you configure an app-port?" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.channels type=log ver=1.19.1
+time="2026-11-23T22:43:46.027967+01:00" level=info msg="Hot reloading enabled. Daprd will reload 'Component', 'Subscription', 'MCPServer', 'Configuration', 'HTTPEndpoint', 'Resiliency' and 'WorkflowAccessPolicy' resources when they are added, updated or deleted." app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload type=log ver=1.19.1
+time="2026-11-23T22:43:46.028001+01:00" level=info msg="gRPC server listening on TCP address: :50003" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T22:43:46.028239+01:00" level=info msg="Enabled gRPC tracing middleware" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T22:43:46.028274+01:00" level=info msg="Enabled gRPC metrics middleware" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T22:43:46.028312+01:00" level=info msg="gRPC server listening on TCP address: :50002" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T22:43:46.028315+01:00" level=info msg="gRPC server listening on TCP address: :50004" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T22:43:46.028321+01:00" level=info msg="Enabled gRPC tracing middleware" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T22:43:46.028325+01:00" level=info msg="Enabled gRPC tracing middleware" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T22:43:46.028331+01:00" level=info msg="Enabled gRPC metrics middleware" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T22:43:46.028298+01:00" level=info msg="Hot reloading enabled. Daprd will reload 'Component', 'Subscription', 'MCPServer', 'Configuration', 'HTTPEndpoint', 'Resiliency' and 'WorkflowAccessPolicy' resources when they are added, updated or deleted." app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload type=log ver=1.19.1
+time="2026-11-23T22:43:46.028345+01:00" level=info msg="Hot reloading enabled. Daprd will reload 'Component', 'Subscription', 'MCPServer', 'Configuration', 'HTTPEndpoint', 'Resiliency' and 'WorkflowAccessPolicy' resources when they are added, updated or deleted." app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload type=log ver=1.19.1
+time="2026-11-23T22:43:46.028364+01:00" level=info msg="Registering workflow engine for gRPC endpoint: [::]:50003" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T22:43:46.028368+01:00" level=info msg="Starting to watch WorkflowAccessPolicy updates" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:46.028385+01:00" level=info msg="API gRPC server is running on port 50003" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.028384+01:00" level=info msg="Starting to watch WorkflowAccessPolicy updates" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:46.028401+01:00" level=info msg="Registering workflow engine for gRPC endpoint: [::]:50004" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T22:43:46.028401+01:00" level=info msg="Starting to watch MCPServer updates" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:46.02842+01:00" level=info msg="API gRPC server is running on port 50004" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.028417+01:00" level=info msg="Starting to watch HTTPEndpoint updates for SIGHUP reload" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:46.028444+01:00" level=warning msg="The default value for 'spec.metric.http.increasedCardinality' will change to 'false' in Dapr 1.15 or later" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T22:43:46.028327+01:00" level=info msg="Enabled gRPC metrics middleware" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T22:43:46.02848+01:00" level=info msg="Starting to watch Configuration updates for SIGHUP reload" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:46.028512+01:00" level=info msg="Starting to watch Component updates" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:46.028528+01:00" level=info msg="Registering workflow engine for gRPC endpoint: [::]:50002" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.api type=log ver=1.19.1
+time="2026-11-23T22:43:46.028411+01:00" level=warning msg="The default value for 'spec.metric.http.increasedCardinality' will change to 'false' in Dapr 1.15 or later" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T22:43:46.028545+01:00" level=info msg="API gRPC server is running on port 50002" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.028528+01:00" level=info msg="Starting to watch Subscription updates" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:46.028528+01:00" level=info msg="Enabled max body size HTTP middleware with size 4194304 bytes" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T22:43:46.028567+01:00" level=warning msg="The default value for 'spec.metric.http.increasedCardinality' will change to 'false' in Dapr 1.15 or later" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T22:43:46.028573+01:00" level=info msg="Enabled tracing HTTP middleware" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T22:43:46.028579+01:00" level=info msg="Enabled metrics HTTP middleware" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T22:43:46.02844+01:00" level=info msg="Starting to watch Resiliency updates for SIGHUP reload" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:46.028592+01:00" level=info msg="Enabled max body size HTTP middleware with size 4194304 bytes" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T22:43:46.028599+01:00" level=info msg="Enabled tracing HTTP middleware" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T22:43:46.028066+01:00" level=info msg="Starting to watch WorkflowAccessPolicy updates" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:46.028535+01:00" level=info msg="Starting to watch MCPServer updates" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:46.02862+01:00" level=info msg="Enabled max body size HTTP middleware with size 4194304 bytes" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T22:43:46.028607+01:00" level=info msg="Enabled metrics HTTP middleware" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T22:43:46.02855+01:00" level=info msg="Starting to watch HTTPEndpoint updates for SIGHUP reload" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:46.028555+01:00" level=info msg="Starting to watch Resiliency updates for SIGHUP reload" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:46.02867+01:00" level=info msg="Enabled tracing HTTP middleware" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T22:43:46.028676+01:00" level=info msg="Enabled metrics HTTP middleware" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T22:43:46.028473+01:00" level=info msg="Starting to watch Component updates" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:46.028482+01:00" level=info msg="Starting to watch Subscription updates" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:46.028068+01:00" level=info msg="Starting to watch Component updates" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:46.028081+01:00" level=info msg="Starting to watch Subscription updates" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:46.028087+01:00" level=info msg="Starting to watch MCPServer updates" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:46.028098+01:00" level=info msg="Starting to watch Configuration updates for SIGHUP reload" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:46.028102+01:00" level=info msg="Starting to watch HTTPEndpoint updates for SIGHUP reload" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:46.028402+01:00" level=info msg="Starting to watch Configuration updates for SIGHUP reload" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:46.028105+01:00" level=info msg="Starting to watch Resiliency updates for SIGHUP reload" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.hotreload.reconciler type=log ver=1.19.1
+time="2026-11-23T22:43:46.028875+01:00" level=info msg="HTTP server listening on TCP address: :3501" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T22:43:46.028899+01:00" level=info msg="HTTP server is running on port 3501" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.028898+01:00" level=info msg="HTTP server listening on TCP address: :3502" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T22:43:46.028905+01:00" level=info msg="The request body size parameter is: 4194304 bytes" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.028921+01:00" level=info msg="HTTP server is running on port 3502" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.02893+01:00" level=info msg="The request body size parameter is: 4194304 bytes" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.028933+01:00" level=info msg="gRPC server listening on pre-bound TCP address: [::]:53374" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.internal type=log ver=1.19.1
+time="2026-11-23T22:43:46.028942+01:00" level=info msg="Enabled gRPC tracing middleware" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.internal type=log ver=1.19.1
+time="2026-11-23T22:43:46.02894+01:00" level=info msg="gRPC server listening on pre-bound TCP address: [::]:53373" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.internal type=log ver=1.19.1
+time="2026-11-23T22:43:46.028948+01:00" level=info msg="Enabled gRPC metrics middleware" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.internal type=log ver=1.19.1
+time="2026-11-23T22:43:46.028952+01:00" level=info msg="Enabled gRPC tracing middleware" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.internal type=log ver=1.19.1
+time="2026-11-23T22:43:46.02896+01:00" level=info msg="Enabled gRPC metrics middleware" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.internal type=log ver=1.19.1
+time="2026-11-23T22:43:46.028974+01:00" level=info msg="Internal gRPC server is running on :53374" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.028982+01:00" level=info msg="actors: state store is not configured - actor state and workflow operations will be unavailable until an actor state store component is loaded" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.028984+01:00" level=info msg="Internal gRPC server is running on :53373" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.028993+01:00" level=info msg="actors: state store is not configured - actor state and workflow operations will be unavailable until an actor state store component is loaded" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.029023+01:00" level=info msg="HTTP server listening on TCP address: :3503" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.http type=log ver=1.19.1
+time="2026-11-23T22:43:46.029037+01:00" level=info msg="HTTP server is running on port 3503" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.029042+01:00" level=info msg="The request body size parameter is: 4194304 bytes" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.029051+01:00" level=info msg="gRPC server listening on pre-bound TCP address: [::]:53372" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.internal type=log ver=1.19.1
+time="2026-11-23T22:43:46.029058+01:00" level=info msg="Enabled gRPC tracing middleware" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.internal type=log ver=1.19.1
+time="2026-11-23T22:43:46.029062+01:00" level=info msg="Enabled gRPC metrics middleware" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.grpc.internal type=log ver=1.19.1
+time="2026-11-23T22:43:46.029082+01:00" level=info msg="Internal gRPC server is running on :53372" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.029089+01:00" level=info msg="actors: state store is not configured - actor state and workflow operations will be unavailable until an actor state store component is loaded" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.0291+01:00" level=info msg="Actor state store not configured - actor hosting disabled until one is configured, but invocation enabled" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actor type=log ver=1.19.1
+time="2026-11-23T22:43:46.029099+01:00" level=info msg="Actor state store not configured - actor hosting disabled until one is configured, but invocation enabled" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actor type=log ver=1.19.1
+time="2026-11-23T22:43:46.029111+01:00" level=info msg="Using Scheduler service for reminders." app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actor.reminders.scheduler type=log ver=1.19.1
+time="2026-11-23T22:43:46.029122+01:00" level=info msg="Using Scheduler service for reminders." app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actor.reminders.scheduler type=log ver=1.19.1
+time="2026-11-23T22:43:46.029129+01:00" level=info msg="Scheduler address configured; asking the scheduler whether it serves actor placement" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actors.placement type=log ver=1.19.1
+time="2026-11-23T22:43:46.029138+01:00" level=info msg="Scheduler address configured; asking the scheduler whether it serves actor placement" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actors.placement type=log ver=1.19.1
+time="2026-11-23T22:43:46.02915+01:00" level=info msg="Actor state store not configured - actor hosting disabled until one is configured, but invocation enabled" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actor type=log ver=1.19.1
+time="2026-11-23T22:43:46.029161+01:00" level=info msg="Using Scheduler service for reminders." app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actor.reminders.scheduler type=log ver=1.19.1
+time="2026-11-23T22:43:46.029174+01:00" level=info msg="Loading MCP servers…" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.029177+01:00" level=info msg="Scheduler address configured; asking the scheduler whether it serves actor placement" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actors.placement type=log ver=1.19.1
+time="2026-11-23T22:43:46.029173+01:00" level=info msg="Loading MCP servers…" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.029199+01:00" level=info msg="Actor runtime started" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actor type=log ver=1.19.1
+time="2026-11-23T22:43:46.029216+01:00" level=warning msg="Graceful shutdown timeout is infinite, will wait indefinitely to shutdown" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actor type=log ver=1.19.1
+time="2026-11-23T22:43:46.029222+01:00" level=info msg="Loading MCP servers…" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.029295+01:00" level=info msg="worker started with backend dapr.actors/v1" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.wfengine.durabletask.backend type=log ver=1.19.1
+time="2026-11-23T22:43:46.029315+01:00" level=info msg="Workflow engine started" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.wfengine type=log ver=1.19.1
+time="2026-11-23T22:43:46.029342+01:00" level=info msg="Waiting for all outstanding MCP servers to be processed…" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.029349+01:00" level=info msg="All outstanding MCP servers processed" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.029356+01:00" level=info msg="Waiting for all outstanding MCP servers to be processed…" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.029363+01:00" level=info msg="All outstanding MCP servers processed" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.029366+01:00" level=info msg="Waiting for all outstanding MCP servers to be processed…" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.029373+01:00" level=info msg="All outstanding MCP servers processed" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.029371+01:00" level=info msg="Actor runtime started" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actor type=log ver=1.19.1
+time="2026-11-23T22:43:46.029364+01:00" level=info msg="dapr initialized. Status: Running. Init Elapsed 28ms" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.029304+01:00" level=info msg="Actor runtime started" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actor type=log ver=1.19.1
+time="2026-11-23T22:43:46.029531+01:00" level=warning msg="Graceful shutdown timeout is infinite, will wait indefinitely to shutdown" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actor type=log ver=1.19.1
+time="2026-11-23T22:43:46.029396+01:00" level=info msg="worker started with backend dapr.actors/v1" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.wfengine.durabletask.backend type=log ver=1.19.1
+time="2026-11-23T22:43:46.02955+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:46.029556+01:00" level=info msg="Workflow engine started" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.wfengine type=log ver=1.19.1
+time="2026-11-23T22:43:46.029573+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:46.029589+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:46.029598+01:00" level=warning msg="Scheduler cluster does not serve actor placement, using the placement service" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actors.placement.loops.placement type=log ver=1.19.1
+time="2026-11-23T22:43:46.029383+01:00" level=warning msg="Graceful shutdown timeout is infinite, will wait indefinitely to shutdown" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actor type=log ver=1.19.1
+time="2026-11-23T22:43:46.029383+01:00" level=info msg="dapr initialized. Status: Running. Init Elapsed 31ms" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.029395+01:00" level=warning msg="Scheduler cluster does not serve actor placement, using the placement service" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actors.placement.loops.placement type=log ver=1.19.1
+time="2026-11-23T22:43:46.02955+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:46.029393+01:00" level=info msg="dapr initialized. Status: Running. Init Elapsed 30ms" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime type=log ver=1.19.1
+time="2026-11-23T22:43:46.02955+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:46.029489+01:00" level=info msg="worker started with backend dapr.actors/v1" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.wfengine.durabletask.backend type=log ver=1.19.1
+time="2026-11-23T22:43:46.029697+01:00" level=warning msg="Scheduler cluster does not serve actor placement, using the placement service" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actors.placement.loops.placement type=log ver=1.19.1
+time="2026-11-23T22:43:46.029599+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:46.029612+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:46.029559+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:46.029737+01:00" level=info msg="Workflow engine started" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.wfengine type=log ver=1.19.1
+time="2026-11-23T22:43:46.029565+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:46.034392+01:00" level=info msg="Connected to placement service: localhost:50005" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actors.placement.loops.placement type=log ver=1.19.1
+time="2026-11-23T22:43:46.0344+01:00" level=info msg="Connected to placement service: localhost:50005" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actors.placement.loops.placement type=log ver=1.19.1
+time="2026-11-23T22:43:46.03441+01:00" level=info msg="Connected to placement service: localhost:50005" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actors.placement.loops.placement type=log ver=1.19.1
+time="2026-11-23T22:43:46.034446+01:00" level=info msg="Reporting initial host to placement service with initial types []" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actors.placement.loops.placement type=log ver=1.19.1
+time="2026-11-23T22:43:46.034439+01:00" level=info msg="Reporting initial host to placement service with initial types []" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actors.placement.loops.placement type=log ver=1.19.1
+time="2026-11-23T22:43:46.034517+01:00" level=info msg="Reporting initial host to placement service with initial types []" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actors.placement.loops.placement type=log ver=1.19.1
+time="2026-11-23T22:43:46.036073+01:00" level=info msg="Dissemination complete for version 0 (changed types []), unlocking disseminator default/sensor-3" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actors.placement.loops.disseminator type=log ver=1.19.1
+time="2026-11-23T22:43:46.036068+01:00" level=info msg="Dissemination complete for version 0 (changed types []), unlocking disseminator default/sensor-2" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actors.placement.loops.disseminator type=log ver=1.19.1
+time="2026-11-23T22:43:46.036171+01:00" level=info msg="Scheduler stream disconnected" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:46.036203+01:00" level=info msg="Scheduler stream disconnected" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:46.036214+01:00" level=info msg="Scheduler stream disconnected" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:46.036256+01:00" level=info msg="Scheduler stream disconnected" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:46.03628+01:00" level=info msg="Scheduler stream disconnected" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:46.036088+01:00" level=info msg="Dissemination complete for version 0 (changed types []), unlocking disseminator default/sensor-1" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.actors.placement.loops.disseminator type=log ver=1.19.1
+time="2026-11-23T22:43:46.036303+01:00" level=info msg="Scheduler stream disconnected" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:46.036334+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:46.036366+01:00" level=info msg="Scheduler stream disconnected" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:46.036378+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:46.036395+01:00" level=info msg="Scheduler stream disconnected" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:46.036412+01:00" level=info msg="Scheduler stream disconnected" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:46.036417+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:46.036379+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-2 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:46.036463+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:46.036519+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:46.036571+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-1 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:46.036372+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+time="2026-11-23T22:43:46.03645+01:00" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=sensor-3 instance=Mauritss-MacBook-Air.local scope=dapr.runtime.scheduler.cluster type=log ver=1.19.1
+ℹ️  Checking if Dapr sidecar is listening on GRPC port 50004
+ℹ️  Checking if Dapr sidecar is listening on GRPC port 50003
+ℹ️  Checking if Dapr sidecar is listening on GRPC port 50002
+ℹ️  Dapr sidecar is up and running.
+ℹ️  Dapr sidecar is up and running.
+ℹ️  Dapr sidecar is up and running.
+ℹ️  Updating metadata for appPID: 28174
+ℹ️  Updating metadata for appPID: 28176
+ℹ️  Updating metadata for appPID: 28175
+ℹ️  Updating metadata for app command: mvn -q exec:java -Dexec.mainClass=uc4.SensorKt -Dexec.args=1
+ℹ️  Updating metadata for app command: mvn -q exec:java -Dexec.mainClass=uc4.SensorKt -Dexec.args=2
+ℹ️  Updating metadata for app command: mvn -q exec:java -Dexec.mainClass=uc4.SensorKt -Dexec.args=3
+✅  You're up and running! Both Dapr and your app logs will appear here.
+
+✅  You're up and running! Both Dapr and your app logs will appear here.
+
+✅  You're up and running! Both Dapr and your app logs will appear here.
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/opt/homebrew/Cellar/maven/3.9.11/libexec/lib/guice-5.1.0-classes.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/opt/homebrew/Cellar/maven/3.9.11/libexec/lib/guice-5.1.0-classes.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/opt/homebrew/Cellar/maven/3.9.11/libexec/lib/guice-5.1.0-classes.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+Sensor 2 initialized
+Sensor 1 initialized
+Sensor 3 initialized
+Sensor 1: 45 -> NORMAL
+Sensor 2: 52 -> NORMAL
+Sensor 3: 40 -> NORMAL
+Sensor 2: 81 -> ALERT
+Active alerts: 1
+Sensor 1: 62 -> NORMAL
+Sensor 3: 48 -> NORMAL
+Sensor 2: 85 -> ALERT
+Sensor 1: 78 -> ALERT
+Active alerts: 2
+Sensor 3: 73 -> ALERT
+Active alerts: 3
+Sensor 1: 55 -> NORMAL
+Active alerts: 2
+Sensor 2: 60 -> NORMAL
+Active alerts: 1
+Sensor 3: 80 -> ALERT
+time="2026-11-23T22:43:52.668587+01:00" level=info msg="Unsubscribed from pubsub 'pubsub' topic 'measurements'" app_id=coordinator instance=Mauritss-MacBook-Air.local scope=dapr.runtime.pubsub.streamer type=log ver=1.19.1
+Measurements processed: 12
+Sensor 1 final state: NORMAL
+Sensor 2 final state: NORMAL
+Sensor 3 final state: ALERT
+Active alerts: 1
+✅  Exited App successfully
+ℹ️  
+terminated signal received: shutting down
+✅  Exited Dapr successfully
+✅  Exited App successfully
+ℹ️  
+terminated signal received: shutting down
+ℹ️  
+terminated signal received: shutting down
+ℹ️  
+terminated signal received: shutting down
+✅  Exited Dapr successfully
+✅  Exited Dapr successfully
+✅  Exited Dapr successfully
+❌  The daprd process exited with error code: signal: killed
+❌  The daprd process exited with error code: signal: killed
+❌  The daprd process exited with error code: signal: killed
+❌  The App process exited with error code: 143
+❌  The App process exited with error code: 143
+❌  The App process exited with error code: 143
+✅  Exited App successfully
+✅  Exited App successfully
+✅  Exited App successfully
