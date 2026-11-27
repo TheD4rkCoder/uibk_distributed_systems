@@ -237,7 +237,6 @@ Active alerts: 1
 | :--- | ---: | ---: |
 | **SLOC (src, no blank / comment lines)** | 97 (kotlin) | 129 (pkl) |
 | **config / build / run lines** | 28 yaml + 53 pom + 16 run.sh | 34 compose + 4 zenoh + 7 run.sh |
-| **active coding time (codetime)** | [fill in] | [fill in] |
 | **compile / config errors** | 0 | 2 |
 | **bugs found by the tests below** | 3 | 1 |
 | **requirements met** | all 10 | all 10 |
@@ -254,7 +253,7 @@ csml errors: cirrina image has no arm64 build (needs `platform: linux/amd64`), a
 | **backlog delivered at once** | readings out of order (45, 55, 78, 62) -> `concurrency: 1` | n/a |
 | **sensors done before the coordinator starts** | correct, stream keeps the messages | hung, events lost -> ready / go handshake, then correct with the coordinator started 15 s late |
 | **duplicate messages (second sensor 1 with the same run id)** | duplicates ignored, correct | n/a |
-| **old counters still in etcd** | n/a | correct, reset in init |
+| **old counters still in the state store** | correct, reset on start (redis) | correct, reset in init (etcd) |
 
 dapr installation problems (docker hub timeouts during dapr init) are installation time and not counted
 
